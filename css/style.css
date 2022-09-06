@@ -68,6 +68,25 @@ body {
   text-align: center;
 }
 
+.header .inner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 30px;
+  background: url('../images') no-repeat center;
+  background-size: cover;
+  text-align: center;
+  border: 1px solid pink;
+  padding: 40px 0;
+}
+
+/* header-gnb */
 .gnb {
   position: relative;
   display: inline-block;
@@ -87,6 +106,7 @@ body {
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 500;
+  border: 1px solid blue;
 }
 
 .gnb>li>a:hover {
@@ -97,7 +117,7 @@ body {
 .visual {
   position: relative;
   display: block;
-  height: 700px;
+  height: 100vh;
   background-color: skyblue;
 }
 
@@ -123,16 +143,19 @@ body {
   display: block;
 }
 
+/* portfolio-font */
+
 .portfolio h2 {
   text-align: center;
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .portfolio h3 {
   text-align: center;
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .portfolio h4 {
@@ -147,6 +170,7 @@ body {
   font-weight: 400;
 }
 
+/* portfolio-layout */
 .portfolio-wrap {
   position: relative;
 }
@@ -157,15 +181,18 @@ body {
 
 .portfolio-list {
   position: relative;
-  overflow: hidden;
+  display: block;
+  border: 1px solid blue;
 }
 
 .portfolio-list>li {
   position: relative;
+  display: block;
   float: left;
-  width: 50%;
-  text-align: center;
+  width: 33%;
   margin-bottom: 60px;
+  text-align: center;
+  border: 1px solid firebrick;
 }
 
 .portfolio-list>li a {
