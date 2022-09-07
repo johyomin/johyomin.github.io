@@ -149,13 +149,13 @@ body {
   text-align: center;
   font-size: 40px;
   font-weight: 700;
-  text-transform: uppercase;
 }
 
 .portfolio h3 {
   text-align: center;
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 30px;
 }
 
 .portfolio h4 {
@@ -175,6 +175,30 @@ body {
   position: relative;
 }
 
+.portfolio-menu {
+  position: relative;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.portfolio-menu>li {
+  position: relative;
+  display: inline-block;
+}
+
+.portfolio-menu>li button {
+  position: relative;
+  display: block;
+  border: 0;
+  cursor: pointer;
+  margin: 0 30px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 18px;
+  background-color: #e6c7c1;
+  color: #fff;
+}
+
 .portfolio-cate {
   position: relative;
 }
@@ -182,17 +206,31 @@ body {
 .portfolio-list {
   position: relative;
   display: block;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
+  width: 100%;
 }
 
 .portfolio-list>li {
   position: relative;
   display: block;
   float: left;
-  width: 33%;
+  width: 360px;
+  height: 300px;
+  margin-right: 30px;
   margin-bottom: 60px;
   text-align: center;
-  border: 1px solid firebrick;
+  background-color: #fff;
+  box-shadow: 1px 1px 7px gray;
+  border-radius: 40px 80px / 80px 40px;
+  overflow: hidden;
+
+}
+
+.portfolio-list>li:nth-child(3),
+.portfolio-list>li:nth-child(6),
+.portfolio-list>li:nth-child(9) {
+  margin-right: 0;
+  /* border: 1px solid pink; */
 }
 
 .portfolio-list>li a {
@@ -202,4 +240,9 @@ body {
 
 .portfolio-list>li a:hover {
   color: green;
+}
+
+.portfolio-list>li a img {
+  width: 100%;
+  height: 200px;
 }
