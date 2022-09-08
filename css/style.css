@@ -177,6 +177,20 @@ body {
   color: #a51b0b;
 }
 
+.responsive {
+  position: relative;
+  display: inline-block;
+  border: 1px solid pink;
+  border-radius: 30px;
+}
+
+.vue {
+  position: relative;
+  display: inline-block;
+  border: 1px solid blue;
+  border-radius: 30px;
+}
+
 /* portfolio-layout */
 .portfolio-wrap {
   position: relative;
@@ -252,7 +266,7 @@ body {
 /* portfolio inner */
 .portfolio h5 {
   position: relative;
-  display: block;
+  display: inline-block;
   font-size: 18px;
   font-weight: 500;
   margin: 10px 20px;
