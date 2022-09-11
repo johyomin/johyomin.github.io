@@ -113,29 +113,26 @@ body {
   color: hotpink;
 }
 
-/* visual */
-.visual {
+/* home */
+.home {
   position: relative;
   display: block;
   height: 100vh;
   background-color: skyblue;
 }
 
-.visual .inner {
-  height: 100%;
-}
-
-/* profile */
-.profile {
+/* about */
+.about {
   position: relative;
   display: block;
   height: 800px;
   background-color: aliceblue;
 }
 
-.profile .inner {
+.about .inner {
   height: 100%;
 }
+
 
 /* portfolio */
 .portfolio {
@@ -361,3 +358,19 @@ body {
   font-weight: 400;
 }
 
+
+
+/* footer */
+.footer {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 70px;
+  background-color: #e3eaf1;
+}
+
+.footer .inner {
+  position: relative;
+  display: block;
+  padding-top: 25px;
+}
