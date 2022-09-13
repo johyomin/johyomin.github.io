@@ -377,3 +377,25 @@ body {
   display: block;
   padding-top: 25px;
 }
+
+#pro-html {
+  position: relative;
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+
+
+#pro-css {
+  position: relative;
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+
+
+.portfolio-menu-active {
+    font-weight: 700;
+    color: #222;
+    background-color: #fff;
+}
