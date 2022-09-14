@@ -49,6 +49,7 @@ body {
   display: block;
   max-width: 1200px;
   margin: 0 auto;
+
 }
 
 .wrap {
@@ -118,7 +119,7 @@ body {
   position: relative;
   display: block;
   height: 100vh;
-  background-color: skyblue;
+  background-color: #fff6f1;
 }
 
 /* about */
@@ -151,7 +152,7 @@ body {
 
 
 
-/* portfolio */
+/* ====================== portfolio ====================== */
 .portfolio {
   position: relative;
   display: block;
@@ -165,18 +166,6 @@ body {
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
-}
-
-.portfolio h2::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: block;
-  width: 60px;
-  height: 2px;
-  background-color: #CFBDBB;
 }
 
 .portfolio h3 {
@@ -215,21 +204,41 @@ body {
 .portfolio-bt button {
   position: relative;
   display: block;
-  border: 0;
   cursor: pointer;
   margin: 0 30px;
   padding: 10px 20px;
-  border-radius: 25px;
+  border: 0;
   font-size: 18px;
-  background-color: #e6c7c1;
-  color: #fff;
+  background-color: #fff;
+  color: #666;
+
+
+  --b: 2px;   /* the thickness of the line */
+  --c: #1095c1; /* the color */
+  
+  color: #0000;
+  padding-block: var(--b);
+  background: 
+    linear-gradient(var(--c) 50%,#000 0) 0% calc(100% - var(--_p,0%))/100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
+  -webkit-background-clip: text,padding-box;
+          background-clip: text,padding-box;
+  transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
+}
+
+.portfolio-bt button:hover {
+  font-weight: 600;
+  font-size: 20px;
+  --_p: 100%;
+  --_s: .3s;
 }
 
 .portfolio-bt .portfolio-menu-active {
-  font-weight: 700;
-  color: #222;
-  background-color: #fff;
+  font-weight: 600;
+  --_p: 100%;
+  --_s: .3s;
 }
+
 
 .portfolio-cate {
   position: relative;
@@ -245,21 +254,15 @@ body {
   position: relative;
   display: block;
   float: left;
-  width: 360px;
-  height: 350px;
-  margin: 25px 40px 25px 0;
+  width: 350px;
+  height: 380px;
+  margin: 25px 25px;
   background-color: #fff;
   box-shadow: 1px 1px 6px #e6c7c1;
   /* border-radius: 40px 80px / 80px 40px; */
   border-radius: 7px;
   overflow: hidden;
-
-}
-
-.portfolio-content:nth-child(3),
-.portfolio-content:nth-child(6),
-.portfolio-content:nth-child(9) {
-  margin-right: 0;
+  /* border:3px solid red; */
 }
 
 .portfolio-content .portfolio-pic {
@@ -269,7 +272,9 @@ body {
 .portfolio-content .portfolio-pic>img {
   width: 100%;
   height: 200px;
+  margin-bottom: 10px;
   box-shadow: -1px -1px 5px gray;
+  /* border: 3px solid blue; */
 }
 
 /* portfolio inner */
@@ -278,7 +283,7 @@ body {
   display: block;
   font-size: 18px;
   font-weight: 500;
-  margin: 0px 20px 10px 20px;
+  margin: 7px 20px 10px 20px;
 }
 
 .responsive {
@@ -357,6 +362,13 @@ body {
 .fa-laptop-code {
   position: relative;
   font-size: 15px;
+  color: #000;
+}
+
+.vue-pic {
+  position: relative;
+  width: 18px;
+  height: 18px;
 }
 
 .fa-github {
@@ -364,9 +376,10 @@ body {
   font-size: 15px;
 }
 
-.fa-chrome {
+.chrome-pic {
   position: relative;
-  font-size: 15px;
+  width: 18px;
+  height: 18px;
 }
 
 .figma {
