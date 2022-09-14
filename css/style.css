@@ -134,8 +134,8 @@ body {
   height: 100%;
 }
 
-/* possibility */
-#pro-html {
+/* ====================== skill ====================== */
+.inner #pro-html {
   position: relative;
   display: block;
   width: 100px;
@@ -149,6 +149,7 @@ body {
   width: 100px;
   height: 100px;
 }
+
 
 
 
@@ -166,13 +167,16 @@ body {
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
+  box-shadow: 0px 10px 10px -10px #e6c7c1;
+  padding: 15px 0;
 }
+
 
 .portfolio h3 {
   text-align: center;
   font-size: 18px;
   font-weight: 500;
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
 .portfolio h3 strong {
@@ -212,31 +216,36 @@ body {
   background-color: #fff;
   color: #666;
 
-
-  --b: 2px;   /* the thickness of the line */
-  --c: #1095c1; /* the color */
+/* button animation */
+  --b: 3px;
+  --c: #d36853; 
   
-  color: #0000;
+  color: #999;
   padding-block: var(--b);
+
   background: 
+
     linear-gradient(var(--c) 50%,#000 0) 0% calc(100% - var(--_p,0%))/100% 200%,
     linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
   -webkit-background-clip: text,padding-box;
-          background-clip: text,padding-box;
+          background-clip: text,padding-box;            
+
   transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
 }
 
 .portfolio-bt button:hover {
   font-weight: 600;
   font-size: 20px;
+  color: #d36853;
   --_p: 100%;
-  --_s: .3s;
+  --_s: .2s;
 }
 
 .portfolio-bt .portfolio-menu-active {
   font-weight: 600;
+  font-size: 20px;
+  color: #d36853;
   --_p: 100%;
-  --_s: .3s;
 }
 
 
@@ -262,7 +271,23 @@ body {
   /* border-radius: 40px 80px / 80px 40px; */
   border-radius: 7px;
   overflow: hidden;
+  transition: all 0.6s;
   /* border:3px solid red; */
+}
+
+.portfolio-content:hover {
+  transform: scale(1.2);
+  z-index: 9;
+}
+
+
+.portfolio-content:hover .portfolio-pic>img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  z-index: 999;
 }
 
 .portfolio-content .portfolio-pic {

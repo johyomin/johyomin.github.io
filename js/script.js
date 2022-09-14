@@ -31,7 +31,7 @@ window.onload = function () {
 
 
   // 프로그래스바
-  function makeCirecle(_id, _stroke, _endColor) {
+  function makeCircle(_id, _stroke, _startColor, _endColor) {
     var bar = new ProgressBar.Circle(_id, {
       color: '#aaa',
       // This has to be the same size as the maximum width to
@@ -39,17 +39,17 @@ window.onload = function () {
       strokeWidth: _stroke,
       trailWidth: 1,
       easing: 'easeInOut',
-      duration: 1400,
+      duration: 2500,
       text: {
-        autoStyleContainer: false
+        autoStyleContainer: true
       },
       from: {
-        color: '#aaa',
+        color: _startColor,
         width: 1
       },
       to: {
         color: _endColor,
-        width: 3
+        width: 2
       },
       // Set default step function for all animate calls
       step: function (state, circle) {
@@ -71,10 +71,16 @@ window.onload = function () {
     return bar;
   }
 
-  let bar_html = makeCirecle(pro_html, 3, '#333');
-  let bar_css = makeCirecle(pro_css, 3, '#333');
-  let bar_jquery = makeCirecle(pro_jquery, 3, '#333');
-  let bar_vue = makeCirecle(pro_vue, 10, '#f00');
+  let bar_html = makeCircle(pro_html, 8, '#999' ,'#e4f2c6');
+  let bar_css = makeCircle(pro_css, 7,'#999' , '#333');
+  let bar_js = makeCircle(pro_js, 5,'#999' , '#333');
+  let bar_jquery = makeCircle(pro_jquery, 5,'#999' , '#f00');
+  let bar_vue = makeCircle(pro_vue, 2,'#999' , '#d1baf35e');
+  let bar_git = makeCircle(pro_git, 10,'#999' , '#f00');
+  let bar_scss = makeCircle(pro_scss, 10,'#999' , '#f00');
+  let bar_flex = makeCircle(pro_flex, 10,'#999' , '#f00');
+  let bar_grid = makeCircle(pro_grid, 10,'#999' , '#f00');
+  let bar_maria = makeCircle(pro_maria, 10,'#999' , '#f00');
 
 
 
