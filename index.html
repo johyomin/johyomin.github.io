@@ -70,6 +70,9 @@
   <link rel="stylesheet" type="text/css" href="js/lightbox2/css/lightbox.css">
   <script src="js/lightbox2/js/lightbox.js"></script>
 
+  <!-- rader chart -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
   <!-- Progressbar -->
   <script type="text/javascript" src="js/progressbar/progressbar.js"></script>
 
@@ -88,10 +91,10 @@
         <span class="logo">로고</span>
         <ul class="gnb">
           <li><a href="#">Home</a></li>
-          <li><a href="#profile">ABOUT</a></li>
-          <li><a href="#portfolio">SKILL</a></li>
-          <li><a href="#life">POSSIBILITY</a></li>
-          <li><a href="#contact">PORTFOLIO</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#skill">SKILL</a></li>
+          <li><a href="#possibility">POSSIBILITY</a></li>
+          <li><a href="#portfolio">PORTFOLIO</a></li>
           <li><a href="#life">LIFE</a></li>
           <li><a href="#contact">CONTACT</a></li>
         </ul>
@@ -100,7 +103,9 @@
 
     <!-- home -->
     <section class="home" id="home">
-      <h2>HOME</h2>
+      <div data-aos="fade-up" data-aos-duration="1500">
+        <h2>HOME</h2>
+      </div>
     </section>
 
     <!-- gotop -->
@@ -115,47 +120,67 @@
     <!-- about -->
     <section class="about" id="about">
       <div class="inner">
-        <h2>ABOUT</h2>
+        <div data-aos="fade-up" data-aos-duration="1500">
+          <h2>ABOUT</h2>
+        </div>
         <!-- branding  설명추가 -->
-      </div>
-    </section>
-
-    <!-- skill -->
-    <section class="skill" id="skill">
-      <div class="inner">
-        <h2>SKILL</h2>
-        <div id="pro_html">HTML</div>
-        <div id="pro_css">CSS</div>
-        <div id="pro_js">JS</div>
-        <div id="pro_jquery">J-query</div>
-        <div id="pro_vue">Vue.js</div>
-        <div id="pro_git">Github</div>
-        <div id="pro_scss">SCSS</div>
-        <div id="pro_flex">FLEX</div>
-        <div id="pro_grid">GRID</div>
-        <div id="pro_maria">MariaDB</div>
-
       </div>
     </section>
 
     <!-- possibility -->
     <section class="possibility" id="possibility">
       <div class="inner">
-        <h2>POSSIBILITY</h2>
+        <div data-aos="fade-up" data-aos-duration="1500">
+          <h2>POSSIBILITY</h2>
+        </div>
+        <div class="chart">
+          <canvas id="radar-chart" width="250" height="250"></canvas>
+        </div>
       </div>
     </section>
 
+    <!-- skill -->
+    <section class="skill" id="skill">
+      <div class="inner">
+        <div data-aos="fade-up" data-aos-duration="1500">
+          <h2>SKILL</h2>
+        </div>
+        <ul class="skill-list">
+          <li id="pro_html" class="skill-box">HTML
+            <img src="images/html.png" alt="html" class="skill-pic">
+          </li>
+          <li id="pro_css" class="skill-box">CSS
+            <img src="images/css.png" alt="css" class="skill-pic">
+          </li>
+          <li id="pro_js" class="skill-box">JS
+            <img src="images/js.png" alt="js" class="skill-pic">
+          </li>
+          <li id="pro_jquery" class="skill-box">J-query
+            <img src="images/jquery.gif" alt="jquery" class="skill-pic">
+          </li>
+          <li id="pro_vue" class="skill-box">Vue.js
+            <img src="images/Vue.png" alt="vue.js" class="skill-pic">
+          </li>
+          <li id="pro_git" class="skill-box">Github
+            <img src="images/git.png" alt="git-hub" class="skill-pic">
+          </li>
+          <li id="pro_flex" class="skill-box">FLEX
+            <i class="fas fa-th-large"></i>
+          </li>
+          <li id="pro_scss" class="skill-box">SCSS
+            <img src="images/sass.png" alt="scss" class="skill-pic">
+          </li>
+        </ul>
+      </div>
+    </section>
 
     <!-- portfolio -->
     <section class="portfolio" id="portfolio">
       <div class="inner">
-        <div data-aos="fade-up">
+        <div data-aos="fade-up" data-aos-duration="1500">
           <h2>PORTFOLIO</h2>
         </div>
         <div class="portfolio-wrap">
-          <div data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-out-cubic" data-aos-duration="500">
-            <h3>저의 코딩 <strong>성장</strong> 과정이 담겨있는 포트폴리오 입니다.</h3>
-          </div>
           <ul class="portfolio-menu">
             <li class="portfolio-bt"><button data-cate="all">All</button></li>
             <li class="portfolio-bt"><button data-cate="study">Study Clone</button></li>
@@ -490,15 +515,18 @@
     <!-- life -->
     <section class="life" id="life">
       <div class="inner">
-        <h2>LIFE</h2>
+        <div data-aos="fade-up" data-aos-duration="1500">
+          <h2>LIFE</h2>
+        </div>
       </div>
     </section>
 
     <!-- contact -->
     <section class="contact" id="contact">
       <div class="inner">
-        <h2>CONTACT</h2>
-
+        <div data-aos="fade-up" data-aos-duration="1500">
+          <h2>CONTACT</h2>
+        </div>
       </div>
     </section>
 

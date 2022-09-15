@@ -1,5 +1,114 @@
 window.onload = function () {
-  // 포트폴리오 탭기능
+
+  /* ========================= possibility ========================= */
+
+  new Chart(document.getElementById("radar-chart"), {
+    type: 'radar',
+    data: {
+      labels: ["책임감", "성실성", "도전정신", "응용력", "소통능력"],
+      datasets: [{
+        label: "1950",
+        fill: true,
+        backgroundColor: "rgba(179,181,198,0.2)",
+        borderColor: "rgba(179,181,198,1)",
+        pointBorderColor: "#fff",
+        pointBackgroundColor: "rgba(179,181,198,1)",
+        data: [8.77, 55.61, 21.69, 6.62, 6.82]
+      }, {
+        label: "2050",
+        fill: true,
+        backgroundColor: "rgba(255,99,132,0.2)",
+        borderColor: "rgba(255,99,132,1)",
+        pointBorderColor: "#fff",
+        pointBackgroundColor: "rgba(255,99,132,1)",
+        pointBorderColor: "#fff",
+        data: [25.48, 54.16, 7.61, 8.06, 4.45]
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Distribution in % of world population'
+      }
+    }
+  });
+
+
+
+
+  /* ========================= skill ========================= */
+  function makeCircle(_id, _endColor) {
+    var bar = new ProgressBar.Circle(_id, {
+      color: '#333',
+      // This has to be the same size as the maximum width to
+      // prevent clipping
+      strokeWidth: 4, //바깥 선 굵기
+      trailWidth: 1, //안 선 굵기
+      easing: 'easeInOut',
+      duration: 2500,
+      text: {
+        autoStyleContainer: true
+      },
+      from: {
+        color: '#fff',
+        width: 1
+      },
+      to: {
+        color: _endColor,
+        width: 3
+      },
+      // Set default step function for all animate calls
+      step: function (state, circle) {
+        circle.path.setAttribute('stroke', state.color);
+        circle.path.setAttribute('stroke-width', state.width);
+
+        var value = Math.round(circle.value() * 100);
+        if (value === 0) {
+          circle.setText('');
+        } else {
+          circle.setText(value); //원 안에들어가는 요소
+        }
+
+      }
+    });
+    bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+    bar.text.style.fontSize = '2rem';
+
+    return bar;
+  }
+
+  let bar_html = makeCircle(pro_html, '#d1baf35e');
+  let bar_css = makeCircle(pro_css, '#d1baf35e');
+  let bar_js = makeCircle(pro_js, '#d1baf35e');
+  let bar_jquery = makeCircle(pro_jquery, '#d1baf35e');
+  let bar_vue = makeCircle(pro_vue, '#d1baf35e');
+  let bar_git = makeCircle(pro_git, '#d1baf35e');
+  let bar_flex = makeCircle(pro_flex, '#d1baf35e');
+  let bar_scss = makeCircle(pro_scss, '#d1baf35e');
+
+  new Waypoint({
+    element: $('.skill'),
+    handler: function (direction) {
+      if (direction == 'down') {
+        // 모션실행
+        bar_html.animate(0.95); // Number from 0.0 to 1.0
+        bar_css.animate(0.9); // Number from 0.0 to 1.0
+        bar_js.animate(0.75); // Number from 0.0 to 1.0
+        bar_jquery.animate(0.75); // Number from 0.0 to 1.0
+        bar_vue.animate(0.7); // Number from 0.0 to 1.0
+        bar_git.animate(0.8); // Number from 0.0 to 1.0
+        bar_flex.animate(0.9); // Number from 0.0 to 1.0
+        bar_scss.animate(0.85); // Number from 0.0 to 1.0
+
+      } else if (direction == 'up') {}
+    },
+    offset: '50%'
+  });
+
+
+
+
+  /* ========================= portfolio ========================= */
   let portfolioMenu = $('.portfolio-bt');
   let portfolioContent = $('.portfolio-content');
   portfolioMenu.eq(0).find('button').addClass('portfolio-menu-active');
@@ -26,82 +135,6 @@ window.onload = function () {
       }
     });
   }
-
-
-
-
-  // 프로그래스바
-  function makeCircle(_id, _stroke, _startColor, _endColor) {
-    var bar = new ProgressBar.Circle(_id, {
-      color: '#aaa',
-      // This has to be the same size as the maximum width to
-      // prevent clipping
-      strokeWidth: _stroke,
-      trailWidth: 1,
-      easing: 'easeInOut',
-      duration: 2500,
-      text: {
-        autoStyleContainer: true
-      },
-      from: {
-        color: _startColor,
-        width: 1
-      },
-      to: {
-        color: _endColor,
-        width: 2
-      },
-      // Set default step function for all animate calls
-      step: function (state, circle) {
-        circle.path.setAttribute('stroke', state.color);
-        circle.path.setAttribute('stroke-width', state.width);
-
-        var value = Math.round(circle.value() * 100);
-        if (value === 0) {
-          circle.setText('');
-        } else {
-          circle.setText(value);
-        }
-
-      }
-    });
-    bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-    bar.text.style.fontSize = '2rem';
-
-    return bar;
-  }
-
-  let bar_html = makeCircle(pro_html, 8, '#999' ,'#e4f2c6');
-  let bar_css = makeCircle(pro_css, 7,'#999' , '#333');
-  let bar_js = makeCircle(pro_js, 5,'#999' , '#333');
-  let bar_jquery = makeCircle(pro_jquery, 5,'#999' , '#f00');
-  let bar_vue = makeCircle(pro_vue, 2,'#999' , '#d1baf35e');
-  let bar_git = makeCircle(pro_git, 10,'#999' , '#f00');
-  let bar_scss = makeCircle(pro_scss, 10,'#999' , '#f00');
-  let bar_flex = makeCircle(pro_flex, 10,'#999' , '#f00');
-  let bar_grid = makeCircle(pro_grid, 10,'#999' , '#f00');
-  let bar_maria = makeCircle(pro_maria, 10,'#999' , '#f00');
-
-
-
-  new Waypoint({
-    element: $('.possibility'),
-    handler: function (direction) {
-      if (direction == 'down') {
-        // 모션실행
-        bar_html.animate(1.0); // Number from 0.0 to 1.0
-        bar_css.animate(0.8); // Number from 0.0 to 1.0
-        bar_jquery.animate(1.0); // Number from 0.0 to 1.0
-        bar_vue.animate(1.0); // Number from 0.0 to 1.0
-      } else if (direction == 'up') {}
-    },
-    offset: '50%'
-  });
-
-
-
-
-
 
 
 

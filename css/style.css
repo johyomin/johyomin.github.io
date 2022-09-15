@@ -57,6 +57,16 @@ body {
   display: block;
 }
 
+h2 {
+  position: relative;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-top: 45px;
+  margin-bottom: 30px;
+}
+
 /* header */
 .header {
   position: fixed;
@@ -111,77 +121,93 @@ body {
 }
 
 .gnb>li>a:hover {
-  color: hotpink;
+  color: #bcc7f1;
 }
 
-/* home */
+/* ========================= home ========================= */
 .home {
   position: relative;
   display: block;
   height: 100vh;
+  margin-bottom: 120px;
   background-color: #fff6f1;
 }
 
-/* about */
+/* ========================= gotop ========================= */
+
+
+
+
+/* ========================= about ========================= */
 .about {
   position: relative;
   display: block;
   height: 800px;
-  background-color: aliceblue;
+  margin-bottom: 120px;
 }
 
 .about .inner {
   height: 100%;
 }
 
-/* ====================== skill ====================== */
-.inner #pro-html {
+/* ========================= possibility ========================= */
+.possibility {
   position: relative;
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 900px;
+  margin-bottom: 120px;
+}
+
+.chart {
+  position: relative;
+  display: block;
+  float: right;
+  width: 600px;
+  height: 600px;
+}
+
+/* ========================= skill ========================= */
+.skill {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 870px;
+  margin-bottom: 120px;
+  background-color: hsl(228, 72%, 90%, 0.4);
+}
+
+.skill-list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill-box {
+  position: relative;
+  display: block;
+  width: 220px;
+  height: 200px;
+  margin: 60px 40px;
+  font-size: 20px;
+}
+
+/* skill-icon */
+.skill-pic {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 30px;
 }
 
 
-#pro-css {
-  position: relative;
-  display: block;
-  width: 100px;
-  height: 100px;
-}
 
 
-
-
-/* ====================== portfolio ====================== */
+/* ========================= portfolio ========================= */
 .portfolio {
   position: relative;
   display: block;
-}
-
-/* portfolio-font */
-
-.portfolio h2 {
-  position: relative;
-  text-align: center;
-  font-size: 40px;
-  font-weight: 700;
-  text-transform: uppercase;
-  box-shadow: 0px 10px 10px -10px #e6c7c1;
-  padding: 15px 0;
-}
-
-
-.portfolio h3 {
-  text-align: center;
-  font-size: 18px;
-  font-weight: 500;
-  margin-top: 60px;
-}
-
-.portfolio h3 strong {
-  font-weight: 700;
-  color: #a51b0b;
+  margin-bottom: 120px;
 }
 
 .portfolio b {
@@ -197,7 +223,7 @@ body {
 .portfolio-menu {
   position: relative;
   text-align: center;
-  margin: 30px 0;
+  margin: 40px 0 20px;
 }
 
 .portfolio-bt {
@@ -216,21 +242,21 @@ body {
   background-color: #fff;
   color: #666;
 
-/* button animation */
+  /* button animation */
   --b: 3px;
-  --c: #d36853; 
-  
+  --c: #d36853;
+
   color: #999;
   padding-block: var(--b);
 
-  background: 
+  background:
 
-    linear-gradient(var(--c) 50%,#000 0) 0% calc(100% - var(--_p,0%))/100% 200%,
-    linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
-  -webkit-background-clip: text,padding-box;
-          background-clip: text,padding-box;            
+    linear-gradient(var(--c) 50%, #000 0) 0% calc(100% - var(--_p, 0%))/100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p, 0%)/var(--_p, 0%) var(--b) no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
 
-  transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
+  transition: .3s var(--_s, 0s) linear, background-size .3s calc(.3s - var(--_s, 0s));
 }
 
 .portfolio-bt button:hover {
@@ -419,12 +445,26 @@ body {
   font-weight: 400;
 }
 
-/* contact */
+/* ========================= life ========================= */
+.life {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 500px;
+  background-color: #e3eaf1;
+}
+
+/* ========================= contact ========================= */
+.contact {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 500px;
+}
 
 
 
-
-/* footer */
+/* ========================= footer ========================= */
 .footer {
   position: relative;
   display: block;
