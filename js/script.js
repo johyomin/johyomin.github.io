@@ -1,37 +1,22 @@
 window.onload = function () {
 
-  /* ========================= possibility ========================= */
+ /* ========================= possibility ========================= */
 
-  new Chart(document.getElementById("radar-chart"), {
-    type: 'radar',
-    data: {
-      labels: ["책임감", "성실성", "도전정신", "응용력", "소통능력"],
-      datasets: [{
-        label: "1950",
-        fill: true,
-        backgroundColor: "rgba(179,181,198,0.2)",
-        borderColor: "rgba(179,181,198,1)",
-        pointBorderColor: "#fff",
-        pointBackgroundColor: "rgba(179,181,198,1)",
-        data: [8.77, 55.61, 21.69, 6.62, 6.82]
-      }, {
-        label: "2050",
-        fill: true,
-        backgroundColor: "rgba(255,99,132,0.2)",
-        borderColor: "rgba(255,99,132,1)",
-        pointBorderColor: "#fff",
-        pointBackgroundColor: "rgba(255,99,132,1)",
-        pointBorderColor: "#fff",
-        data: [25.48, 54.16, 7.61, 8.06, 4.45]
-      }]
-    },
-    options: {
-      title: {
-        display: true,
-        text: 'Distribution in % of world population'
-      }
-    }
-  });
+new Chart(document.getElementById("radar-chart"), {
+  type: 'radar',
+  data: {
+    labels: ["책임감", "성실성", "도전정신", "응용력", "소통능력"],
+    datasets: [{
+      label: "",
+      fill: true,
+      backgroundColor: "hsl(10, 43%, 90%, 60%)",
+      borderColor: "#e6c7c1",
+      data: [95, 95, 80, 75, 100]
+    }]
+  },
+
+});
+  
 
 
 
@@ -45,7 +30,7 @@ window.onload = function () {
       strokeWidth: 4, //바깥 선 굵기
       trailWidth: 1, //안 선 굵기
       easing: 'easeInOut',
-      duration: 2500,
+      duration: 1500,
       text: {
         autoStyleContainer: true
       },

@@ -134,9 +134,131 @@ h2 {
 }
 
 /* ========================= gotop ========================= */
+.button-list {
+  position: fixed;
+  bottom: 15px;
+  right: 10px;
+  display: block;
+  z-index: 99;
+}
 
+.contact {
+  position: relative;
+  display: block;
+  margin: 10px 0;
+  border: 1px solid #e6c7c1;
+  border-radius: 50%;
+  background-color: #fff;
+  width: 60px;
+  height: 60px;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 10px;
+  transition: all 0.2s;
+}
 
+.contact:hover {
+  background-color: hsl(10, 43%, 83%);
+  color: #fff;
+}
 
+.contact-list {
+  position: absolute;
+  bottom: 55%;
+  right: 80px;
+}
+
+.contact-list .fa-comments {
+  font-size: 50px;
+  color: rgb(235, 227, 14);
+}
+
+.contact-list .cont-git {
+  font-size: 50px;
+  margin: 20px 0;
+}
+
+.contact-list .fa-envelope {
+  font-size: 50px;
+  color: rgb(216, 44, 73);
+}
+
+.pdf {
+  position: relative;
+  display: block;
+  margin: 10px 0;
+  border: 1px solid #e6c7c1;
+  border-radius: 50%;
+  background-color: #fff;
+  width: 60px;
+  height: 60px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 12px;
+  transition: all 0.2s;
+}
+
+.pdf:hover{
+  background-color: hsl(10, 43%, 83%);
+  color: #fff;
+}
+
+.fa-file-pdf {
+  font-size: 32px;
+}
+
+.resume {
+  position: relative;
+  display: block;
+  margin: 10px 0;
+  border: 1px solid #e6c7c1;
+  border-radius: 50%;
+  background-color: #fff;
+  width: 60px;
+  height: 60px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 19px;
+  transition: all 0.2s;
+}
+
+.resume:hover{
+  background-color: #e6c7c1;
+  color: #fff;
+}
+
+.fa-user {
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.gotop {
+  position: relative;
+  display: block;
+  margin: 10px 0;
+  border: 1px solid #e6c7c1;
+  border-radius: 50%;
+  background-color: #e6c7c1;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 8px;
+  transition: all 0.2s;
+}
+
+.fa-chevron-up {
+  font-size: 40px;
+}
+
+.gotop:hover{
+  background-color: transparent;
+  color: #000;
+}
 
 /* ========================= about ========================= */
 .about {
@@ -453,15 +575,6 @@ h2 {
   height: 500px;
   background-color: #e3eaf1;
 }
-
-/* ========================= contact ========================= */
-.contact {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 500px;
-}
-
 
 
 /* ========================= footer ========================= */
