@@ -93,7 +93,6 @@ h2 {
   background: url('../images') no-repeat center;
   background-size: cover;
   text-align: center;
-  border: 1px solid pink;
   padding: 40px 0;
 }
 
@@ -101,6 +100,7 @@ h2 {
 .gnb {
   position: relative;
   display: inline-block;
+  font-size: 0;
 }
 
 .gnb>li {
@@ -111,36 +111,74 @@ h2 {
   margin: 0 10px;
 }
 
-.gnb>li>a {
+.gnb-button {
+  position: relative;
   display: block;
   line-height: 80px;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
-  border: 1px solid blue;
+  margin-left: 30px;
 }
 
-.gnb>li>a:hover {
-  color: #bcc7f1;
+.gnb-buttonL::after:hover {
+  content: '';
+  position: absolute;
+  bottom: 15px;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #d36853;
+  transition: all 0.3s;
 }
+
+.gnb-button:hover {
+  font-weight: 700;
+  font-size: 20px;
+  color: #d36853;
+}
+
+.portfolio-bt .gnb-button-active {
+  font-weight: 700;
+  font-size: 20px;
+  color: #d36853;
+}
+
+
+
+
+
 
 /* ========================= home ========================= */
 .home {
   position: relative;
   display: block;
   height: 100vh;
-  margin-bottom: 120px;
-  background-color: #fff6f1;
+  background-color: #e6c7c1;
 }
 
 /* ========================= gotop ========================= */
 .button-list {
   position: fixed;
   bottom: 15px;
-  right: 10px;
+  right: 30px;
   display: block;
   z-index: 99;
+  visibility: hidden;
 }
+
+.button-list-fix {
+  position: absolute;
+  bottom: 15px;
+  right: 30px;
+}
+
+
+.button-list-show {
+  visibility: visible !important;
+}
+
+/* contact */
 
 .contact {
   position: relative;
@@ -169,19 +207,36 @@ h2 {
   right: 80px;
 }
 
-.contact-list .fa-comments {
-  font-size: 50px;
-  color: rgb(235, 227, 14);
+.contact-list .kakao-pic{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.contact-list .kakao-pic:hover {
+  transform: scale(1.1);
 }
 
 .contact-list .cont-git {
-  font-size: 50px;
-  margin: 20px 0;
+  font-size: 46px;
+  margin: 20px 0 20px 3px;
+  transition: all 0.3s;
 }
 
-.contact-list .fa-envelope {
-  font-size: 50px;
-  color: rgb(216, 44, 73);
+.contact-list .cont-git:hover {
+  transform: scale(1.1);
+}
+
+.contact-list .email-pic {
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s;
+}
+
+.contact-list .email-pic:hover {
+  transform: scale(1.1);
 }
 
 .pdf {
@@ -256,7 +311,6 @@ h2 {
 }
 
 .gotop:hover{
-  background-color: transparent;
   color: #000;
 }
 
@@ -296,7 +350,8 @@ h2 {
   width: 100%;
   height: 870px;
   margin-bottom: 120px;
-  background-color: hsl(228, 72%, 90%, 0.4);
+  background: url('../images/skill-bcc.jpg') no-repeat center;
+  background-size: cover;
 }
 
 .skill-list {
@@ -416,11 +471,10 @@ h2 {
   margin: 25px 25px;
   background-color: #fff;
   box-shadow: 1px 1px 6px #e6c7c1;
-  /* border-radius: 40px 80px / 80px 40px; */
-  border-radius: 7px;
+  border-radius: 40px 80px / 80px 40px;
+  /* border-radius: 7px; */
   overflow: hidden;
   transition: all 0.6s;
-  /* border:3px solid red; */
 }
 
 .portfolio-content:hover {
@@ -573,7 +627,6 @@ h2 {
   display: block;
   width: 100%;
   height: 500px;
-  background-color: #e3eaf1;
 }
 
 
@@ -583,11 +636,12 @@ h2 {
   display: block;
   width: 100%;
   height: 70px;
-  background-color: #e3eaf1;
+  background-color: #e6c7c1;
 }
 
 .footer .inner {
   position: relative;
   display: block;
   padding-top: 25px;
+  font-weight: 500;
 }

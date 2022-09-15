@@ -90,19 +90,19 @@
       <div class="inner">
         <span class="logo">로고</span>
         <ul class="gnb">
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#skill">SKILL</a></li>
-          <li><a href="#possibility">POSSIBILITY</a></li>
-          <li><a href="#portfolio">PORTFOLIO</a></li>
-          <li><a href="#life">LIFE</a></li>
+          <li><a href="#" class="gnb-button">Home</a></li>
+          <li><a href="#about" class="gnb-button">ABOUT</a></li>
+          <li><a href="#possibility" class="gnb-button">POSSIBILITY</a></li>
+          <li><a href="#skill" class="gnb-button">SKILL</a></li>
+          <li><a href="#portfolio" class="gnb-button">PORTFOLIO</a></li>
+          <li><a href="#life" class="gnb-button">LIFE</a></li>
         </ul>
       </div>
     </header>
 
     <!-- home -->
     <section class="home" id="home">
-      <div data-aos="fade-up" data-aos-duration="1500">
+      <div data-aos="fade-down" data-aos-duration="1500">
         <h2>HOME</h2>
       </div>
     </section>
@@ -112,12 +112,14 @@
       <ul>
         <li>
           <a href="#" class="contact"><i class="fas fa-link"></i></a>
-            <ul class="contact-list">
-              <li><a href="#" target="_blank"><i class="fas fa-comments"></i></a></li>
-              <li><a href="https://github.com/johyomin" target="_blank"><i class="fab fa-github cont-git"></i></a></li>
-              <li><a href="mailto:scnly222@naver.com"><i class="far fa-envelope"></i></a></li>
-            </ul>
-          
+          <ul class="contact-list">
+            <li><a href="https://open.kakao.com/o/scKd25Ae" target="_blank">
+                <img src="images/kakao.ico" alt="kakaotalk" class="kakao-pic">
+              </a></li>
+            <li><a href="https://github.com/johyomin" target="_blank"><i class="fab fa-github cont-git"></i></a></li>
+            <li><a href="mailto:scnly222@naver.com"><img src="images/email.png" alt="email" class="email-pic"></a></li>
+          </ul>
+
         </li>
         <li><a href="#" class="pdf"><i class="far fa-file-pdf"></i></a></li>
         <li><a href="#" class="resume">이력서<i class="fas fa-user"></i></a></li>
@@ -128,7 +130,7 @@
     <!-- about -->
     <section class="about" id="about">
       <div class="inner">
-        <div data-aos="fade-up" data-aos-duration="1500">
+        <div data-aos="fade-down" data-aos-duration="1500">
           <h2>ABOUT</h2>
         </div>
         <!-- branding  설명추가 -->
@@ -138,7 +140,7 @@
     <!-- possibility -->
     <section class="possibility" id="possibility">
       <div class="inner">
-        <div data-aos="fade-up" data-aos-duration="1500">
+        <div data-aos="fade-down" data-aos-duration="1500">
           <h2>POSSIBILITY</h2>
         </div>
         <div class="chart">
@@ -150,7 +152,7 @@
     <!-- skill -->
     <section class="skill" id="skill">
       <div class="inner">
-        <div data-aos="fade-up" data-aos-duration="1500">
+        <div data-aos="fade-down" data-aos-duration="1500">
           <h2>SKILL</h2>
         </div>
         <ul class="skill-list">
@@ -163,14 +165,14 @@
           <li id="pro_js" class="skill-box">JS
             <img src="images/js.png" alt="js" class="skill-pic">
           </li>
+          <li id="pro_git" class="skill-box">Github
+            <img src="images/git.png" alt="git-hub" class="skill-pic">
+          </li>
           <li id="pro_jquery" class="skill-box">J-query
             <img src="images/jquery.gif" alt="jquery" class="skill-pic">
           </li>
           <li id="pro_vue" class="skill-box">Vue.js
             <img src="images/Vue.png" alt="vue.js" class="skill-pic">
-          </li>
-          <li id="pro_git" class="skill-box">Github
-            <img src="images/git.png" alt="git-hub" class="skill-pic">
           </li>
           <li id="pro_flex" class="skill-box">FLEX
             <i class="fas fa-th-large"></i>
@@ -185,9 +187,8 @@
     <!-- portfolio -->
     <section class="portfolio" id="portfolio">
       <div class="inner">
-        <div data-aos="fade-up" data-aos-duration="1500">
+        <div data-aos="fade-down" data-aos-duration="1000">
           <h2>PORTFOLIO</h2>
-        </div>
         <div class="portfolio-wrap">
           <ul class="portfolio-menu">
             <li class="portfolio-bt"><button data-cate="all">All</button></li>
@@ -196,8 +197,9 @@
             <li class="portfolio-bt"><button data-cate="vue">Vue Clone</button></li>
             <li class="portfolio-bt"><button data-cate="project">Vue Project</button></li>
           </ul>
-
+</div>
           <div class="portfolio-cate">
+            <div data-aos="fade-up" data-aos-duration="2000">
             <ul class="portfolio-list clearfix">
               <!-- k-water -->
               <li class="portfolio-content" data-cate="study">
@@ -219,15 +221,16 @@
                   </a>
                 </div>
               </li>
-
               <!-- korail -->
               <li class="portfolio-content" data-cate="personal">
                 <a href="https://qwertymi.github.io/korail/" target="_blank" class="portfolio-pic">
                   <img src="images/korail.png" alt="korail thumbnail">
                 </a>
-                <span class="pc-web">웹사이트</span><span class="responsive">반응형</span><span class="with-git">Git 협업</span>
+                <span class="pc-web">웹사이트</span><span class="responsive">반응형</span><span class="with-git">Git
+                  협업</span>
                 <h5>Korail</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 7일 <b>[ 반응형 작업중 ]</b></span>
+                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 7일 <b>[ 반응형 작업중
+                    ]</b></span>
                 <div class="portfolio-text-wrap">
                   <a href="https://qwertymi.github.io/korail/" target="_blank" class="portfolio-text">
                     <i class="fas fa-laptop-code"></i><span class="icon-text">work</span>
@@ -240,7 +243,6 @@
                   </a>
                 </div>
               </li>
-
               <!-- winia -->
               <li class="portfolio-content" data-cate="personal">
                 <a href="https://johyomin.github.io/winia/" target="_blank" class="portfolio-pic">
@@ -513,7 +515,9 @@
               <!-- TodoApp (vue.js/php/mysql) -->
               <!-- TodoApp (vue.js/RESTFull(jsonServer)) -->
 
+
             </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -523,7 +527,7 @@
     <!-- life -->
     <section class="life" id="life">
       <div class="inner">
-        <div data-aos="fade-up" data-aos-duration="1500">
+        <div data-aos="fade-down" data-aos-duration="1500">
           <h2>LIFE</h2>
         </div>
       </div>

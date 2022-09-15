@@ -1,22 +1,89 @@
 window.onload = function () {
 
- /* ========================= possibility ========================= */
 
-new Chart(document.getElementById("radar-chart"), {
-  type: 'radar',
-  data: {
-    labels: ["책임감", "성실성", "도전정신", "응용력", "소통능력"],
-    datasets: [{
-      label: "",
-      fill: true,
-      backgroundColor: "hsl(10, 43%, 90%, 60%)",
-      borderColor: "#e6c7c1",
-      data: [95, 95, 80, 75, 100]
-    }]
-  },
+  /* ========================= header ========================= */
+  let gnbButton = $('.gnb-button');
+  gnbButton.eq(0).find('a').addClass('gnb-button-active');
+  $.each(gnbButton, function (index, item) {
+    $(this).find('a').click(function (event) {
+      //  일단 모든 클래스 제거
+      gnbButton.find('a').removeClass('gnb-button-active');
+      // 클릭된 대상만 클래스 추가
+      $(this).addClass('gnb-button-active');
+    });
+  });
 
+
+
+  /* ========================= gotop ========================= */
+  let go_top = $('.gotop');
+  let buttonList = $('.button-list');
+  go_top.click(function () {
+    $('html').animate({
+      scrollTop: 0
+    }, 1000);
+  });
+
+
+  new Waypoint({
+    element: $('.button-list'), // html 의 기준이 어딘가?
+    handler: function (direction) {
+        if (direction == 'down') {
+            // console.log('down------------------')
+            buttonList.addClass('button-list-fix');
+        } else if (direction == 'up') {
+            // console.log('up***********')
+            buttonList.removeClass('button-list-fix');
+        }
+    },
+    offset: '100%'
 });
-  
+
+new Waypoint({
+    element: $('.about'), // html 의 기준이 어딘가?
+    handler: function (direction) {
+        if (direction == 'down') {
+          buttonList.addClass('button-list-show ');
+        } else if (direction == 'up') {
+          buttonList.removeClass('button-list-show ');
+        }
+    },
+    offset: '20%'
+});
+
+
+  /* ========================= contact ========================= */
+  let contact = $('.contact');
+  let contactList = $('.contact-list');
+  contact.click(function (event) {
+    event.preventDefault();
+    contactList.show();
+  });
+
+  // document.click(function (event) {
+  //   contactList.hide();
+  // });
+
+
+
+
+  /* ========================= possibility ========================= */
+
+  new Chart(document.getElementById("radar-chart"), {
+    type: 'radar',
+    data: {
+      labels: ["책임감", "성실성", "도전정신", "응용력", "소통능력"],
+      datasets: [{
+        label: "",
+        fill: true,
+        backgroundColor: "hsl(10, 43%, 90%, 60%)",
+        borderColor: "#e6c7c1",
+        data: [95, 95, 80, 75, 100]
+      }]
+    },
+
+  });
+
 
 
 
@@ -35,7 +102,7 @@ new Chart(document.getElementById("radar-chart"), {
         autoStyleContainer: true
       },
       from: {
-        color: '#fff',
+        color: _endColor,
         width: 1
       },
       to: {
@@ -62,14 +129,14 @@ new Chart(document.getElementById("radar-chart"), {
     return bar;
   }
 
-  let bar_html = makeCircle(pro_html, '#d1baf35e');
-  let bar_css = makeCircle(pro_css, '#d1baf35e');
-  let bar_js = makeCircle(pro_js, '#d1baf35e');
-  let bar_jquery = makeCircle(pro_jquery, '#d1baf35e');
-  let bar_vue = makeCircle(pro_vue, '#d1baf35e');
-  let bar_git = makeCircle(pro_git, '#d1baf35e');
-  let bar_flex = makeCircle(pro_flex, '#d1baf35e');
-  let bar_scss = makeCircle(pro_scss, '#d1baf35e');
+  let bar_html = makeCircle(pro_html, '#ff6347');
+  let bar_css = makeCircle(pro_css, '#4169e1');
+  let bar_js = makeCircle(pro_js, '#ffd700');
+  let bar_git = makeCircle(pro_git, '#000');
+  let bar_jquery = makeCircle(pro_jquery, '#191970');
+  let bar_vue = makeCircle(pro_vue, '#3cb371');
+  let bar_flex = makeCircle(pro_flex, '#666');
+  let bar_scss = makeCircle(pro_scss, '#c87ec8');
 
   new Waypoint({
     element: $('.skill'),
@@ -120,8 +187,6 @@ new Chart(document.getElementById("radar-chart"), {
       }
     });
   }
-
-
 
 
 
