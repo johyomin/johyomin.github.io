@@ -1,5 +1,7 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
 
 * {
   margin: 0;
@@ -23,7 +25,41 @@ img {
 }
 
 html {
+  scrollbar-3dLight-Color: #efefef;
+  scrollbar-arrow-color: #dfdfdf;
+  scrollbar-base-color: #efefef;
+  scrollbar-Face-Color: #dfdfdf;
+  scrollbar-Track-Color: #efefef;
+  scrollbar-DarkShadow-Color: #efefef;
+  scrollbar-Highlight-Color: #efefef;
+  scrollbar-Shadow-Color: #efefef;
+  -ms-overflow-style: none;
+  overflow: auto;
+}
+
+/* SCROLL */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* 스크롤바의 width */
+::-webkit-scrollbar-track {
+  background-color: #619ab4;
+}
+
+/* 스크롤바의 전체 배경색 */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #1697bf, #62b7ac);
+}
+
+/* 스크롤바 색 */
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+html {
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -31,9 +67,11 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.4;
-  letter-spacing: -0.64px;
+  letter-spacing: -0.5px;
   color: #444;
 }
+
+
 
 /* 공통요소 */
 .clearfix::after {
@@ -48,7 +86,10 @@ body {
   position: relative;
   display: block;
   max-width: 1200px;
+  height: calc(100% - 80px);
   margin: 0 auto;
+  /* padding-top: 80px; */
+  /* border: 1px solid red; */
 
 }
 
@@ -58,111 +99,17 @@ body {
 }
 
 h2 {
+  font-family: 'Sriracha','Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo', sans-serif;
   position: relative;
   text-align: center;
   font-size: 50px;
   font-weight: 700;
   text-transform: uppercase;
-  padding-top: 45px;
-  margin-bottom: 30px;
+  letter-spacing: 2px;
+  /* padding-top: 45px; */
+  /* margin-bottom: 30px; */
 }
 
-/* header */
-.header {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 80px;
-  background-color: #fff;
-  z-index: 999;
-  text-align: center;
-  box-shadow: 1px 1px 6px #e6c7c1;
-}
-
-.header .inner {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-}
-
-.logo {
-  position: relative;
-  display: block;
-  width: 50px;
-  height: 50px;
-  background: url('../images/favicon.png') no-repeat center;
-  background-size: contain;
-  text-align: center;
-  padding: 40px 0;
-}
-
-/* header-gnb */
-.gnb {
-  position: relative;
-  display: inline-block;
-  font-size: 0;
-}
-
-.gnb>li {
-  position: relative;
-  display: inline-block;
-  white-space: nowrap;
-  font-size: 0;
-  margin: 0 10px;
-}
-
-.gnb-button {
-  position: relative;
-  display: block;
-  line-height: 80px;
-  text-transform: uppercase;
-  font-size: 18px;
-  font-weight: 500;
-  margin-left: 30px;
-}
-
-.gnb-button::after {
-  content: '';
-  position: absolute;
-  bottom: 15px;
-  display: block;
-  width: 0%;
-  height: 2px;
-  background-color: #d36853;
-  transition: all 0.3s;
-}
-
-.gnb-button:hover {
-  font-weight: 700;
-  font-size: 20px;
-  color: #d36853;
-}
-
-.gnb-button:hover .gnb-button::after {
-  width: 100%;
-}
-
-
-.gnb-button-active {
-  font-weight: 700;
-  font-size: 20px;
-  color: #d36853;
-  width: 100%;
-}
-
-
-
-
-
-
-/* ========================= home ========================= */
-.home {
-  position: relative;
-  display: block;
-  height: 100vh;
-  background-color: #e6c7c1;
-}
 
 /* ========================= gotop ========================= */
 .button-list {
@@ -171,7 +118,9 @@ h2 {
   right: 30px;
   display: block;
   z-index: 9999;
-  visibility: hidden;
+  display: none;
+  
+  /* visibility: hidden; */
 }
 
 .button-list-fix {
@@ -212,7 +161,10 @@ h2 {
   position: absolute;
   bottom: 55%;
   right: 80px;
+  display: none;
+  transition: all 0.2s;
 }
+
 
 .contact-list .kakao-pic{
   width: 50px;
@@ -321,38 +273,160 @@ h2 {
   color: #000;
 }
 
+/* 공통요소 */
+.line-bar {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 43px;
+  background: url('../images/line.png') no-repeat center;
+
+}
+
+.section-title {
+  position: relative;
+  display: block;
+  /* padding-top: 50px; */
+}
+
+/* header */
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  z-index: 999;
+  text-align: center;
+  box-shadow: 1px 1px 6px #e6c7c1;
+}
+
+.header .inner { 
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0;
+}
+
+.logo {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: url('../images/favicon.png') no-repeat center;
+  background-size: contain;
+  text-align: center;
+  padding: 40px 0;
+}
+
+/* header-gnb */
+.gnb {
+  position: relative;
+  display: inline-block;
+  font-size: 0;
+}
+
+.gnb>li {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 0;
+  margin: 0 10px;
+}
+
+.gnb-button {
+  position: relative;
+  display: block;
+  line-height: 80px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 30px;
+  transition: all 0.7s;
+}
+
+.gnb-button::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 25px;
+  display: block;
+  width: 120%;
+  height: 30px;
+  background: url('../images/skill-bcc.jpg') no-repeat center;
+  border-radius: 40px 80px / 80px 40px;
+  background-size: cover;
+  transition: all 0.7s;
+  z-index: -1;
+  opacity: 0;
+}
+
+.gnb-button:hover {
+  /* font-weight: 700; */
+  /* font-size: 20px; */
+  color: #d36853;
+}
+
+.gnb-button:hover::before {  
+  opacity: 1;
+  /* width: 100%; */
+}
+
+
+.gnb-button-active {
+  /* font-weight: 700; */
+  /* font-size: 20px; */
+  color: #d36853;
+  /* width: 100%; */
+}
+.gnb-button-active::before {
+  opacity: 1;
+}
+
+/* ========================= home ========================= */
+.home {
+  position: relative;
+  display: block;
+  height: 100vh;
+  /* background-color: #e6c7c1; */
+
+  margin-bottom: 20px;
+}
+.home-wrap {
+  position: relative;
+  display: block;
+  height: 100%;
+}
+
+.home-txt {
+  position: absolute;
+  top: 30%;
+  left: 0%;
+}
+
 /* ========================= about ========================= */
 .about {
   position: relative;
   display: block;
   height: 800px;
-  margin-bottom: 120px;
+  margin-bottom: 20px;
 }
-
-.about .inner {
-  height: 100%;
-}
-
 /* ========================= possibility ========================= */
 .possibility {
   position: relative;
   display: block;
   width: 100%;
   height: 1000px;
-  margin-bottom: 120px;
+  margin-bottom: 20px;
 }
 
-.possibility .inner {
-  position: relative;
-  display: block;
-}
 
 .chart {
   position: relative;
   display: block;
-  margin: 150px auto;
-  width: 600px;
-  height:600px;
+  margin: 120px auto;
+  width: 550px;
+  height:550px;
 }
 
 .pos-text1 {
@@ -374,7 +448,7 @@ h2 {
 
 .pos-text3 {
   position: absolute;
-  bottom: 5%;
+  bottom: 8%;
   right: 0%;
   width: 360px;
   background: url('../images//posibility-bcc.jpg') no-repeat center;
@@ -384,7 +458,7 @@ h2 {
 
 .pos-text4 {
   position: absolute;
-  bottom: 5%;
+  bottom: 8%;
   left: 0%;
   width: 400px;
 }
@@ -406,9 +480,7 @@ h2 {
   display: block;
   width: 100%;
   height: 870px;
-  margin-bottom: 120px;
-  background: url('../images/skill-bcc.jpg') no-repeat center;
-  background-size: cover;
+  margin-bottom: 20px;
 }
 
 .skill-list {
@@ -428,12 +500,14 @@ h2 {
 
 /* skill-icon */
 .skill-pic {
-  position: relative;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
 }
-
 
 
 
@@ -441,7 +515,7 @@ h2 {
 .portfolio {
   position: relative;
   display: block;
-  margin-bottom: 120px;
+  margin-bottom: 20px;
 }
 
 .portfolio b {
@@ -472,40 +546,43 @@ h2 {
   margin: 0 30px;
   padding: 10px 20px;
   border: 0;
-  font-size: 18px;
+  font-size: 19px;
   background-color: #fff;
-  color: #666;
+  color: #999;
+  font-weight: 600;
+
+  transition: all 0.9s;
 
   /* button animation */
-  --b: 3px;
+  /* --b: 3px;
   --c: #d36853;
 
   color: #999;
-  padding-block: var(--b);
+  padding-block: var(--b); */
 
-  background:
+  /* background:
 
     linear-gradient(var(--c) 50%, #000 0) 0% calc(100% - var(--_p, 0%))/100% 200%,
     linear-gradient(var(--c) 0 0) 0% var(--_p, 0%)/var(--_p, 0%) var(--b) no-repeat;
   -webkit-background-clip: text, padding-box;
   background-clip: text, padding-box;
 
-  transition: .3s var(--_s, 0s) linear, background-size .3s calc(.3s - var(--_s, 0s));
+  transition: .3s var(--_s, 0s) linear, background-size .3s calc(.3s - var(--_s, 0s)); */
 }
 
 .portfolio-bt button:hover {
-  font-weight: 600;
-  font-size: 20px;
+  /* font-weight: 600; */
+  /* font-size: 20px; */
   color: #d36853;
-  --_p: 100%;
-  --_s: .2s;
+  /* --_p: 100%;
+  --_s: .2s; */
 }
 
 .portfolio-bt .portfolio-menu-active {
-  font-weight: 600;
-  font-size: 20px;
+  /* font-weight: 600; */
+  /* font-size: 20px; */
   color: #d36853;
-  --_p: 100%;
+  /* --_p: 100%; */
 }
 
 
@@ -528,14 +605,14 @@ h2 {
   margin: 25px 25px;
   background-color: #fff;
   box-shadow: 1px 1px 6px #e6c7c1;
-  border-radius: 40px 80px / 80px 40px;
-  /* border-radius: 7px; */
+  /* border-radius: 40px 80px / 80px 40px; */
+  border-radius: 15px;
   overflow: hidden;
-  transition: all 0.6s;
+  transition: all 0.9s ease;
 }
 
 .portfolio-content:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   z-index: 9;
 }
 
@@ -689,6 +766,7 @@ h2 {
 
 /* ========================= footer ========================= */
 .footer {
+  font-family: 'Sriracha','Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo', sans-serif;
   position: relative;
   display: block;
   width: 100%;

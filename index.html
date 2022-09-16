@@ -65,6 +65,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
     integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollToPlugin.min.js"
+    integrity="sha512-9DDJWj17gkdeGHU0Zr76wc9jY2g0IwE7ZCIxakVYKyzlTiOWZDZJOTaVgAzNo+LB7+EbGXxwCXkOP+a5rgkuqQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- lightbox -->
   <link rel="stylesheet" type="text/css" href="js/lightbox2/css/lightbox.css">
@@ -83,30 +86,7 @@
 </head>
 
 <body>
-  <div class="wrap">
-
-    <!-- header -->
-    <header class="header" id="header">
-      <div class="inner">
-        <a href="index.html" class="logo"></a>
-        <ul class="gnb">
-          <li><a href="#" class="gnb-button">Home</a></li>
-          <li><a href="#about" class="gnb-button">ABOUT</a></li>
-          <li><a href="#possibility" class="gnb-button">POSSIBILITY</a></li>
-          <li><a href="#skill" class="gnb-button">SKILL</a></li>
-          <li><a href="#portfolio" class="gnb-button">PORTFOLIO</a></li>
-          <li><a href="#life" class="gnb-button">LIFE</a></li>
-        </ul>
-      </div>
-    </header>
-
-    <!-- home -->
-    <section class="home" id="home">
-      <div data-aos="fade-down" data-aos-duration="1500">
-        <h2>HOME</h2>
-      </div>
-    </section>
-
+  
     <!-- gotop -->
     <div class="button-list">
       <ul>
@@ -127,440 +107,485 @@
       </ul>
     </div>
 
+    
+  <div class="wrap">
+
+    <!-- header -->
+    <header class="header" id="header">
+      <div class="inner">
+        <a href="index.html" class="logo"></a>
+        <ul class="gnb">
+          <li><a href="#home" class="gnb-button">Home</a></li>
+          <li><a href="#about" class="gnb-button">ABOUT</a></li>
+          <li><a href="#possibility" class="gnb-button">POSSIBILITY</a></li>
+          <li><a href="#skill" class="gnb-button">SKILL</a></li>
+          <li><a href="#portfolio" class="gnb-button">PORTFOLIO</a></li>
+          <li><a href="#life" class="gnb-button">LIFE</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- home -->
+    <section class="home" id="home">
+      <div class="inner">
+        <div data-aos="fade-down" data-aos-duration="1500" class="home-wrap">
+          <h2></h2>
+          <img src="images/home_txt.png" alt="" class="home-txt">
+        </div>
+      </div>
+      <div class="line-bar"></div>
+    </section>
+
     <!-- about -->
     <section class="about" id="about">
       <div class="inner">
-        <div data-aos="fade-down" data-aos-duration="1500">
+        <div data-aos="fade-down" data-aos-duration="1500" class="section-title">
           <h2>ABOUT</h2>
         </div>
-          <div class="profile">
-            <img src="images/favicon.png" alt="johyomin">
+        <div class="profile">
+          <img src="images/favicon.png" alt="johyomin">
           <ul>
             <li class="birth"></li>
             <li class="location"></li>
             <li class="e-mail"></li>
           </ul>
-          </div>
-          <div class="profile-content">
-            <h4>Front-end</h4>
-            <h5>Jo Hyo Min</h5>
-            <p>mbti 및 내소개</p>
-            <p>학력</p>
-            <p>경력</p>
-          </div>
+        </div>
+        <div class="profile-content">
+          <h4>Front-end</h4>
+          <h5>Jo Hyo Min</h5>
+          <p>mbti 및 내소개</p>
+          <p>학력</p>
+          <p>경력</p>
+        </div>
       </div>
+
+      <div class="line-bar"></div>
     </section>
 
     <!-- possibility -->
     <section class="possibility" id="possibility">
       <div class="inner">
-        <div data-aos="fade-down" data-aos-duration="1500">
+        <div data-aos="fade-down" data-aos-duration="1500" class="section-title">
           <h2>POSSIBILITY</h2>
         </div>
         <div class="pos-content">
           <ul>
-            <div data-aos="fade-up" data-aos-duration="1500"  class="pos-text1">
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit cum atque expedita animi illum fugit magnam officiis enim repellat perferendis accusamus iure vero laborum voluptatum explicabo, architecto hic reiciendis labore!</li>
-          </div>
-          <div data-aos="fade-left" data-aos-duration="1500" class="pos-text2">
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptas, autem quas doloremque perspiciatis id sequi! Asperiores nesciunt deleniti voluptate fuga aliquid repudiandae dolor facilis repellat, labore ipsum, possimus quos?</li>
+            <div data-aos="fade-up" data-aos-duration="1500" class="pos-text1">
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit cum atque expedita animi illum fugit
+                magnam officiis enim repellat perferendis accusamus iure vero laborum voluptatum explicabo, architecto
+                hic reiciendis labore!</li>
+            </div>
+            <div data-aos="fade-left" data-aos-duration="1500" class="pos-text2">
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptas, autem quas doloremque
+                perspiciatis id sequi! Asperiores nesciunt deleniti voluptate fuga aliquid repudiandae dolor facilis
+                repellat, labore ipsum, possimus quos?</li>
             </div>
             <div data-aos="fade-left" data-aos-duration="1500" class="pos-text3">
-            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente esse nihil iure maxime, quia deserunt, provident iste sunt delectus, dolore illo placeat doloribus distinctio fugit. Recusandae tenetur necessitatibus iure facere.</li>
+              <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente esse nihil iure maxime, quia
+                deserunt, provident iste sunt delectus, dolore illo placeat doloribus distinctio fugit. Recusandae
+                tenetur necessitatibus iure facere.</li>
             </div>
             <div data-aos="fade-right" data-aos-duration="1500" class="pos-text4">
-            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium excepturi doloribus a, illum ad, itaque hic deleniti, ipsam iusto blanditiis recusandae consequuntur mollitia iure dolor iste dicta suscipit impedit in.</li>
+              <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium excepturi doloribus a, illum ad,
+                itaque hic deleniti, ipsam iusto blanditiis recusandae consequuntur mollitia iure dolor iste dicta
+                suscipit impedit in.</li>
             </div>
             <div data-aos="fade-right" data-aos-duration="1500" class="pos-text5">
-            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam dolore magnam necessitatibus assumenda voluptate autem cupiditate labore iusto quas eligendi? Facere expedita nihil sequi neque quia illo minima explicabo enim!</li>
-          </div>
+              <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam dolore magnam necessitatibus
+                assumenda voluptate autem cupiditate labore iusto quas eligendi? Facere expedita nihil sequi neque quia
+                illo minima explicabo enim!</li>
+            </div>
           </ul>
         </div>
         <div class="chart">
-        <canvas id="radar-chart" width="250" height="250"></canvas>
+          <canvas id="radar-chart"></canvas>
+          
+        </div>
       </div>
-      </div>
+      <div class="line-bar"></div>
     </section>
 
     <!-- skill -->
     <section class="skill" id="skill">
       <div class="inner">
-        <div data-aos="fade-down" data-aos-duration="1500">
+        <div data-aos="fade-down" data-aos-duration="1500" class="section-title">
           <h2>SKILL</h2>
         </div>
         <ul class="skill-list">
-          <li id="pro_html" class="skill-box">HTML
+          <li id="pro_html" class="skill-box">
             <img src="images/html.png" alt="html" class="skill-pic">
           </li>
-          <li id="pro_css" class="skill-box">CSS
+          <li id="pro_css" class="skill-box">
             <img src="images/css.png" alt="css" class="skill-pic">
           </li>
-          <li id="pro_js" class="skill-box">JS
+          <li id="pro_js" class="skill-box">
             <img src="images/js.png" alt="js" class="skill-pic">
           </li>
-          <li id="pro_git" class="skill-box">Github
+          <li id="pro_git" class="skill-box">
             <img src="images/git.png" alt="git-hub" class="skill-pic">
           </li>
-          <li id="pro_jquery" class="skill-box">J-query
+          <li id="pro_jquery" class="skill-box">
             <img src="images/jquery.gif" alt="jquery" class="skill-pic">
           </li>
-          <li id="pro_vue" class="skill-box">Vue.js
+          <li id="pro_vue" class="skill-box">
             <img src="images/Vue.png" alt="vue.js" class="skill-pic">
           </li>
-          <li id="pro_flex" class="skill-box">FLEX
-            <i class="fas fa-th-large"></i>
+          <li id="pro_figma" class="skill-box">
+            <img src="images/figma.png" alt="figma" class="skill-pic">
           </li>
-          <li id="pro_scss" class="skill-box">SCSS
+          <li id="pro_scss" class="skill-box">
             <img src="images/sass.png" alt="scss" class="skill-pic">
           </li>
         </ul>
       </div>
+      <div class="line-bar"></div>
     </section>
 
     <!-- portfolio -->
     <section class="portfolio" id="portfolio">
       <div class="inner">
-        <div data-aos="fade-down" data-aos-duration="1000">
+        <div data-aos="fade-down" data-aos-duration="1000" class="section-title">
           <h2>PORTFOLIO</h2>
-        <div class="portfolio-wrap">
-          <ul class="portfolio-menu">
-            <li class="portfolio-bt"><button data-cate="all">All</button></li>
-            <li class="portfolio-bt"><button data-cate="study">Study Clone</button></li>
-            <li class="portfolio-bt"><button data-cate="personal">Personal Clone</button></li>
-            <li class="portfolio-bt"><button data-cate="vue">Vue Clone</button></li>
-            <li class="portfolio-bt"><button data-cate="project">Vue Project</button></li>
-          </ul>
-</div>
+          <div class="portfolio-wrap">
+            <ul class="portfolio-menu">
+              <li class="portfolio-bt"><button data-cate="all">All</button></li>
+              <li class="portfolio-bt"><button data-cate="study">Study Clone</button></li>
+              <li class="portfolio-bt"><button data-cate="personal">Personal Clone</button></li>
+              <li class="portfolio-bt"><button data-cate="vue">Vue Clone</button></li>
+              <li class="portfolio-bt"><button data-cate="project">Vue Project</button></li>
+            </ul>
+          </div>
           <div class="portfolio-cate">
             <div data-aos="fade-up" data-aos-duration="2000">
-            <ul class="portfolio-list clearfix">
-              <!-- k-water -->
-              <li class="portfolio-content" data-cate="study">
-                <a href="https://johyomin.github.io/K-water/" target="_blank" class="portfolio-pic">
-                  <img src="images/k-water.png" alt="k-water thumbnail">
-                </a>
-                <span class="pc-web">웹사이트</span><span class="responsive">반응형</span>
-                <h5>K-Water</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 20일</span>
-                <div class="portfolio-text-wrap">
-                  <a href="https://johyomin.github.io/K-water/" target="_blank" class="portfolio-text">
-                    <i class="fas fa-laptop-code"></i><span class="icon-text">work</span>
+              <ul class="portfolio-list clearfix">
+                <!-- k-water -->
+                <li class="portfolio-content" data-cate="study">
+                  <a href="https://johyomin.github.io/K-water/" target="_blank" class="portfolio-pic">
+                    <img src="images/k-water.png" alt="k-water thumbnail">
                   </a>
-                  <a href="https://github.com/johyomin/K-water" target="_blank" class="portfolio-text">
-                    <i class="fab fa-github"></i><span class="icon-text">github</span>
+                  <span class="pc-web">웹사이트</span><span class="responsive">반응형</span>
+                  <h5>K-Water</h5>
+                  <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 20일</span>
+                  <div class="portfolio-text-wrap">
+                    <a href="https://johyomin.github.io/K-water/" target="_blank" class="portfolio-text">
+                      <i class="fas fa-laptop-code"></i><span class="icon-text">work</span>
+                    </a>
+                    <a href="https://github.com/johyomin/K-water" target="_blank" class="portfolio-text">
+                      <i class="fab fa-github"></i><span class="icon-text">github</span>
+                    </a>
+                    <a href="https://www.kwater.or.kr/main.do?s_mid=1" target="_blank" class="portfolio-text">
+                      <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
+                    </a>
+                  </div>
+                </li>
+                <!-- korail -->
+                <li class="portfolio-content" data-cate="personal">
+                  <a href="https://qwertymi.github.io/korail/" target="_blank" class="portfolio-pic">
+                    <img src="images/korail.png" alt="korail thumbnail">
                   </a>
-                  <a href="https://www.kwater.or.kr/main.do?s_mid=1" target="_blank" class="portfolio-text">
-                    <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
+                  <span class="pc-web">웹사이트</span><span class="responsive">반응형</span><span class="with-git">Git
+                    협업</span>
+                  <h5>Korail</h5>
+                  <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 7일 <b>[ 반응형 작업중
+                      ]</b></span>
+                  <div class="portfolio-text-wrap">
+                    <a href="https://qwertymi.github.io/korail/" target="_blank" class="portfolio-text">
+                      <i class="fas fa-laptop-code"></i><span class="icon-text">work</span>
+                    </a>
+                    <a href="https://github.com/qwertymi/korail" target="_blank" class="portfolio-text">
+                      <i class="fab fa-github"></i><span class="icon-text">github</span>
+                    </a>
+                    <a href="https://info.korail.com/info/index.do" target="_blank" class="portfolio-text">
+                      <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
+                    </a>
+                  </div>
+                </li>
+                <!-- winia -->
+                <li class="portfolio-content" data-cate="personal">
+                  <a href="https://johyomin.github.io/winia/" target="_blank" class="portfolio-pic">
+                    <img src="images/winia.png" alt="winia thumbnail">
                   </a>
-                </div>
-              </li>
-              <!-- korail -->
-              <li class="portfolio-content" data-cate="personal">
-                <a href="https://qwertymi.github.io/korail/" target="_blank" class="portfolio-pic">
-                  <img src="images/korail.png" alt="korail thumbnail">
-                </a>
-                <span class="pc-web">웹사이트</span><span class="responsive">반응형</span><span class="with-git">Git
-                  협업</span>
-                <h5>Korail</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 7일 <b>[ 반응형 작업중
-                    ]</b></span>
-                <div class="portfolio-text-wrap">
-                  <a href="https://qwertymi.github.io/korail/" target="_blank" class="portfolio-text">
-                    <i class="fas fa-laptop-code"></i><span class="icon-text">work</span>
-                  </a>
-                  <a href="https://github.com/qwertymi/korail" target="_blank" class="portfolio-text">
-                    <i class="fab fa-github"></i><span class="icon-text">github</span>
-                  </a>
-                  <a href="https://info.korail.com/info/index.do" target="_blank" class="portfolio-text">
-                    <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
-                  </a>
-                </div>
-              </li>
-              <!-- winia -->
-              <li class="portfolio-content" data-cate="personal">
-                <a href="https://johyomin.github.io/winia/" target="_blank" class="portfolio-pic">
-                  <img src="images/winia.png" alt="winia thumbnail">
-                </a>
-                <span class="pc-web">웹사이트</span><span class="responsive">반응형</span>
-                <h5>Winia</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 10일 <b>[ 반응형 작업중 ]</b></span>
-                <div class="portfolio-text-wrap">
-                  <a href="https://johyomin.github.io/winia/" target="_blank" class="portfolio-text">
-                    <i class="fas fa-laptop-code"></i><span class="icon-text">work</span>
-                  </a>
-                  <a href="https://github.com/johyomin/winia" target="_blank" class="portfolio-text">
-                    <i class="fab fa-github"></i><span class="icon-text">github</span>
-                  </a>
-                  <a href="https://www.winia.com/main" target="_blank" class="portfolio-text">
-                    <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
-                  </a>
-                </div>
-              </li>
+                  <span class="pc-web">웹사이트</span><span class="responsive">반응형</span>
+                  <h5>Winia</h5>
+                  <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 10일 <b>[ 반응형 작업중
+                      ]</b></span>
+                  <div class="portfolio-text-wrap">
+                    <a href="https://johyomin.github.io/winia/" target="_blank" class="portfolio-text">
+                      <i class="fas fa-laptop-code"></i><span class="icon-text">work</span>
+                    </a>
+                    <a href="https://github.com/johyomin/winia" target="_blank" class="portfolio-text">
+                      <i class="fab fa-github"></i><span class="icon-text">github</span>
+                    </a>
+                    <a href="https://www.winia.com/main" target="_blank" class="portfolio-text">
+                      <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
+                    </a>
+                  </div>
+                </li>
 
-              <!-- geojeyouth -->
-              <li class="portfolio-content" data-cate="study">
-                <a href="https://johyomin.github.io/geojeyouth/" target="_blank" class="portfolio-pic">
-                  <img src="images/geojeyouth.png" alt="geojeyouth thumbnail">
-                </a>
-                <span class="pc-web">웹사이트</span><span class="responsive">반응형</span>
-                <h5>Geojeyouth</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 12일 <b>[ 달력 작업중 ]</b></span>
-                <div class="portfolio-text-wrap">
-                  <a href="https://johyomin.github.io/geojeyouth/" target="_blank" class="portfolio-text">
-                    <i class="fas fa-laptop-code"></i><span class="icon-text">work</span>
+                <!-- geojeyouth -->
+                <li class="portfolio-content" data-cate="study">
+                  <a href="https://johyomin.github.io/geojeyouth/" target="_blank" class="portfolio-pic">
+                    <img src="images/geojeyouth.png" alt="geojeyouth thumbnail">
                   </a>
-                  <a href="https://github.com/johyomin/geojeyouth" target="_blank" class="portfolio-text">
-                    <i class="fab fa-github"></i><span class="icon-text">github</span>
-                  </a>
-                  <a href="https://geojeyouth.com/web/" target="_blank" class="portfolio-text">
-                    <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
-                  </a>
-                </div>
-              </li>
+                  <span class="pc-web">웹사이트</span><span class="responsive">반응형</span>
+                  <h5>Geojeyouth</h5>
+                  <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 12일 <b>[ 달력 작업중
+                      ]</b></span>
+                  <div class="portfolio-text-wrap">
+                    <a href="https://johyomin.github.io/geojeyouth/" target="_blank" class="portfolio-text">
+                      <i class="fas fa-laptop-code"></i><span class="icon-text">work</span>
+                    </a>
+                    <a href="https://github.com/johyomin/geojeyouth" target="_blank" class="portfolio-text">
+                      <i class="fab fa-github"></i><span class="icon-text">github</span>
+                    </a>
+                    <a href="https://geojeyouth.com/web/" target="_blank" class="portfolio-text">
+                      <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
+                    </a>
+                  </div>
+                </li>
 
-              <!-- noelohills -->
-              <li class="portfolio-content" data-cate="study">
-                <a href="https://johyomin.github.io/noelohills/" target="_blank" class="portfolio-pic">
-                  <img src="images/noelohills.png" alt="noellohills thumbnail">
-                </a>
-                <span class="pc-web">웹사이트</span><span class="responsive">반응형</span>
-                <h5>Noelohills</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 7일</span>
-                <div class="portfolio-text-wrap">
-                  <a href="https://johyomin.github.io/noelohills/" target="_blank" class="portfolio-text">
-                    <i class="fas fa-laptop-code"></i><span class="icon-text">work</span>
+                <!-- noelohills -->
+                <li class="portfolio-content" data-cate="study">
+                  <a href="https://johyomin.github.io/noelohills/" target="_blank" class="portfolio-pic">
+                    <img src="images/noelohills.png" alt="noellohills thumbnail">
                   </a>
-                  <a href="https://github.com/johyomin/noelohills" target="_blank" class="portfolio-text">
-                    <i class="fab fa-github"></i><span class="icon-text">github</span>
-                  </a>
-                  <a href="https://noelohills.com/" target="_blank" class="portfolio-text">
-                    <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
-                  </a>
-                </div>
-              </li>
+                  <span class="pc-web">웹사이트</span><span class="responsive">반응형</span>
+                  <h5>Noelohills</h5>
+                  <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 7일</span>
+                  <div class="portfolio-text-wrap">
+                    <a href="https://johyomin.github.io/noelohills/" target="_blank" class="portfolio-text">
+                      <i class="fas fa-laptop-code"></i><span class="icon-text">work</span>
+                    </a>
+                    <a href="https://github.com/johyomin/noelohills" target="_blank" class="portfolio-text">
+                      <i class="fab fa-github"></i><span class="icon-text">github</span>
+                    </a>
+                    <a href="https://noelohills.com/" target="_blank" class="portfolio-text">
+                      <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
+                    </a>
+                  </div>
+                </li>
 
-              <!-- masigray -->
-              <li class="portfolio-content" data-cate="study">
-                <a href="https://johyomin.github.io/masigray/" target="_blank" class="portfolio-pic">
-                  <img src="images/masigray.png" alt="Masigray thumbnail">
-                </a>
-                <span class="pc-web">웹사이트</span><span class="responsive">반응형</span>
-                <h5>Masigray</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 7일</span>
-                <div class="portfolio-text-wrap">
-                  <a href="https://johyomin.github.io/masigray/" target="_blank" class="portfolio-text">
-                    <i class="fas fa-laptop-code"></i><span class="icon-text">work</span>
+                <!-- masigray -->
+                <li class="portfolio-content" data-cate="study">
+                  <a href="https://johyomin.github.io/masigray/" target="_blank" class="portfolio-pic">
+                    <img src="images/masigray.png" alt="Masigray thumbnail">
                   </a>
-                  <a href="https://github.com/johyomin/masigray" target="_blank" class="portfolio-text">
-                    <i class="fab fa-github"></i><span class="icon-text">github</span>
-                  </a>
-                  <a href="https://www.masigray.com:5021/main/main.asp" target="_blank" class="portfolio-text">
-                    <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
-                  </a>
-                </div>
-              </li>
+                  <span class="pc-web">웹사이트</span><span class="responsive">반응형</span>
+                  <h5>Masigray</h5>
+                  <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 7일</span>
+                  <div class="portfolio-text-wrap">
+                    <a href="https://johyomin.github.io/masigray/" target="_blank" class="portfolio-text">
+                      <i class="fas fa-laptop-code"></i><span class="icon-text">work</span>
+                    </a>
+                    <a href="https://github.com/johyomin/masigray" target="_blank" class="portfolio-text">
+                      <i class="fab fa-github"></i><span class="icon-text">github</span>
+                    </a>
+                    <a href="https://www.masigray.com:5021/main/main.asp" target="_blank" class="portfolio-text">
+                      <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
+                    </a>
+                  </div>
+                </li>
 
-              <!-- stx const -->
-              <li class="portfolio-content" data-cate="study">
-                <a href="https://johyomin.github.io/stxconst/" target="_blank" class="portfolio-pic">
-                  <img src="images/stx.png" alt="STXconst thumbnail">
-                </a>
-                <span class="pc-web">웹사이트</span>
-                <h5>STX-const</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 3일</span>
-                <div class="portfolio-text-wrap">
-                  <a href="https://johyomin.github.io/stxconst/" target="_blank" class="portfolio-text">
-                    <i class="fas fa-laptop-code"></i><span class="icon-text">work</span>
+                <!-- stx const -->
+                <li class="portfolio-content" data-cate="study">
+                  <a href="https://johyomin.github.io/stxconst/" target="_blank" class="portfolio-pic">
+                    <img src="images/stx.png" alt="STXconst thumbnail">
                   </a>
-                  <a href="https://github.com/johyomin/stxconst" target="_blank" class="portfolio-text">
-                    <i class="fab fa-github"></i><span class="icon-text">github</span>
-                  </a>
-                  <a href="http://www.stxconst.co.kr/" target="_blank" class="portfolio-text">
-                    <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
-                  </a>
-                </div>
-              </li>
+                  <span class="pc-web">웹사이트</span>
+                  <h5>STX-const</h5>
+                  <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 3일</span>
+                  <div class="portfolio-text-wrap">
+                    <a href="https://johyomin.github.io/stxconst/" target="_blank" class="portfolio-text">
+                      <i class="fas fa-laptop-code"></i><span class="icon-text">work</span>
+                    </a>
+                    <a href="https://github.com/johyomin/stxconst" target="_blank" class="portfolio-text">
+                      <i class="fab fa-github"></i><span class="icon-text">github</span>
+                    </a>
+                    <a href="http://www.stxconst.co.kr/" target="_blank" class="portfolio-text">
+                      <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
+                    </a>
+                  </div>
+                </li>
 
-              <!-- jeongyookgak -->
-              <li class="portfolio-content" data-cate="personal">
-                <a href="https://johyomin.github.io/jeongyookgak/" target="_blank" class="portfolio-pic">
-                  <img src="images/jeongyookgak.png" alt="jeongyookgak thumbnail">
-                </a>
-                <span class="pc-web">웹사이트</span>
-                <h5>Jeongyookgak</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 2일</span>
-                <div class="portfolio-text-wrap">
-                  <a href="https://johyomin.github.io/jeongyookgak/" target="_blank" class="portfolio-text">
-                    <i class="fas fa-laptop-code"></i><span class="icon-text">work</span>
+                <!-- jeongyookgak -->
+                <li class="portfolio-content" data-cate="personal">
+                  <a href="https://johyomin.github.io/jeongyookgak/" target="_blank" class="portfolio-pic">
+                    <img src="images/jeongyookgak.png" alt="jeongyookgak thumbnail">
                   </a>
-                  <a href="https://github.com/johyomin/jeongyookgak" target="_blank" class="portfolio-text">
-                    <i class="fab fa-github"></i><span class="icon-text">github</span>
-                  </a>
-                  <a href="https://www.jeongyookgak.com/index" target="_blank" class="portfolio-text">
-                    <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
-                  </a>
-                </div>
-              </li>
+                  <span class="pc-web">웹사이트</span>
+                  <h5>Jeongyookgak</h5>
+                  <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 2일</span>
+                  <div class="portfolio-text-wrap">
+                    <a href="https://johyomin.github.io/jeongyookgak/" target="_blank" class="portfolio-text">
+                      <i class="fas fa-laptop-code"></i><span class="icon-text">work</span>
+                    </a>
+                    <a href="https://github.com/johyomin/jeongyookgak" target="_blank" class="portfolio-text">
+                      <i class="fab fa-github"></i><span class="icon-text">github</span>
+                    </a>
+                    <a href="https://www.jeongyookgak.com/index" target="_blank" class="portfolio-text">
+                      <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
+                    </a>
+                  </div>
+                </li>
 
-              <!-- Todo vue -->
-              <li class="portfolio-content" data-cate="project">
-                <a href="" target="_blank" class="portfolio-pic">
-                  <img src="images/todo.png" alt="Todo thumbnail">
-                </a>
-                <span class="vue">Vue.js</span>
-                <h5>To do</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 일</span>
-                <div class="portfolio-text-wrap">
-                  <a href="" target="_blank" class="portfolio-text">
-                    <img src="images/Vue.png" alt="vue.js" class="vue-pic"><span class="icon-text">work</span>
+                <!-- Todo vue -->
+                <li class="portfolio-content" data-cate="project">
+                  <a href="" target="_blank" class="portfolio-pic">
+                    <img src="images/todo.png" alt="Todo thumbnail">
                   </a>
-                  <a href="https://github.com/johyomin/vue-Todo" target="_blank" class="portfolio-text">
-                    <i class="fab fa-github"></i><span class="icon-text">github</span>
-                  </a>
-                  <a href="https://www.figma.com/file/9vPkjLpA4hcYvh6EHzFXqY/Untitled?node-id=0%3A1" target="_blank"
-                    class="portfolio-text">
-                    <img src="images/figma.png" alt="figma-icon" class="figma"><span class="icon-text">Figma</span>
-                  </a>
-                </div>
-              </li>
+                  <span class="vue">Vue.js</span>
+                  <h5>To do</h5>
+                  <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 일</span>
+                  <div class="portfolio-text-wrap">
+                    <a href="" target="_blank" class="portfolio-text">
+                      <img src="images/Vue.png" alt="vue.js" class="vue-pic"><span class="icon-text">work</span>
+                    </a>
+                    <a href="https://github.com/johyomin/vue-Todo" target="_blank" class="portfolio-text">
+                      <i class="fab fa-github"></i><span class="icon-text">github</span>
+                    </a>
+                    <a href="https://www.figma.com/file/9vPkjLpA4hcYvh6EHzFXqY/Untitled?node-id=0%3A1" target="_blank"
+                      class="portfolio-text">
+                      <img src="images/figma.png" alt="figma-icon" class="figma"><span class="icon-text">Figma</span>
+                    </a>
+                  </div>
+                </li>
 
-              <!-- mini blog vue -->
-              <li class="portfolio-content" data-cate="project">
-                <a href="https://johyomin.github.io/page_miniblog/" target="_blank" class="portfolio-pic">
-                  <img src="images/miniblog.png" alt="mini blog thumbnail">
-                </a>
-                <span class="vue">Vue.js</span>
-                <h5>Mini blog</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 3일</span>
-                <div class="portfolio-text-wrap">
-                  <a href="https://johyomin.github.io/page_miniblog/" target="_blank" class="portfolio-text">
-                    <img src="images/Vue.png" alt="vue.js" class="vue-pic"><span class="icon-text">work</span>
+                <!-- mini blog vue -->
+                <li class="portfolio-content" data-cate="project">
+                  <a href="https://johyomin.github.io/page_miniblog/" target="_blank" class="portfolio-pic">
+                    <img src="images/miniblog.png" alt="mini blog thumbnail">
                   </a>
-                  <a href="https://github.com/johyomin/vue_miniblog" target="_blank" class="portfolio-text">
-                    <i class="fab fa-github"></i><span class="icon-text">github</span>
-                  </a>
-                </div>
-              </li>
+                  <span class="vue">Vue.js</span>
+                  <h5>Mini blog</h5>
+                  <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 3일</span>
+                  <div class="portfolio-text-wrap">
+                    <a href="https://johyomin.github.io/page_miniblog/" target="_blank" class="portfolio-text">
+                      <img src="images/Vue.png" alt="vue.js" class="vue-pic"><span class="icon-text">work</span>
+                    </a>
+                    <a href="https://github.com/johyomin/vue_miniblog" target="_blank" class="portfolio-text">
+                      <i class="fab fa-github"></i><span class="icon-text">github</span>
+                    </a>
+                  </div>
+                </li>
 
-              <!-- ghibli api -->
-              <li class="portfolio-content" data-cate="project">
-                <a href="https://johyomin.github.io/page_miniblog/" target="_blank" class="portfolio-pic">
-                  <img src="images/miniblog.png" alt="mini blog thumbnail">
-                </a>
-                <span class="vue">Vue.js</span>
-                <h5>Ghibli Api</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 3일</span>
-                <div class="portfolio-text-wrap">
-                  <a href="https://johyomin.github.io/page_miniblog/" target="_blank" class="portfolio-text">
-                    <img src="images/Vue.png" alt="vue.js" class="vue-pic"><span class="icon-text">work</span>
+                <!-- ghibli api -->
+                <li class="portfolio-content" data-cate="project">
+                  <a href="https://johyomin.github.io/page_miniblog/" target="_blank" class="portfolio-pic">
+                    <img src="images/miniblog.png" alt="mini blog thumbnail">
                   </a>
-                  <a href="https://github.com/johyomin/vue_miniblog" target="_blank" class="portfolio-text">
-                    <i class="fab fa-github"></i><span class="icon-text">github</span>
-                  </a>
-                </div>
-              </li>
+                  <span class="vue">Vue.js</span>
+                  <h5>Ghibli Api</h5>
+                  <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 3일</span>
+                  <div class="portfolio-text-wrap">
+                    <a href="https://johyomin.github.io/page_miniblog/" target="_blank" class="portfolio-text">
+                      <img src="images/Vue.png" alt="vue.js" class="vue-pic"><span class="icon-text">work</span>
+                    </a>
+                    <a href="https://github.com/johyomin/vue_miniblog" target="_blank" class="portfolio-text">
+                      <i class="fab fa-github"></i><span class="icon-text">github</span>
+                    </a>
+                  </div>
+                </li>
 
-              <!-- geojeyouth vue -->
-              <li class="portfolio-content" data-cate="vue">
-                <a href="https://johyomin.github.io/page_geojeyouth/" target="_blank" class="portfolio-pic">
-                  <img src="images/geojeyouth.png" alt="geojeyouth thumbnail">
-                </a>
-                <span class="vue">Vue.js</span>
-                <h5>Geojeyouth</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 4일 <b>[ 달력 작업중 ]</b></span>
-                <div class="portfolio-text-wrap">
-                  <a href="https://johyomin.github.io/page_geojeyouth/" target="_blank" class="portfolio-text">
-                    <img src="images/Vue.png" alt="vue.js" class="vue-pic"><span class="icon-text">work</span>
+                <!-- geojeyouth vue -->
+                <li class="portfolio-content" data-cate="vue">
+                  <a href="https://johyomin.github.io/page_geojeyouth/" target="_blank" class="portfolio-pic">
+                    <img src="images/geojeyouth.png" alt="geojeyouth thumbnail">
                   </a>
-                  <a href="https://github.com/johyomin/vue_geojeyouth" target="_blank" class="portfolio-text">
-                    <i class="fab fa-github"></i><span class="icon-text">github</span>
-                  </a>
-                  <a href="https://geojeyouth.com/web/" target="_blank" class="portfolio-text">
-                    <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
-                  </a>
-                </div>
-              </li>
+                  <span class="vue">Vue.js</span>
+                  <h5>Geojeyouth</h5>
+                  <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 4일 <b>[ 달력 작업중 ]</b></span>
+                  <div class="portfolio-text-wrap">
+                    <a href="https://johyomin.github.io/page_geojeyouth/" target="_blank" class="portfolio-text">
+                      <img src="images/Vue.png" alt="vue.js" class="vue-pic"><span class="icon-text">work</span>
+                    </a>
+                    <a href="https://github.com/johyomin/vue_geojeyouth" target="_blank" class="portfolio-text">
+                      <i class="fab fa-github"></i><span class="icon-text">github</span>
+                    </a>
+                    <a href="https://geojeyouth.com/web/" target="_blank" class="portfolio-text">
+                      <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
+                    </a>
+                  </div>
+                </li>
 
-              <!-- noelohills vue -->
-              <li class="portfolio-content" data-cate="vue">
-                <a href="https://johyomin.github.io/page_noelohills/" target="_blank" class="portfolio-pic">
-                  <img src="images/noelohills.png" alt="noellohills thumbnail">
-                </a>
-                <span class="vue">Vue.js</span>
-                <h5>Noelohills</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 3일</span>
+                <!-- noelohills vue -->
+                <li class="portfolio-content" data-cate="vue">
+                  <a href="https://johyomin.github.io/page_noelohills/" target="_blank" class="portfolio-pic">
+                    <img src="images/noelohills.png" alt="noellohills thumbnail">
+                  </a>
+                  <span class="vue">Vue.js</span>
+                  <h5>Noelohills</h5>
+                  <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 3일</span>
 
-                <div class="portfolio-text-wrap">
-                  <a href="https://johyomin.github.io/page_noelohills/" target="_blank" class="portfolio-text">
-                    <img src="images/Vue.png" alt="vue.js" class="vue-pic"><span class="icon-text">work</span>
-                  </a>
-                  <a href="https://github.com/johyomin/vue_noellohills" target="_blank" class="portfolio-text">
-                    <i class="fab fa-github"></i><span class="icon-text">github</span>
-                  </a>
-                  <a href="https://noelohills.com/" target="_blank" class="portfolio-text">
-                    <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
-                  </a>
-                </div>
-              </li>
+                  <div class="portfolio-text-wrap">
+                    <a href="https://johyomin.github.io/page_noelohills/" target="_blank" class="portfolio-text">
+                      <img src="images/Vue.png" alt="vue.js" class="vue-pic"><span class="icon-text">work</span>
+                    </a>
+                    <a href="https://github.com/johyomin/vue_noellohills" target="_blank" class="portfolio-text">
+                      <i class="fab fa-github"></i><span class="icon-text">github</span>
+                    </a>
+                    <a href="https://noelohills.com/" target="_blank" class="portfolio-text">
+                      <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
+                    </a>
+                  </div>
+                </li>
 
-              <!-- masigray vue -->
-              <li class="portfolio-content" data-cate="vue">
-                <a href="https://johyomin.github.io/page_masigray/" target="_blank" class="portfolio-pic">
-                  <img src="images/masigray.png" alt="Masigray thumbnail">
-                </a>
-                <span class="vue">Vue.js</span>
-                <h5>Masigray</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 3일 <b>[ 작업중 ]</b></span>
-                <div class="portfolio-text-wrap">
-                  <a href="https://johyomin.github.io/page_masigray/" target="_blank" class="portfolio-text">
-                    <img src="images/Vue.png" alt="vue.js" class="vue-pic"><span class="icon-text">work</span>
+                <!-- masigray vue -->
+                <li class="portfolio-content" data-cate="vue">
+                  <a href="https://johyomin.github.io/page_masigray/" target="_blank" class="portfolio-pic">
+                    <img src="images/masigray.png" alt="Masigray thumbnail">
                   </a>
-                  <a href="https://github.com/johyomin/vue_masigray" target="_blank" class="portfolio-text">
-                    <i class="fab fa-github"></i><span class="icon-text">github</span>
-                  </a>
-                  <a href="https://www.masigray.com:5021/main/main.asp" target="_blank" class="portfolio-text">
-                    <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
-                  </a>
-                </div>
-              </li>
+                  <span class="vue">Vue.js</span>
+                  <h5>Masigray</h5>
+                  <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 3일 <b>[ 작업중 ]</b></span>
+                  <div class="portfolio-text-wrap">
+                    <a href="https://johyomin.github.io/page_masigray/" target="_blank" class="portfolio-text">
+                      <img src="images/Vue.png" alt="vue.js" class="vue-pic"><span class="icon-text">work</span>
+                    </a>
+                    <a href="https://github.com/johyomin/vue_masigray" target="_blank" class="portfolio-text">
+                      <i class="fab fa-github"></i><span class="icon-text">github</span>
+                    </a>
+                    <a href="https://www.masigray.com:5021/main/main.asp" target="_blank" class="portfolio-text">
+                      <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
+                    </a>
+                  </div>
+                </li>
 
-              <!-- stx const vue -->
-              <li class="portfolio-content" data-cate="vue">
-                <a href="https://johyomin.github.io/page_stx/" target="_blank" class="portfolio-pic">
-                  <img src="images/stx.png" alt="STXconst thumbnail">
-                </a>
-                <span class="vue">Vue.js</span>
-                <h5>STX-const</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 2일</span>
-                <div class="portfolio-text-wrap">
-                  <a href="https://johyomin.github.io/page_stx/" target="_blank" class="portfolio-text">
-                    <img src="images/Vue.png" alt="vue.js" class="vue-pic"><span class="icon-text">work</span>
+                <!-- stx const vue -->
+                <li class="portfolio-content" data-cate="vue">
+                  <a href="https://johyomin.github.io/page_stx/" target="_blank" class="portfolio-pic">
+                    <img src="images/stx.png" alt="STXconst thumbnail">
                   </a>
-                  <a href="https://github.com/johyomin/vue_stx" target="_blank" class="portfolio-text">
-                    <i class="fab fa-github"></i><span class="icon-text">github</span>
-                  </a>
-                  <a href="http://www.stxconst.co.kr/" target="_blank" class="portfolio-text">
-                    <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
-                  </a>
-                </div>
-              </li>
+                  <span class="vue">Vue.js</span>
+                  <h5>STX-const</h5>
+                  <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 2일</span>
+                  <div class="portfolio-text-wrap">
+                    <a href="https://johyomin.github.io/page_stx/" target="_blank" class="portfolio-text">
+                      <img src="images/Vue.png" alt="vue.js" class="vue-pic"><span class="icon-text">work</span>
+                    </a>
+                    <a href="https://github.com/johyomin/vue_stx" target="_blank" class="portfolio-text">
+                      <i class="fab fa-github"></i><span class="icon-text">github</span>
+                    </a>
+                    <a href="http://www.stxconst.co.kr/" target="_blank" class="portfolio-text">
+                      <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
+                    </a>
+                  </div>
+                </li>
 
-              <!-- TodoApp (vue.js/php/mysql) -->
-              <!-- TodoApp (vue.js/RESTFull(jsonServer)) -->
-
-
-            </ul>
+                <!-- TodoApp (vue.js/php/mysql) -->
+                <!-- TodoApp (vue.js/RESTFull(jsonServer)) -->
+              </ul>
             </div>
           </div>
         </div>
       </div>
+      <div class="line-bar"></div>
     </section>
 
 
     <!-- life -->
     <section class="life" id="life">
       <div class="inner">
-        <div data-aos="fade-down" data-aos-duration="1500">
+        <div data-aos="fade-down" data-aos-duration="1500" class="section-title">
           <h2>LIFE</h2>
         </div>
       </div>

@@ -2,13 +2,26 @@ window.onload = function () {
   
   /* ========================= header ========================= */
   let gnbButton = $('.gnb-button');
-  gnbButton.eq(0).find('a').addClass('gnb-button-active');
+  gnbButton.eq(0).addClass('gnb-button-active');
   $.each(gnbButton, function (index, item) {
-    $(this).find('a').click(function (event) {
+    $(this).click(function (event) {
+
+      event.preventDefault();
+      
       //  일단 모든 클래스 제거
-      gnbButton.find('a').removeClass('gnb-button-active');
+      gnbButton.removeClass('gnb-button-active');
       // 클릭된 대상만 클래스 추가
       $(this).addClass('gnb-button-active');
+
+      // 부드럽게 이동하기
+      let posY = $(this).attr('href');
+      posY = $(posY).offset().top;
+      posY = parseInt(posY);
+      
+      gsap.to($('html'), 0.5, {
+        scrollTo: posY - 90
+      });
+
     });
   });
 
@@ -24,30 +37,17 @@ window.onload = function () {
   });
 
 
-  new Waypoint({
-    element: $('.button-list'), // html 의 기준이 어딘가?
-    handler: function (direction) {
-        if (direction == 'down') {
-            // console.log('down------------------')
-            buttonList.addClass('button-list-fix');
-        } else if (direction == 'up') {
-            // console.log('up***********')
-            buttonList.removeClass('button-list-fix');
-        }
-    },
-    offset: '100%'
-});
-
 new Waypoint({
     element: $('.about'), // html 의 기준이 어딘가?
     handler: function (direction) {
         if (direction == 'down') {
-          buttonList.addClass('button-list-show ');
+          buttonList.show();
         } else if (direction == 'up') {
-          buttonList.removeClass('button-list-show ');
+          buttonList.hide();
+          contactList.hide();
         }
     },
-    offset: '20%'
+    offset: '50%'
 });
 
 
@@ -56,12 +56,15 @@ new Waypoint({
   let contactList = $('.contact-list');
   contact.click(function (event) {
     event.preventDefault();
-    contactList.show();
+    event.stopPropagation();
+    // contact 를 눌렀을때 나왔다가 다시누르면 다시 나옴
+    contactList.stop().toggle();
   });
 
-  // document.click(function (event) {
-  //   contactList.hide();
-  // });
+
+  $('body').click(function (event) {
+    contactList.hide();
+  });
 
 
 
@@ -93,8 +96,8 @@ new Waypoint({
       color: '#333',
       // This has to be the same size as the maximum width to
       // prevent clipping
-      strokeWidth: 4, //바깥 선 굵기
-      trailWidth: 1, //안 선 굵기
+      strokeWidth: 6, //바깥 선 굵기
+      trailWidth: 4, //안 선 굵기
       easing: 'easeInOut',
       duration: 1500,
       text: {
@@ -106,7 +109,7 @@ new Waypoint({
       },
       to: {
         color: _endColor,
-        width: 3
+        width: 36
       },
       // Set default step function for all animate calls
       step: function (state, circle) {
@@ -117,7 +120,7 @@ new Waypoint({
         if (value === 0) {
           circle.setText('');
         } else {
-          circle.setText(value); //원 안에들어가는 요소
+          circle.setText(''); //원 안에들어가는 요소
         }
 
       }
@@ -134,7 +137,7 @@ new Waypoint({
   let bar_git = makeCircle(pro_git, '#000');
   let bar_jquery = makeCircle(pro_jquery, '#414193');
   let bar_vue = makeCircle(pro_vue, '#3cb371');
-  let bar_flex = makeCircle(pro_flex, '#666');
+  let bar_figma = makeCircle(pro_figma, '#a3e3f0');
   let bar_scss = makeCircle(pro_scss, '#c091c0');
 
   new Waypoint({
@@ -145,10 +148,10 @@ new Waypoint({
         bar_html.animate(0.95); // Number from 0.0 to 1.0
         bar_css.animate(0.9); // Number from 0.0 to 1.0
         bar_js.animate(0.75); // Number from 0.0 to 1.0
-        bar_jquery.animate(0.75); // Number from 0.0 to 1.0
-        bar_vue.animate(0.7); // Number from 0.0 to 1.0
-        bar_git.animate(0.8); // Number from 0.0 to 1.0
-        bar_flex.animate(0.9); // Number from 0.0 to 1.0
+        bar_jquery.animate(0.8); // Number from 0.0 to 1.0
+        bar_vue.animate(0.8); // Number from 0.0 to 1.0
+        bar_git.animate(0.9); // Number from 0.0 to 1.0
+        bar_figma.animate(0.9); // Number from 0.0 to 1.0
         bar_scss.animate(0.85); // Number from 0.0 to 1.0
 
       } else if (direction == 'up') {}
