@@ -1,5 +1,5 @@
 window.onload = function () {
-  
+
   /* ========================= header ========================= */
   let gnbButton = $('.gnb-button');
   gnbButton.eq(0).addClass('gnb-button-active');
@@ -7,7 +7,7 @@ window.onload = function () {
     $(this).click(function (event) {
 
       event.preventDefault();
-      
+
       //  일단 모든 클래스 제거
       gnbButton.removeClass('gnb-button-active');
       // 클릭된 대상만 클래스 추가
@@ -17,7 +17,7 @@ window.onload = function () {
       let posY = $(this).attr('href');
       posY = $(posY).offset().top;
       posY = parseInt(posY);
-      
+
       gsap.to($('html'), 0.5, {
         scrollTo: posY - 90
       });
@@ -37,18 +37,18 @@ window.onload = function () {
   });
 
 
-new Waypoint({
+  new Waypoint({
     element: $('.about'), // html 의 기준이 어딘가?
     handler: function (direction) {
-        if (direction == 'down') {
-          buttonList.show();
-        } else if (direction == 'up') {
-          buttonList.hide();
-          contactList.hide();
-        }
+      if (direction == 'down') {
+        buttonList.show();
+      } else if (direction == 'up') {
+        buttonList.hide();
+        contactList.hide();
+      }
     },
     offset: '50%'
-});
+  });
 
 
   /* ========================= contact ========================= */
@@ -71,21 +71,50 @@ new Waypoint({
 
   /* ========================= possibility ========================= */
 
-  new Chart(document.getElementById("radar-chart"), {
+  const labels = [
+    '책임감',
+    '도전정신',
+    '포용력',
+    'IT 활용 능력',
+    '소통 능력'
+  ];
+
+  const data = {
+    labels: labels,
+
+    datasets: [{
+      backgroundColor: 'rgb(230, 200, 194,30%)',
+      borderColor: '#e6c7c1',
+      borderWidth: 5,
+      data: [95, 85, 95, 90, 100],
+    }]
+  };
+
+  const config = {
     type: 'radar',
-    data: {
-      labels: ["책임감", "도전정신", "성실성", "응용력", "소통능력"],
-      datasets: [{
-        label: "",
-        fill: true,
-        backgroundColor: "hsl(10, 43%, 90%, 60%)",
-        borderColor: "#e6c7c1",
-        data: [95, 95, 80, 75, 100]
-      }]
-    },
+    data: data,
+    options: {
+      plugins: {
+        legend: {
+          display: false
+        }
+      },
+      scale: {
+        min: 0,
+        max: 100,
+        suggestedMin: 0,
+        suggestedMax: 100,
+        ticks: {
+          textStrokeWidth: 35
+        }
+      }
+    }
+  };
 
-  });
-
+  const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
 
 
 

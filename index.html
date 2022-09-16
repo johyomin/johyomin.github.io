@@ -65,7 +65,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
     integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollToPlugin.min.js"
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollToPlugin.min.js"
     integrity="sha512-9DDJWj17gkdeGHU0Zr76wc9jY2g0IwE7ZCIxakVYKyzlTiOWZDZJOTaVgAzNo+LB7+EbGXxwCXkOP+a5rgkuqQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -74,7 +74,7 @@
   <script src="js/lightbox2/js/lightbox.js"></script>
 
   <!-- rader chart -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <!-- Progressbar -->
   <script type="text/javascript" src="js/progressbar/progressbar.js"></script>
@@ -86,28 +86,28 @@
 </head>
 
 <body>
-  
-    <!-- gotop -->
-    <div class="button-list">
-      <ul>
-        <li>
-          <a href="#" class="contact"><i class="fas fa-link"></i></a>
-          <ul class="contact-list">
-            <li><a href="https://open.kakao.com/o/scKd25Ae" target="_blank">
-                <img src="images/kakao.ico" alt="kakaotalk" class="kakao-pic">
-              </a></li>
-            <li><a href="https://github.com/johyomin" target="_blank"><i class="fab fa-github cont-git"></i></a></li>
-            <li><a href="mailto:scnly222@naver.com"><img src="images/email.png" alt="email" class="email-pic"></a></li>
-          </ul>
 
-        </li>
-        <li><a href="#" class="pdf"><i class="far fa-file-pdf"></i></a></li>
-        <li><a href="#" class="resume">이력서<i class="fas fa-user"></i></a></li>
-        <li><a href="#" class="gotop"><i class="fas fa-chevron-up"></i></a></li>
-      </ul>
-    </div>
+  <!-- gotop -->
+  <div class="button-list">
+    <ul>
+      <li>
+        <a href="#" class="contact"><i class="fas fa-link"></i></a>
+        <ul class="contact-list">
+          <li><a href="https://open.kakao.com/o/scKd25Ae" target="_blank">
+              <img src="images/kakao.ico" alt="kakaotalk" class="kakao-pic">
+            </a></li>
+          <li><a href="https://github.com/johyomin" target="_blank"><i class="fab fa-github cont-git"></i></a></li>
+          <li><a href="mailto:scnly222@naver.com"><img src="images/email.png" alt="email" class="email-pic"></a></li>
+        </ul>
 
-    
+      </li>
+      <li><a href="#" class="pdf"><i class="far fa-file-pdf"></i></a></li>
+      <li><a href="#" class="resume">이력서<i class="fas fa-user"></i></a></li>
+      <li><a href="#" class="gotop"><i class="fas fa-chevron-up"></i></a></li>
+    </ul>
+  </div>
+
+
   <div class="wrap">
 
     <!-- header -->
@@ -131,6 +131,7 @@
         <div data-aos="fade-down" data-aos-duration="1500" class="home-wrap">
           <h2></h2>
           <img src="images/home_txt.png" alt="" class="home-txt">
+          <view my work></view>
         </div>
       </div>
       <div class="line-bar"></div>
@@ -139,15 +140,15 @@
     <!-- about -->
     <section class="about" id="about">
       <div class="inner">
-        <div data-aos="fade-down" data-aos-duration="1500" class="section-title">
+        <div data-aos="fade-down" data-aos-duration="1500">
           <h2>ABOUT</h2>
         </div>
         <div class="profile">
           <img src="images/favicon.png" alt="johyomin">
           <ul>
-            <li class="birth"></li>
-            <li class="location"></li>
-            <li class="e-mail"></li>
+            <li class="birth">1998.11.19</li>
+            <li class="location">Korea, Daegu</li>
+            <li class="e-mail">johyomin1119@gmail.com</li>
           </ul>
         </div>
         <div class="profile-content">
@@ -165,41 +166,72 @@
     <!-- possibility -->
     <section class="possibility" id="possibility">
       <div class="inner">
-        <div data-aos="fade-down" data-aos-duration="1500" class="section-title">
+        <div data-aos="fade-down" data-aos-duration="1500">
           <h2>POSSIBILITY</h2>
         </div>
         <div class="pos-content">
           <ul>
             <div data-aos="fade-up" data-aos-duration="1500" class="pos-text1">
-              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit cum atque expedita animi illum fugit
-                magnam officiis enim repellat perferendis accusamus iure vero laborum voluptatum explicabo, architecto
-                hic reiciendis labore!</li>
+              <li>
+                <h3>책임감</h3>
+                <h4>책임지지 못 할 일은 절대로 하지 않을 것입니다.</h4>
+                <p>
+                  모든 일에는 원인과 결과가 있습니다.<br>
+                  제 손길이 닿으면, 그 원인과 결과에 저의 책임이 있다고 생각합니다.<br>
+                  항상 책임감 있고 완벽하게 수행하려 노력합니다.
+                </p>
+              </li>
             </div>
             <div data-aos="fade-left" data-aos-duration="1500" class="pos-text2">
-              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptas, autem quas doloremque
-                perspiciatis id sequi! Asperiores nesciunt deleniti voluptate fuga aliquid repudiandae dolor facilis
-                repellat, labore ipsum, possimus quos?</li>
+              <li>
+                <h3>도전정신</h3>
+                <h4>트렌드를 놓치지 않는
+                  <br><strong>MZ세대</strong> 개발자가 될 것입니다.</h4>
+                <p>
+                  배움에는 끝이 없고 세상은 빠르게
+                  <br>변화하고 있습니다.<br>
+                  저는 그러한 변화를 따라가기 위해
+                  <br>항상 공부하는 습관을 지니고 발전합니다.
+                </p>
+              </li>
             </div>
             <div data-aos="fade-left" data-aos-duration="1500" class="pos-text3">
-              <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente esse nihil iure maxime, quia
-                deserunt, provident iste sunt delectus, dolore illo placeat doloribus distinctio fugit. Recusandae
-                tenetur necessitatibus iure facere.</li>
+              <li>
+                <h3>포용력</h3>
+                <h4> 피드백을 겸허히 받아들이는 포용력 높은 사람이 될 것입니다.</h4>
+                <p>
+                  저는 피드백을 즉각적으로 반영하여 여러 방안을 시도해봅니다.<br>
+                  기분이 나쁜 말이더라도 좋은 의도를 찾아 제가 성장할 수 있도록 노력합니다.<br>
+                </p>
+              </li>
             </div>
             <div data-aos="fade-right" data-aos-duration="1500" class="pos-text4">
-              <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium excepturi doloribus a, illum ad,
-                itaque hic deleniti, ipsam iusto blanditiis recusandae consequuntur mollitia iure dolor iste dicta
-                suscipit impedit in.</li>
+              <li>
+                <h3>IT 활용 능력</h3>
+                <h4>코드 활용을 잘하는 개발자가 될 것입니다.</h4>
+                <p>
+                  저는 기존에 했던 작업과 유사한 상황을 잘 캐치합니다.<br>
+                  비슷한 패턴이 떠오르면 키워드를 찾고 제 생각과 구글링을 합쳐 응용합니다.<br>
+                  계속 업그레이드하여 가독성과 효율이 좋은 <strong>나만의 코드</strong>를 만들어 낼 것입니다.
+                </p>
+              </li>
             </div>
             <div data-aos="fade-right" data-aos-duration="1500" class="pos-text5">
-              <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam dolore magnam necessitatibus
-                assumenda voluptate autem cupiditate labore iusto quas eligendi? Facere expedita nihil sequi neque quia
-                illo minima explicabo enim!</li>
+              <li>
+                <h3>소통 능력</h3>
+                <h4>말 한마디의 힘을 아는 개발자가 되겠습니다.</h4>
+                <p>
+                  협업을 할 때는 의사소통이 가장 중요하다고 생각합니다.<br>
+                  사소한 말 한마디가 가지는 힘은 굉장합니다.<br>
+                  절대로 남 탓을 하지 않고, 동료와의 소통을 우선시합니다.
+                </p>
+              </li>
             </div>
           </ul>
         </div>
         <div class="chart">
-          <canvas id="radar-chart"></canvas>
-          
+          <canvas id="myChart"></canvas>
+
         </div>
       </div>
       <div class="line-bar"></div>
@@ -208,7 +240,7 @@
     <!-- skill -->
     <section class="skill" id="skill">
       <div class="inner">
-        <div data-aos="fade-down" data-aos-duration="1500" class="section-title">
+        <div data-aos="fade-down" data-aos-duration="1500">
           <h2>SKILL</h2>
         </div>
         <ul class="skill-list">
@@ -244,7 +276,7 @@
     <!-- portfolio -->
     <section class="portfolio" id="portfolio">
       <div class="inner">
-        <div data-aos="fade-down" data-aos-duration="1000" class="section-title">
+        <div data-aos="fade-down" data-aos-duration="1000">
           <h2>PORTFOLIO</h2>
           <div class="portfolio-wrap">
             <ul class="portfolio-menu">
@@ -585,7 +617,7 @@
     <!-- life -->
     <section class="life" id="life">
       <div class="inner">
-        <div data-aos="fade-down" data-aos-duration="1500" class="section-title">
+        <div data-aos="fade-down" data-aos-duration="1500">
           <h2>LIFE</h2>
         </div>
       </div>
