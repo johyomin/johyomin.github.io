@@ -77,6 +77,7 @@ h2 {
   background-color: #fff;
   z-index: 999;
   text-align: center;
+  box-shadow: 1px 1px 6px #e6c7c1;
 }
 
 .header .inner {
@@ -89,9 +90,9 @@ h2 {
   position: relative;
   display: block;
   width: 50px;
-  height: 30px;
-  background: url('../images') no-repeat center;
-  background-size: cover;
+  height: 50px;
+  background: url('../images/favicon.png') no-repeat center;
+  background-size: contain;
   text-align: center;
   padding: 40px 0;
 }
@@ -121,12 +122,12 @@ h2 {
   margin-left: 30px;
 }
 
-.gnb-buttonL::after:hover {
+.gnb-button::after {
   content: '';
   position: absolute;
   bottom: 15px;
   display: block;
-  width: 100%;
+  width: 0%;
   height: 2px;
   background-color: #d36853;
   transition: all 0.3s;
@@ -138,10 +139,16 @@ h2 {
   color: #d36853;
 }
 
-.portfolio-bt .gnb-button-active {
+.gnb-button:hover .gnb-button::after {
+  width: 100%;
+}
+
+
+.gnb-button-active {
   font-weight: 700;
   font-size: 20px;
   color: #d36853;
+  width: 100%;
 }
 
 
@@ -163,7 +170,7 @@ h2 {
   bottom: 15px;
   right: 30px;
   display: block;
-  z-index: 99;
+  z-index: 9999;
   visibility: hidden;
 }
 
@@ -331,17 +338,67 @@ h2 {
   position: relative;
   display: block;
   width: 100%;
-  height: 900px;
+  height: 1000px;
   margin-bottom: 120px;
+}
+
+.possibility .inner {
+  position: relative;
+  display: block;
 }
 
 .chart {
   position: relative;
   display: block;
-  float: right;
+  margin: 150px auto;
   width: 600px;
-  height: 600px;
+  height:600px;
 }
+
+.pos-text1 {
+  position: absolute;
+  left: 55%;
+  top: 20%;
+  width: 430px;
+  background: url('../images//posibility-bcc.jpg') no-repeat center;
+  background-size: contain;
+  background-position: right;
+}
+
+.pos-text2 {
+  position: absolute;
+  top: 46%;
+  right: 0%;
+  width: 280px;
+}
+
+.pos-text3 {
+  position: absolute;
+  bottom: 5%;
+  right: 0%;
+  width: 360px;
+  background: url('../images//posibility-bcc.jpg') no-repeat center;
+  background-size: contain;
+  background-position: center;
+}
+
+.pos-text4 {
+  position: absolute;
+  bottom: 5%;
+  left: 0%;
+  width: 400px;
+}
+
+.pos-text5 {
+  position: absolute;
+  top: 35%;
+  left: 0%;
+  width: 415px;
+  background: url('../images//posibility-bcc.jpg') no-repeat center;
+  background-size: contain;
+  background-position: left;
+}
+
 
 /* ========================= skill ========================= */
 .skill {
@@ -566,7 +623,7 @@ h2 {
   display: inline-block;
   font-size: 20px;
   margin: 0px 8px 10px 20px;
-}
+-large}
 
 .portfolio-calendar {
   position: relative;

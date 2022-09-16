@@ -1,6 +1,5 @@
 window.onload = function () {
-
-
+  
   /* ========================= header ========================= */
   let gnbButton = $('.gnb-button');
   gnbButton.eq(0).find('a').addClass('gnb-button-active');
@@ -72,7 +71,7 @@ new Waypoint({
   new Chart(document.getElementById("radar-chart"), {
     type: 'radar',
     data: {
-      labels: ["책임감", "성실성", "도전정신", "응용력", "소통능력"],
+      labels: ["책임감", "도전정신", "성실성", "응용력", "소통능력"],
       datasets: [{
         label: "",
         fill: true,
@@ -129,14 +128,14 @@ new Waypoint({
     return bar;
   }
 
-  let bar_html = makeCircle(pro_html, '#ff6347');
-  let bar_css = makeCircle(pro_css, '#4169e1');
-  let bar_js = makeCircle(pro_js, '#ffd700');
+  let bar_html = makeCircle(pro_html, '#f1a294');
+  let bar_css = makeCircle(pro_css, '#93a9eb');
+  let bar_js = makeCircle(pro_js, '#f9ecab');
   let bar_git = makeCircle(pro_git, '#000');
-  let bar_jquery = makeCircle(pro_jquery, '#191970');
+  let bar_jquery = makeCircle(pro_jquery, '#414193');
   let bar_vue = makeCircle(pro_vue, '#3cb371');
   let bar_flex = makeCircle(pro_flex, '#666');
-  let bar_scss = makeCircle(pro_scss, '#c87ec8');
+  let bar_scss = makeCircle(pro_scss, '#c091c0');
 
   new Waypoint({
     element: $('.skill'),
