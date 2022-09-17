@@ -396,10 +396,25 @@ strong {
   height: 100%;
 }
 
-.home-txt {
+.home-text {
   position: absolute;
   top: 30%;
   left: 0%;
+  text-align: start;
+  line-height: 80px;
+}
+
+.view {
+  font-family: 'Sriracha', 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo', sans-serif;
+  position: absolute;
+  top: 70%;
+  left: 0;
+  width: 150px;
+  height: 100px;
+  border: 0;
+  background-color: transparent;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 /* =============================== about ================================= */
@@ -417,7 +432,6 @@ strong {
   float: left;
   width: 350px;
   height: 600px;
-  border: 3px solid red;
 }
 
 .profile-left {
@@ -451,7 +465,7 @@ strong {
 .fa-birthday-cake {
   font-size: 26px;
   margin: -1px 10px 20px 3px;
-} 
+}
 
 .fa-map-marked-alt {
   font-size: 22px;
@@ -481,59 +495,131 @@ strong {
 .profile-right {
   font-family: 'S-CoreDream-3Light', 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic';
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
   float: right;
   width: 900px;
-  height: 600px;
-  color: #000;
+  color: #444;
   font-weight: 600;
-  border: 3px solid red;
-  justify-content: space-evenly;
+}
+
+.about-me {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.about-me-title {
+  font-family: 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo', sans-serif;
+  position: relative;
+  display: block;
+  font-size: 28px;
+  font-weight: 500;
+  text-align: start;
+}
+
+.about-me-sub-title {
+  font-family: 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo', sans-serif;
+  position: relative;
+  display: block;
+  font-size: 42px;
+  font-weight: 700;
+  text-align: start;
+}
+
+.about-me-text {
+  font-family: 'S-CoreDream-3Light', 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic';
+  position: relative;
+  display: block;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: start;
+  margin-bottom: 10px;
+}
+
+.about-me-sub-text {
+  position: relative;
+  display: block;
+  font-size: 18px;
+  line-height: 29px;
+}
+
+.about-me-sub-text>b {
+  color: #000;
 }
 
 .mbti {
   position: relative;
-  display: block;
-  background: url('../images/mbti.png') no-repeat center;
-  background-size: contain;
-  border: 1px solid green;
+  display: flex;
+  width: 100%;
+  margin-bottom: 50px;
+  justify-content: space-evenly;
 }
 
-.education {
+.mbti-img {
   position: relative;
   display: block;
-  border: 1px solid green;
+  width: 80px;
+  height: 80px;
+  margin: auto 0;
+}
+
+.mbti-text {
+  position: relative;
+  display: block;
+}
+
+.mbti-text1 {
+  font-family: 'GangwonEduPowerExtraBoldA', 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic';
+  position: relative;
+  display: block;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+
+.mbti-text2 {
+  position: relative;
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.profile-bottom {
+  position: relative;
+  display: block;
+  width: 100%;
 }
 
 .career {
   position: relative;
   display: block;
-  border: 1px solid green;
+  width: 50%;
+  float: left;
 }
 
-.profile-right-text {
+.education {
   position: relative;
   display: block;
+  float: left;
+  width: 50%;
 }
 
 .profile-right-title {
-  font-family: 'GangwonEduPowerExtraBoldA', 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic';
+  font-family: 'Sriracha', 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo', sans-serif;
   position: relative;
   display: block;
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 10px;
 }
 
 .profile-right-text {
   position: relative;
   display: block;
-  margin-bottom: 5px;
+  font-size: 16px;
+  line-height: 42px;
 }
-
-
-
-
 
 
 
@@ -886,6 +972,24 @@ strong {
   width: 100%;
   height: 500px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ========================= footer ========================= */

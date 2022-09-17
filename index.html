@@ -128,10 +128,9 @@
     <!-- home -->
     <section class="home" id="home">
       <div class="inner">
-        <div data-aos="fade-down" data-aos-duration="1500" class="home-wrap">
-          <h2></h2>
-          <img src="images/home_txt.png" alt="" class="home-txt">
-          <view my work></view>
+        <div class="home-wrap">
+          <h2 class="home-text"></h2>
+          <button class="view">View My Work</button>
         </div>
       </div>
       <div class="line-bar"></div>
@@ -140,50 +139,67 @@
     <!-- about -->
     <section class="about" id="about">
       <div class="inner">
-        <div data-aos="fade-down" data-aos-duration="1500">
-          <h2>ABOUT</h2>
-        </div>
         <div class="profile">
           <img src="images/profile.jpg" alt="johyomin" class="profile-pic">
           <div class="profile-left">
-          <div class="profile-icon">
-            <img src="images/favicon.png" alt="logo" class="profile-logo">
-            <i class="fas fa-birthday-cake"></i>
-            <i class="fas fa-map-marked-alt"></i>
-            <i class="far fa-envelope"></i>
-          </div>
-          <div class="profile-text">
-            <span>조효민</span>
-            <span>1998.11.19</span>
-            <span>Korea, Daegu</span>
-            <span>johyomin1119@gmail.com</span>
-          </div>
+            <div class="profile-icon">
+              <img src="images/favicon.png" alt="logo" class="profile-logo">
+              <i class="fas fa-birthday-cake"></i>
+              <i class="fas fa-map-marked-alt"></i>
+              <i class="far fa-envelope"></i>
+            </div>
+            <div class="profile-text">
+              <span>조효민</span>
+              <span>1998.11.19</span>
+              <span>Korea, Daegu</span>
+              <span><a href="mailto:johyomin1119@gmail.com">johyomin1119@gmail.com</a></span>
+            </div>
           </div>
         </div>
 
         <div class="profile-right">
-          <div class="mbti">
-            <span>
-            MBTI : ESTJ 
-            신뢰, 성실, 규칙을 중요시하는 경영진의 MBTI로 남에게 헌신적이며 정직합니다.
+          <div class="about-me">
+            <h2 class="about-me-title">FRONT-END</h2>
+            <h2 class="about-me-sub-title">JO HYO MIN</h2>
+            <h2 class="about-me-text"><strong>시작</strong>과 <strong>끝</strong>을 보며 나아가는 프론트엔드 개발자 조효민입니다.</h2>
+            <span class="about-me-sub-text">
+              저는 세심하고 꼼꼼하며 안정성을 중요시하는 성격입니다.<br>
+              항상 행동하기 전에 계획을 짜고 행동을 실행합니다.<br>
+              그 후, 빠진 것은 없는지 두 번 이상 확인하고 문제가 생길 요소가 있는지 시뮬레이션합니다.<br>
+              만약 실수한다면 같은 실수를 다시 하는 일은 절대로 없도록 새겨두고 나 자신을 계속 되돌아보며 발전합니다.<br><br>
+              <b>이러한 저의 성격은 지금까지 해왔던 실무에서 굉장히 도움이 되었고 앞으로도 도움이 될 것이라고 확신합니다!</b>
             </span>
-            저는 게으름 피우거나 미루는 것을 싫어하며 계획과 규칙을 준수하는 것을 매우 중요시합니다. <br>
-            그렇다 보니 다소 융통성이 부족할 때가 있으나 
-            E의 강점인 친화력과 소통으로 피드백을 빠르게 받아들여 완벽함을 추구합니다.
           </div>
-          <div class="education">
-            <span class="profile-right-title">Education</span>
-            <span class="profile-right-text">2014.03 ~ 2017.02 원화여자고등학교</span>
-            <span class="profile-right-text">2017.03 ~ 2022.08 계명대학교 국제통상학과</span>
-            <span class="profile-right-text">2022.05 ~ 2022.10 그린 컴퓨터 아트 학원</span>
-              <span class="profile-right-text"><strong>스마트혼합-뷰(Vue)활용 프론트앤드 개발자 양성과정 A</strong></span>
+
+          <div class="mbti">
+            <img src="images/mbti.png" alt="mbti" class="mbti-img">
+            <div class="mbti-text">
+              <span class="mbti-text1">
+                ESTJ<br>
+                신뢰, 성실, 규칙을 중요시하는 경영진의 MBTI로 남에게 헌신적이며 정직합니다.
+              </span>
+              <span class="mbti-text2">
+                저는 게으름 피우거나 미루는 것을 싫어하며 계획과 규칙을 준수하는 것을 매우 중요시합니다. <br>
+                그렇다 보니 다소 융통성이 부족할 때가 있으나<br>
+                E의 강점인 친화력과 소통으로 피드백을 빠르게 받아들여 완벽함을 추구합니다.
+              </span>
+            </div>
           </div>
-          <div class="career">
-            <span class="profile-right-title">Experince</span>
-            <span class="profile-right-text">2017.04 ~ 2017.08 CU 장기하늘점</span>
-            <span class="profile-right-text">2017.09 ~ 2019.09 애슐리 LM</span>
-            <span class="profile-right-text">2020.06 ~ 2021.06 버거킹 TL</span>
-            <span class="profile-right-text">2021.07 ~ 2022.01 버거킹 SL</span>
+          <div class="profile-bottom clearfix">
+            <div class="career">
+              <span class="profile-right-title">Experince</span>
+              <span class="profile-right-text">2021.07 ~ 2022.01 버거킹 SL</span>
+              <span class="profile-right-text">2020.06 ~ 2021.06 버거킹 TL</span>
+              <span class="profile-right-text">2017.09 ~ 2019.09 애슐리 LM</span>
+              <span class="profile-right-text">2017.04 ~ 2017.08 CU 장기하늘점</span>
+            </div>
+            <div class="education">
+              <span class="profile-right-title">Education</span>
+              <span class="profile-right-text"><strong>스마트혼합-뷰(Vue)활용 프론트엔드 개발자 양성과정 A</strong></span>
+              <span class="profile-right-text">2022.05 ~ 2022.10 그린 컴퓨터 아트 학원</span>
+              <span class="profile-right-text">2017.03 ~ 2022.08 계명대학교 국제통상학과</span>
+              <span class="profile-right-text">2014.03 ~ 2017.02 원화여자고등학교</span>
+            </div>
           </div>
         </div>
       </div>
@@ -202,7 +218,7 @@
             <div data-aos="fade-up" data-aos-duration="1500" class="pos-text1">
               <li>
                 <h3>책임감</h3>
-                <h4>책임지지 못 할 일은 절대로 하지 않을 것입니다.</h4>
+                <h4>책임지지 못 할 행동은 절대로 하지 않을 것입니다.</h4>
                 <p>
                   모든 일에는 원인과 결과가 있습니다.<br>
                   제 손길이 닿으면, 그 원인과 결과에 저의 책임이 있다고 생각합니다.<br>
@@ -645,9 +661,8 @@
     <!-- life -->
     <section class="life" id="life">
       <div class="inner">
-        <div data-aos="fade-down" data-aos-duration="1500">
-          <h2>LIFE</h2>
-        </div>
+        <h2>LIFE</h2>
+        
       </div>
     </section>
 

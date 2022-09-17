@@ -25,7 +25,29 @@ window.onload = function () {
     });
   });
 
+  
+  /* ========================= home ========================= */
+  const content = "안녕하세요 :) \n  프론트엔드 개발자 \n 조효민 입니다.";
+  const text = document.querySelector(".home-text");
+  let i = 0;
 
+  function typing() {
+      let txt = content[i++];
+      text.innerHTML += txt === "\n" ? "<br/>" : txt;
+      if (i > content.length) {
+          text.textContent = "";
+          i = 0;
+      }
+  }
+  setInterval(typing, 150)
+
+  /* ========================= view ========================= */
+  let view = $('.view');
+  view.click(function () {
+    $('html').animate({
+      scrollTo: '#portfolio'
+    }, 1000);
+  });
 
   /* ========================= gotop ========================= */
   let go_top = $('.gotop');
