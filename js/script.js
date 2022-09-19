@@ -26,6 +26,15 @@ window.onload = function () {
   });
 
   
+// 스크롤시 섹션이동
+
+
+
+
+
+
+
+
   /* ========================= home ========================= */
   const content = "안녕하세요 :) \n  프론트엔드 개발자 \n 조효민 입니다.";
   const text = document.querySelector(".home-text");
@@ -40,14 +49,6 @@ window.onload = function () {
       }
   }
   setInterval(typing, 150)
-
-  /* ========================= view ========================= */
-  let view = $('.view');
-  view.click(function () {
-    $('html').animate({
-      scrollTo: '#portfolio'
-    }, 1000);
-  });
 
   /* ========================= gotop ========================= */
   let go_top = $('.gotop');
