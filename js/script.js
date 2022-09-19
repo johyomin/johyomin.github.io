@@ -10,10 +10,10 @@ window.onload = function () {
       let posY = $(this).attr('href');
       posY = $(posY).offset().top;
       posY = parseInt(posY);
-      posY = posY - $('.header').height();
-      if (index == 1) {
-        posY -= 70;
-      }
+      posY = posY - 40;
+      // if (index == 1) {
+      //   posY -= 10;
+      // }
       gsap.to($('html'), 0.5, {
         scrollTo: posY
       });
@@ -24,7 +24,7 @@ window.onload = function () {
       let posY = $(this).attr('href');
       posY = $(posY).offset().top;
       posY = parseInt(posY);
-      posY = posY - $('.header').height();
+      posY = posY -40;
       gsap.to($('html'), 0.5, {
         scrollTo: posY
       });
