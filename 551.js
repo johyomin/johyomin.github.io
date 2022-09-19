@@ -1,17 +1,20 @@
 window.onload = function () {
-  /* ========================= header ========================= */
+  /* ========================= header ========================= */  
   let gnbButton = $('.gnb-button');
   gnbButton.eq(0).addClass('gnb-button-active');
   $.each(gnbButton, function (index, item) {
     $(this).click(function (event) {
       event.preventDefault();
+      //  일단 모든 클래스 제거
       gnbButton.removeClass('gnb-button-active');
+      // 클릭된 대상만 클래스 추가
       $(this).addClass('gnb-button-active');
+      // 부드럽게 이동하기
       let posY = $(this).attr('href');
       posY = $(posY).offset().top;
       posY = parseInt(posY);
-      posY = posY - $('.header').height();
-      if (index == 1) {
+      posY = posY - $('.header').height() - 10;
+      if(index == 1) {
         posY -= 70;
       }
       gsap.to($('html'), 0.5, {
@@ -19,20 +22,20 @@ window.onload = function () {
       });
     });
     let view = $('.view');
-    view.click(function (event) {
+    view.click(function(event){
       event.preventDefault();
       let posY = $(this).attr('href');
       posY = $(posY).offset().top;
       posY = parseInt(posY);
-      posY = posY - $('.header').height();
+      posY = posY - $('.header').height() - 10;
       gsap.to($('html'), 0.5, {
         scrollTo: posY
       });
     });
   });
-
-  // 스크롤시 섹션 포커스
-  $.each(gnbButton, function (index, item) {
+  
+  // 스크롤시 섹션이동
+  $.each(gnbButton, function(index, item) {
     let temp = $(this).attr('href');
     new Waypoint({
       element: $(temp),
@@ -47,7 +50,7 @@ window.onload = function () {
           gnbButton.removeClass('gnb-button-active');
           // 클릭된 대상만 클래스 추가
           gnbButton.eq(index - 1).addClass('gnb-button-active');
-        }
+        }  
       },
       offset: '50%'
     });
@@ -71,20 +74,20 @@ window.onload = function () {
   //   }); 
   // })
 
+
   /* ========================= home ========================= */
   const content = "안녕하세요 :) \n  프론트엔드 개발자 \n 조효민 입니다.";
   const text = document.querySelector(".home-text");
   let i = 0;
-
   function typing() {
-    let txt = content[i++];
-    text.innerHTML += txt === "\n" ? "<br/>" : txt;
-    if (i > content.length) {
-      text.textContent = "";
-      i = 0;
-    }
+      let txt = content[i++];
+      text.innerHTML += txt === "\n" ? "<br/>" : txt;
+      if (i > content.length) {
+          text.textContent = "";
+          i = 0;
+      }
   }
-  setInterval(typing, 150);
+  setInterval(typing, 150);  
   /* ========================= gotop ========================= */
   let go_top = $('.gotop');
   let buttonList = $('.button-list');
@@ -94,7 +97,7 @@ window.onload = function () {
     }, 1000);
   });
   new Waypoint({
-    element: $('.about'),
+    element: $('.about'), // html 의 기준이 어딘가?
     handler: function (direction) {
       if (direction == 'down') {
         buttonList.show();
@@ -105,18 +108,19 @@ window.onload = function () {
     },
     offset: '50%'
   });
-  // contact
+  /* ========================= contact ========================= */
   let contact = $('.contact');
   let contactList = $('.contact-list');
   contact.click(function (event) {
     event.preventDefault();
     event.stopPropagation();
+    // contact 를 눌렀을때 나왔다가 다시누르면 다시 나옴
     contactList.toggleClass('contact-list-active');
   });
   $('body').click(function (event) {
     contactList.removeClass('contact-list-active');
   });
-  $(window).scroll(function () {
+  $(window).scroll(function(){
     contactList.removeClass('contact-list-active');
   });
   /* ========================= possibility ========================= */
@@ -164,8 +168,8 @@ window.onload = function () {
   function makeCircle(_id, _endColor) {
     var bar = new ProgressBar.Circle(_id, {
       color: '#333',
-      strokeWidth: 6,
-      trailWidth: 4, 
+      strokeWidth: 6, //바깥 선 굵기
+      trailWidth: 4, //안 선 굵기
       easing: 'easeInOut',
       duration: 1500,
       text: {
@@ -179,6 +183,7 @@ window.onload = function () {
         color: _endColor,
         width: 36
       },
+      // Set default step function for all animate calls
       step: function (state, circle) {
         circle.path.setAttribute('stroke', state.color);
         circle.path.setAttribute('stroke-width', state.width);
@@ -186,7 +191,7 @@ window.onload = function () {
         if (value === 0) {
           circle.setText('');
         } else {
-          circle.setText('');
+          circle.setText(''); //원 안에들어가는 요소
         }
       }
     });
@@ -208,14 +213,15 @@ window.onload = function () {
     element: $('.skill'),
     handler: function (direction) {
       if (direction == 'down') {
-        bar_html.animate(0.95);
-        bar_css.animate(0.9);
-        bar_js.animate(0.75);
-        bar_jquery.animate(0.8);
-        bar_vue.animate(0.8);
-        bar_git.animate(0.9);
-        bar_figma.animate(0.9);
-        bar_scss.animate(0.85);
+        // 모션실행
+        bar_html.animate(0.95); 
+        bar_css.animate(0.9); 
+        bar_js.animate(0.75); 
+        bar_jquery.animate(0.8); 
+        bar_vue.animate(0.8); 
+        bar_git.animate(0.9); 
+        bar_figma.animate(0.9); 
+        bar_scss.animate(0.85); 
       } else if (direction == 'up') {}
     },
     offset: '50%'
@@ -228,7 +234,9 @@ window.onload = function () {
 
   $.each(portfolioMenu, function (index, item) {
     $(this).find('button').click(function (event) {
+      //  일단 모든 클래스 제거
       portfolioMenu.find('button').removeClass('portfolio-menu-active');
+      // 클릭된 대상만 클래스 추가
       $(this).addClass('portfolio-menu-active');
       let data_cate = $(this).attr('data-cate');
       showPortfolio(data_cate);
