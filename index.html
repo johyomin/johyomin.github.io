@@ -127,11 +127,20 @@
 
     <!-- home -->
     <section class="home" id="home">
+      <span class="visual"></span>
       <div class="inner">
-        <div class="home-wrap">
-          <h2 class="home-text"></h2>
+        <div class="visual-wrap">
+          <!-- <h2 class="visual-text1">
+            고통을 즐거움으로 승화시키는<br>
+            프론트엔드 개발자 조효민입니다.
+          </h2>
+          <h5 class="visual-text2">
+          <b class="visual-text3">Pain past is pleasure.</b> <br>
+            개발하다 보면 수많은 고난에 부딪히게 됩니다. <br>
+            하지만, 그 고난들을 이겨내면 뿌듯함과 즐거움이 남습니다. <br>
+            고난조차도 즐기며 이겨내는 개발자가 되겠습니다 !
+            </h5> -->
           <a href="#portfolio" class="view"><i class="fas fa-paper-plane"></i> View My Work</a>
-          <span class="visual"></span>
         </div>
       </div>
     </section>
@@ -211,7 +220,7 @@
     <section class="possibility" id="possibility">
       <div class="line-bar"></div>
       <div class="inner">
-        <div data-aos="fade-down" data-aos-duration="1500">
+        <div data-aos="zoom-in" data-aos-duration="1500">
           <h2>POSSIBILITY</h2>
         </div>
         <div class="pos-content">
@@ -274,7 +283,8 @@
             </div>
           </ul>
         </div>
-        <div class="chart">
+
+        <div data-aos="zoom-in" data-aos-duration="2500" class="chart">
           <canvas id="myChart"></canvas>
         </div>
       </div>
@@ -320,11 +330,10 @@
     <section class="portfolio" id="portfolio">
       <div class="line-bar"></div>
       <div class="inner">
-        <div data-aos="fade-down" data-aos-duration="1500">
+        <div data-aos="zoom-in" data-aos-duration="2000">
           <h2>PORTFOLIO</h2>
           <div class="portfolio-wrap">
             <ul class="portfolio-menu">
-              <li class="portfolio-bt"><button data-cate="all">All</button></li>
               <li class="portfolio-bt"><button data-cate="study">Study Clone</button></li>
               <li class="portfolio-bt"><button data-cate="personal">Personal Clone</button></li>
               <li class="portfolio-bt"><button data-cate="vue">Vue Clone</button></li>
@@ -332,18 +341,21 @@
             </ul>
           </div>
         </div>
-        <div class="portfolio-cate">
-          <div data-aos="fade-up" data-aos-duration="1500">
-            <ul class="portfolio-list clearfix">
-              <!-- k-water -->
-              <li class="portfolio-content" data-cate="study">
-                <a href="https://johyomin.github.io/K-water/" target="_blank" class="portfolio-pic">
-                  <img src="images/k-water.png" alt="k-water thumbnail">
-                </a>
-                <span class="pc-web">웹사이트</span><span class="responsive">반응형</span>
+
+
+        <div class="swiper portfolio-cate" data-aos="flip-down" data-aos-duration="2000">
+          <div class="swiper-wrapper portfolio-list">
+            <!-- k-water -->
+            <div class="swiper-slide portfolio-content" data-cate="study">
+              <a href="https://johyomin.github.io/K-water/" target="_blank" class="portfolio-pic">
+                <img src="images/k-water.png" alt="k-water thumbnail">
+              </a>
+              <div class="portfolio-depth1">
                 <h5>K-Water</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 20일</span>
-                <div class="portfolio-text-wrap">
+                <span class="portfolio-calendar"><i class="fas fa-calendar-alt"></i>작업기간 : 20일</span>
+                <span class="pc-web">웹사이트</span>
+                <span class="responsive">반응형</span>
+                <div class="portfolio-depth2">
                   <a href="https://johyomin.github.io/K-water/" target="_blank" class="portfolio-text">
                     <i class="fas fa-laptop-code"></i><span class="icon-text">work</span>
                   </a>
@@ -354,18 +366,22 @@
                     <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
                   </a>
                 </div>
-              </li>
-              <!-- korail -->
-              <li class="portfolio-content" data-cate="personal">
-                <a href="https://qwertymi.github.io/korail/" target="_blank" class="portfolio-pic">
-                  <img src="images/korail.png" alt="korail thumbnail">
-                </a>
-                <span class="pc-web">웹사이트</span><span class="responsive">반응형</span><span class="with-git">Git
-                  협업</span>
+              </div>
+            </div>
+
+            <!-- korail -->
+            <div class="swiper-slide portfolio-content" data-cate="personal">
+              <a href="https://qwertymi.github.io/korail/" target="_blank" class="portfolio-pic">
+                <img src="images/korail.png" alt="korail thumbnail">
+              </a>
+              <div class="portfolio-depth1">
                 <h5>Korail</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 7일 <b>[ 반응형 작업중
+                <span class="portfolio-calendar"><i class="fas fa-calendar-alt"></i>작업기간 : 7일 <b>[ 반응형 작업중
                     ]</b></span>
-                <div class="portfolio-text-wrap">
+                <span class="pc-web">웹사이트</span>
+                <span class="responsive">반응형</span>
+                <span class="with-git">Git협업</span>
+                <div class="portfolio-depth2">
                   <a href="https://qwertymi.github.io/korail/" target="_blank" class="portfolio-text">
                     <i class="fas fa-laptop-code"></i><span class="icon-text">work</span>
                   </a>
@@ -376,17 +392,21 @@
                     <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
                   </a>
                 </div>
-              </li>
-              <!-- winia -->
-              <li class="portfolio-content" data-cate="personal">
-                <a href="https://johyomin.github.io/winia/" target="_blank" class="portfolio-pic">
-                  <img src="images/winia.png" alt="winia thumbnail">
-                </a>
-                <span class="pc-web">웹사이트</span><span class="responsive">반응형</span>
+              </div>
+            </div>
+
+            <!-- winia -->
+            <div class="swiper-slide portfolio-content" data-cate="personal">
+              <a href="https://johyomin.github.io/winia/" target="_blank" class="portfolio-pic">
+                <img src="images/winia.png" alt="winia thumbnail">
+              </a>
+              <div class="portfolio-depth1">
                 <h5>Winia</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 10일 <b>[ 반응형 작업중
-                    ]</b></span>
-                <div class="portfolio-text-wrap">
+                <span class="portfolio-calendar"><i class="fas fa-calendar-alt"></i>작업기간 : 10일 <b>[ 반응형 작업중]</b>
+                  <span class="pc-web">웹사이트</span>
+                  <span class="responsive">반응형</span>
+                </span>
+                <div class="portfolio-depth2">
                   <a href="https://johyomin.github.io/winia/" target="_blank" class="portfolio-text">
                     <i class="fas fa-laptop-code"></i><span class="icon-text">work</span>
                   </a>
@@ -397,102 +417,143 @@
                     <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
                   </a>
                 </div>
-              </li>
+              </div>
+            </div>
 
-              <!-- geojeyouth -->
-              <li class="portfolio-content" data-cate="study">
-                <a href="https://johyomin.github.io/geojeyouth/" target="_blank" class="portfolio-pic">
-                  <img src="images/geojeyouth.png" alt="geojeyouth thumbnail">
-                </a>
-                <span class="pc-web">웹사이트</span><span class="responsive">반응형</span>
+            <!-- geojeyouth -->
+            <div class="swiper-slide portfolio-content" data-cate="study">
+              <a href="https://johyomin.github.io/geojeyouth/" target="_blank" class="portfolio-pic">
+                <img src="images/geojeyouth.png" alt="geojeyouth thumbnail">
+              </a>
+              <div class="portfolio-depth1">
                 <h5>Geojeyouth</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 12일 <b>[ 달력 작업중
-                    ]</b></span>
-                <div class="portfolio-text-wrap">
+                <span class="portfolio-calendar"><i class="fas fa-calendar-alt"></i>작업기간 : 15일</span>
+                <span class="pc-web">웹사이트</span>
+                <span class="responsive">반응형</span>
+                <span class="vue">Vue.js</span>
+                <div class="portfolio-depth2">
                   <a href="https://johyomin.github.io/geojeyouth/" target="_blank" class="portfolio-text">
                     <i class="fas fa-laptop-code"></i><span class="icon-text">work</span>
                   </a>
                   <a href="https://github.com/johyomin/geojeyouth" target="_blank" class="portfolio-text">
                     <i class="fab fa-github"></i><span class="icon-text">github</span>
                   </a>
+                  <a href="https://johyomin.github.io/page_geojeyouth/" target="_blank" class="portfolio-text text-vue">
+                    <img src="images/Vue.png" alt="vue.js" class="vue-pic"><span class="icon-text">vue work</span>
+                  </a>
+                  <a href="https://github.com/johyomin/vue_geojeyouth" target="_blank" class="portfolio-text text-vue">
+                    <i class="fab fa-github"></i><span class="icon-text">vue github</span>
+                  </a>
                   <a href="https://geojeyouth.com/web/" target="_blank" class="portfolio-text">
                     <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
                   </a>
                 </div>
-              </li>
+              </div>
+            </div>
 
-              <!-- noelohills -->
-              <li class="portfolio-content" data-cate="study">
-                <a href="https://johyomin.github.io/noelohills/" target="_blank" class="portfolio-pic">
-                  <img src="images/noelohills.png" alt="noellohills thumbnail">
-                </a>
-                <span class="pc-web">웹사이트</span><span class="responsive">반응형</span>
+
+            <!-- noelohills -->
+            <div class="swiper-slide portfolio-content" data-cate="study">
+              <a href="https://johyomin.github.io/noelohills/" target="_blank" class="portfolio-pic">
+                <img src="images/noelohills.png" alt="noellohills thumbnail">
+              </a>
+              <div class="portfolio-depth1">
                 <h5>Noelohills</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 7일</span>
-                <div class="portfolio-text-wrap">
+                <span class="portfolio-calendar"><i class="fas fa-calendar-alt"></i>작업기간 : 7일</span>
+                <span class="pc-web">웹사이트</span>
+                <span class="responsive">반응형</span>
+                <span class="vue">Vue.js</span>
+                <div class="portfolio-depth2">
                   <a href="https://johyomin.github.io/noelohills/" target="_blank" class="portfolio-text">
                     <i class="fas fa-laptop-code"></i><span class="icon-text">work</span>
                   </a>
                   <a href="https://github.com/johyomin/noelohills" target="_blank" class="portfolio-text">
                     <i class="fab fa-github"></i><span class="icon-text">github</span>
                   </a>
+                  <a href="https://johyomin.github.io/page_noelohills/" target="_blank" class="portfolio-text text-vue">
+                    <img src="images/Vue.png" alt="vue.js" class="vue-pic"><span class="icon-text">vue work</span>
+                  </a>
+                  <a href="https://github.com/johyomin/vue_noellohills" target="_blank" class="portfolio-text text-vue">
+                    <i class="fab fa-github"></i><span class="icon-text">vue github</span>
+                  </a>
                   <a href="https://noelohills.com/" target="_blank" class="portfolio-text">
                     <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
                   </a>
                 </div>
-              </li>
+              </div>
+            </div>
 
-              <!-- masigray -->
-              <li class="portfolio-content" data-cate="study">
-                <a href="https://johyomin.github.io/masigray/" target="_blank" class="portfolio-pic">
-                  <img src="images/masigray.png" alt="Masigray thumbnail">
-                </a>
-                <span class="pc-web">웹사이트</span><span class="responsive">반응형</span>
+            <!-- masigray -->
+            <div class="swiper-slide portfolio-content" data-cate="study">
+              <a href="https://johyomin.github.io/masigray/" target="_blank" class="portfolio-pic">
+                <img src="images/masigray.png" alt="Masigray thumbnail">
+              </a>
+              <div class="portfolio-depth1">
                 <h5>Masigray</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 7일</span>
-                <div class="portfolio-text-wrap">
+                <span class="portfolio-calendar"><i class="fas fa-calendar-alt"></i>작업기간 : 7일</span>
+                <span class="pc-web">웹사이트</span>
+                <span class="responsive">반응형</span>
+                <span class="vue">Vue.js</span>
+                <div class="portfolio-depth2">
                   <a href="https://johyomin.github.io/masigray/" target="_blank" class="portfolio-text">
                     <i class="fas fa-laptop-code"></i><span class="icon-text">work</span>
                   </a>
                   <a href="https://github.com/johyomin/masigray" target="_blank" class="portfolio-text">
                     <i class="fab fa-github"></i><span class="icon-text">github</span>
                   </a>
+                  <a href="https://johyomin.github.io/page_masigray/" target="_blank" class="portfolio-text text-vue">
+                    <img src="images/Vue.png" alt="vue.js" class="vue-pic"><span class="icon-text">vue work</span>
+                  </a>
+                  <a href="https://github.com/johyomin/vue_masigray" target="_blank" class="portfolio-text text-vue">
+                    <i class="fab fa-github"></i><span class="icon-text">vue github</span>
+                  </a>
                   <a href="https://www.masigray.com:5021/main/main.asp" target="_blank" class="portfolio-text">
                     <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
                   </a>
                 </div>
-              </li>
+              </div>
+            </div>
 
-              <!-- stx const -->
-              <li class="portfolio-content" data-cate="study">
-                <a href="https://johyomin.github.io/stxconst/" target="_blank" class="portfolio-pic">
-                  <img src="images/stx.png" alt="STXconst thumbnail">
-                </a>
-                <span class="pc-web">웹사이트</span>
+            <!-- stx const -->
+            <div class="swiper-slide portfolio-content" data-cate="study">
+              <a href="https://johyomin.github.io/stxconst/" target="_blank" class="portfolio-pic">
+                <img src="images/stx.png" alt="STXconst thumbnail">
+              </a>
+              <div class="portfolio-depth1">
                 <h5>STX-const</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 3일</span>
-                <div class="portfolio-text-wrap">
+                <span class="portfolio-calendar"><i class="fas fa-calendar-alt"></i>작업기간 : 3일</span>
+                <span class="pc-web">웹사이트</span>
+                <span class="vue">Vue.js</span>
+                <div class="portfolio-depth2">
                   <a href="https://johyomin.github.io/stxconst/" target="_blank" class="portfolio-text">
                     <i class="fas fa-laptop-code"></i><span class="icon-text">work</span>
                   </a>
                   <a href="https://github.com/johyomin/stxconst" target="_blank" class="portfolio-text">
                     <i class="fab fa-github"></i><span class="icon-text">github</span>
                   </a>
+                  <a href="https://johyomin.github.io/page_stx/" target="_blank" class="portfolio-text text-vue">
+                    <img src="images/Vue.png" alt="vue.js" class="vue-pic"><span class="icon-text">vue work</span>
+                  </a>
+                  <a href="https://github.com/johyomin/vue_stx" target="_blank" class="portfolio-text text-vue">
+                    <i class="fab fa-github"></i><span class="icon-text">vue github</span>
+                  </a>
                   <a href="http://www.stxconst.co.kr/" target="_blank" class="portfolio-text">
                     <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
                   </a>
                 </div>
-              </li>
+              </div>
+            </div>
 
-              <!-- jeongyookgak -->
-              <li class="portfolio-content" data-cate="personal">
-                <a href="https://johyomin.github.io/jeongyookgak/" target="_blank" class="portfolio-pic">
-                  <img src="images/jeongyookgak.png" alt="jeongyookgak thumbnail">
-                </a>
-                <span class="pc-web">웹사이트</span>
+            <!-- jeongyookgak -->
+            <div class="swiper-slide portfolio-content" data-cate="personal">
+              <a href="https://johyomin.github.io/jeongyookgak/" target="_blank" class="portfolio-pic">
+                <img src="images/jeongyookgak.png" alt="jeongyookgak thumbnail">
+              </a>
+              <div class="portfolio-depth1">
                 <h5>Jeongyookgak</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 2일</span>
-                <div class="portfolio-text-wrap">
+                <span class="portfolio-calendar"><i class="fas fa-calendar-alt"></i>작업기간 : 2일</span>
+                <span class="pc-web">웹사이트</span>
+                <div class="portfolio-depth2">
                   <a href="https://johyomin.github.io/jeongyookgak/" target="_blank" class="portfolio-text">
                     <i class="fas fa-laptop-code"></i><span class="icon-text">work</span>
                   </a>
@@ -503,17 +564,19 @@
                     <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
                   </a>
                 </div>
-              </li>
+              </div>
+            </div>
 
-              <!-- Todo vue -->
-              <li class="portfolio-content" data-cate="project">
-                <a href="" target="_blank" class="portfolio-pic">
-                  <img src="images/todo.png" alt="Todo thumbnail">
-                </a>
-                <span class="vue">Vue.js</span>
+            <!-- Todo vue -->
+            <div class="swiper-slide portfolio-content" data-cate="project">
+              <a href="" target="_blank" class="portfolio-pic">
+                <img src="images/todo.png" alt="Todo thumbnail">
+              </a>
+              <div class="portfolio-depth1">
                 <h5>To do</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 일</span>
-                <div class="portfolio-text-wrap">
+                <span class="portfolio-calendar"><i class="fas fa-calendar-alt"></i>작업기간 : 일</span>
+                <span class="vue">Vue.js</span>
+                <div class="portfolio-depth2">
                   <a href="" target="_blank" class="portfolio-text">
                     <img src="images/Vue.png" alt="vue.js" class="vue-pic"><span class="icon-text">work</span>
                   </a>
@@ -525,17 +588,20 @@
                     <img src="images/figma.png" alt="figma-icon" class="figma"><span class="icon-text">Figma</span>
                   </a>
                 </div>
-              </li>
+              </div>
+            </div>
 
-              <!-- mini blog vue -->
-              <li class="portfolio-content" data-cate="project">
-                <a href="https://johyomin.github.io/page_miniblog/" target="_blank" class="portfolio-pic">
-                  <img src="images/miniblog.png" alt="mini blog thumbnail">
-                </a>
-                <span class="vue">Vue.js</span><span class="responsive">반응형</span>
+            <!-- mini blog vue -->
+            <div class="swiper-slide portfolio-content" data-cate="project">
+              <a href="https://johyomin.github.io/page_miniblog/" target="_blank" class="portfolio-pic">
+                <img src="images/miniblog.png" alt="mini blog thumbnail">
+              </a>
+              <div class="portfolio-depth1">
                 <h5>Mini blog</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 3일</span>
-                <div class="portfolio-text-wrap">
+                <span class="portfolio-calendar"><i class="fas fa-calendar-alt"></i>작업기간 : 3일</span>
+                <span class="vue">Vue.js</span>
+                <span class="responsive">반응형</span>
+                <div class="portfolio-depth2">
                   <a href="https://johyomin.github.io/page_miniblog/" target="_blank" class="portfolio-text">
                     <img src="images/Vue.png" alt="vue.js" class="vue-pic"><span class="icon-text">work</span>
                   </a>
@@ -543,17 +609,20 @@
                     <i class="fab fa-github"></i><span class="icon-text">github</span>
                   </a>
                 </div>
-              </li>
+              </div>
+            </div>
 
-              <!-- ghibli api -->
-              <li class="portfolio-content" data-cate="project">
-                <a href="https://johyomin.github.io/page_ghibli/" target="_blank" class="portfolio-pic">
-                  <img src="images/ghibli.png" alt="ghibli thumbnail">
-                </a>
-                <span class="vue">Vue.js</span><span class="responsive">반응형</span>
+            <!-- ghibli api -->
+            <div class="swiper-slide portfolio-content" data-cate="project">
+              <a href="https://johyomin.github.io/page_ghibli/" target="_blank" class="portfolio-pic">
+                <img src="images/ghibli.png" alt="ghibli thumbnail">
+              </a>
+              <div class="portfolio-depth1">
                 <h5>Ghibli Api</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 3.5일</span>
-                <div class="portfolio-text-wrap">
+                <span class="portfolio-calendar"><i class="fas fa-calendar-alt"></i>작업기간 : 3.5일</span>
+                <span class="vue">Vue.js</span>
+                <span class="responsive">반응형</span>
+                <div class="portfolio-depth2">
                   <a href="https://johyomin.github.io/page_ghibli/" target="_blank" class="portfolio-text">
                     <img src="images/Vue.png" alt="vue.js" class="vue-pic"><span class="icon-text">work</span>
                   </a>
@@ -561,191 +630,111 @@
                     <i class="fab fa-github"></i><span class="icon-text">github</span>
                   </a>
                 </div>
-              </li>
-
-              <!-- geojeyouth vue -->
-              <li class="portfolio-content" data-cate="vue">
-                <a href="https://johyomin.github.io/page_geojeyouth/" target="_blank" class="portfolio-pic">
-                  <img src="images/geojeyouth.png" alt="geojeyouth thumbnail">
-                </a>
-                <span class="vue">Vue.js</span><span class="responsive">반응형</span>
-                <h5>Geojeyouth</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 4일 <b>[ 달력 작업중 ]</b></span>
-                <div class="portfolio-text-wrap">
-                  <a href="https://johyomin.github.io/page_geojeyouth/" target="_blank" class="portfolio-text">
-                    <img src="images/Vue.png" alt="vue.js" class="vue-pic"><span class="icon-text">work</span>
-                  </a>
-                  <a href="https://github.com/johyomin/vue_geojeyouth" target="_blank" class="portfolio-text">
-                    <i class="fab fa-github"></i><span class="icon-text">github</span>
-                  </a>
-                  <a href="https://geojeyouth.com/web/" target="_blank" class="portfolio-text">
-                    <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
-                  </a>
-                </div>
-              </li>
-
-              <!-- noelohills vue -->
-              <li class="portfolio-content" data-cate="vue">
-                <a href="https://johyomin.github.io/page_noelohills/" target="_blank" class="portfolio-pic">
-                  <img src="images/noelohills.png" alt="noellohills thumbnail">
-                </a>
-                <span class="vue">Vue.js</span><span class="responsive">반응형</span>
-                <h5>Noelohills</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 3일</span>
-
-                <div class="portfolio-text-wrap">
-                  <a href="https://johyomin.github.io/page_noelohills/" target="_blank" class="portfolio-text">
-                    <img src="images/Vue.png" alt="vue.js" class="vue-pic"><span class="icon-text">work</span>
-                  </a>
-                  <a href="https://github.com/johyomin/vue_noellohills" target="_blank" class="portfolio-text">
-                    <i class="fab fa-github"></i><span class="icon-text">github</span>
-                  </a>
-                  <a href="https://noelohills.com/" target="_blank" class="portfolio-text">
-                    <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
-                  </a>
-                </div>
-              </li>
-
-              <!-- masigray vue -->
-              <li class="portfolio-content" data-cate="vue">
-                <a href="https://johyomin.github.io/page_masigray/" target="_blank" class="portfolio-pic">
-                  <img src="images/masigray.png" alt="Masigray thumbnail">
-                </a>
-                <span class="vue">Vue.js</span><span class="responsive">반응형</span>
-                <h5>Masigray</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 3일 <b>[ 작업중 ]</b></span>
-                <div class="portfolio-text-wrap">
-                  <a href="https://johyomin.github.io/page_masigray/" target="_blank" class="portfolio-text">
-                    <img src="images/Vue.png" alt="vue.js" class="vue-pic"><span class="icon-text">work</span>
-                  </a>
-                  <a href="https://github.com/johyomin/vue_masigray" target="_blank" class="portfolio-text">
-                    <i class="fab fa-github"></i><span class="icon-text">github</span>
-                  </a>
-                  <a href="https://www.masigray.com:5021/main/main.asp" target="_blank" class="portfolio-text">
-                    <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
-                  </a>
-                </div>
-              </li>
-
-              <!-- stx const vue -->
-              <li class="portfolio-content" data-cate="vue">
-                <a href="https://johyomin.github.io/page_stx/" target="_blank" class="portfolio-pic">
-                  <img src="images/stx.png" alt="STXconst thumbnail">
-                </a>
-                <span class="vue">Vue.js</span>
-                <h5>STX-const</h5>
-                <i class="fas fa-calendar-alt"></i><span class="portfolio-calendar">작업기간 : 2일</span>
-                <div class="portfolio-text-wrap">
-                  <a href="https://johyomin.github.io/page_stx/" target="_blank" class="portfolio-text">
-                    <img src="images/Vue.png" alt="vue.js" class="vue-pic"><span class="icon-text">work</span>
-                  </a>
-                  <a href="https://github.com/johyomin/vue_stx" target="_blank" class="portfolio-text">
-                    <i class="fab fa-github"></i><span class="icon-text">github</span>
-                  </a>
-                  <a href="http://www.stxconst.co.kr/" target="_blank" class="portfolio-text">
-                    <img src="images/chrome.png" alt="chrome" class="chrome-pic"><span class="icon-text">origin</span>
-                  </a>
-                </div>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
+          <div class="swiper-pagination sw-pg"></div>
         </div>
       </div>
-    </section>
 
 
-    <!-- life -->
-    <section class="life" id="life">
-      <div class="line-bar"></div>
-      <div class="inner">
-        <div data-aos="fade-down" data-aos-duration="1500">
-          <h2>LIFE</h2>
-        </div>
-        <div data-aos="fade-up" data-aos-duration="1500">
-          <ul class="life-collection">
-            <li class="life-photo">
-              <span class=" photo-1"></span>
-              <span class="photo-text">
-                여행 다니는 것을 좋아해 <br>
-                주기적으로 리프레쉬를 합니다. 😍</span>
-            </li>
-            <li class="life-photo">
-              <span class=" photo-2">
-                <video width="255px" height="350px" src="images/hm_drive.mp4" controls autoplay loop muted>
-                </video>
-              </span>
-              <span class="photo-text">
-                여행이 힘들다면 드라이브로<br>
-                기분전환을 합니다. 👍 </span>
-            </li>
-            <li class="life-photo">
-              <span class=" photo-3"></span>
-              <span class="photo-text">
-                수영과 친하지는 않지만 <br>
-                물놀이를 좋아합니다. 😆</span>
-            </li>
-            <li class="life-photo">
-              <span class=" photo-4">
-                <video width="255px" height="350px" src="images/hm_water.mp4" controls autoplay loop muted>
-                </video></span>
-              <span class="photo-text">
-                친구들과의 내기에 져도 <br>
-                절대로 빼지 않습니다. 🤣</span>
-            </li>
-            <li class="life-photo">
-              <span class=" photo-5"></span>
-              <span class="photo-text">
-                나만의 편안한 공간을 꾸밀 수 있는<br>
-                소품 쇼핑을 좋아합니다. 🎵 </span>
-            </li>
-            <li class="life-photo">
-              <span class=" photo-6">
-                <video width="255px" height="350px" src="images/hm_water.mp4" controls autoplay loop muted>
-                </video>
-              </span>
-              <span class="photo-text">
-                4살 때부터 쳐온 피아노는 기쁠 때나<br>
-                슬플 때나 항상 감정을 공유합니다. 🎹</span>
-            </li>
-            <li class="life-photo">
-              <span class=" photo-7"></span>
-              <span class="photo-text">
-                계절이 바뀔 때마다 <br>
-                두근두근 꽃구경은 필수 🌸</span>
-            </li>
-            <li class="life-photo">
-              <span class=" photo-8">
-                <video width="255px" height="350px" src="images/hm_lake.mp4" controls autoplay loop muted>
-                </video></span>
-              <span class="photo-text">
-                시원한 강바람을 맞으며 달리는 것은 <br>
-                일상의 소소한 행복입니다. ♥</span>
-            </li>
-          </ul>
-        </div>
+
+  </div>
+  </section>
+
+
+  <!-- life -->
+  <section class="life" id="life">
+    <div class="line-bar"></div>
+    <div class="inner">
+      <div data-aos="fade-down" data-aos-duration="2000">
+        <h2>LIFE</h2>
       </div>
-    </section>
-
-
-    <!-- vision -->
-    <section class="vision" id="vision">
-      <div class="line-bar"></div>
-      <div class="inner">
-        <div data-aos="fade-down" data-aos-duration="1500">
-          <h2>VISION</h2>
-        </div>
-        <div data-aos="fade-up" data-aos-duration="1500">
-
-        </div>
+      <div data-aos="fade-up" data-aos-duration="2000">
+        <ul class="life-collection">
+          <li class="life-photo">
+            <span class=" photo-1"></span>
+            <span class="photo-text">
+              여행 다니는 것을 좋아해 <br>
+              주기적으로 리프레쉬를 합니다. 😍</span>
+          </li>
+          <li class="life-photo">
+            <span class=" photo-2">
+              <video width="255px" height="350px" src="images/hm_drive.mp4" controls autoplay loop muted>
+              </video>
+            </span>
+            <span class="photo-text">
+              여행이 힘들다면 드라이브로<br>
+              기분전환을 합니다. 👍 </span>
+          </li>
+          <li class="life-photo">
+            <span class=" photo-3"></span>
+            <span class="photo-text">
+              수영과 친하지는 않지만 <br>
+              물놀이를 좋아합니다. 😆</span>
+          </li>
+          <li class="life-photo">
+            <span class=" photo-4">
+              <video width="255px" height="350px" src="images/hm_water.mp4" controls autoplay loop muted>
+              </video></span>
+            <span class="photo-text">
+              친구들과의 내기에 져도 <br>
+              절대로 빼지 않습니다. 🤣</span>
+          </li>
+          <li class="life-photo">
+            <span class=" photo-5"></span>
+            <span class="photo-text">
+              나만의 편안한 공간을 꾸밀 수 있는<br>
+              소품 쇼핑을 좋아합니다. 🎵 </span>
+          </li>
+          <li class="life-photo">
+            <span class=" photo-6">
+              <video width="255px" height="350px" src="images/hm_water.mp4" controls autoplay loop muted>
+              </video>
+            </span>
+            <span class="photo-text">
+              4살 때부터 쳐온 피아노는 기쁠 때나<br>
+              슬플 때나 항상 감정을 공유합니다. 🎹</span>
+          </li>
+          <li class="life-photo">
+            <span class=" photo-7"></span>
+            <span class="photo-text">
+              계절이 바뀔 때마다 <br>
+              두근두근 꽃구경은 필수 🌸</span>
+          </li>
+          <li class="life-photo">
+            <span class=" photo-8">
+              <video width="255px" height="350px" src="images/hm_lake.mp4" controls autoplay loop muted>
+              </video></span>
+            <span class="photo-text">
+              시원한 강바람을 맞으며 달리는 것은 <br>
+              일상의 소소한 행복입니다. ♥</span>
+          </li>
+        </ul>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- footer -->
-    <footer class="footer" id="footer">
-      <div class="inner">
-        All copyrights reserved © 2022 - Designed & Developed by Jo Hyo Min
+
+  <!-- vision -->
+  <section class="vision" id="vision">
+    <div class="line-bar"></div>
+    <div class="inner">
+      <div data-aos="fade-down" data-aos-duration="2000">
+        <h2>VISION</h2>
       </div>
-    </footer>
+      <div data-aos="fade-up" data-aos-duration="2000">
+
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer" id="footer">
+    <div class="inner">
+      All copyrights reserved © 2022 - Designed & Developed by Jo Hyo Min
+    </div>
+  </footer>
 
   </div>
 </body>

@@ -38,14 +38,6 @@ img {
 }
 
 html {
-  scrollbar-3dLight-Color: #efefef;
-  scrollbar-arrow-color: #dfdfdf;
-  scrollbar-base-color: #efefef;
-  scrollbar-Face-Color: #dfdfdf;
-  scrollbar-Track-Color: #efefef;
-  scrollbar-DarkShadow-Color: #efefef;
-  scrollbar-Highlight-Color: #efefef;
-  scrollbar-Shadow-Color: #efefef;
   -ms-overflow-style: none;
   overflow: auto;
 }
@@ -87,7 +79,7 @@ body {
   width: 100%;
   height: 1px;
   margin: 100px 0;
-  box-shadow: 0px 2px 3px #c2cfd7;
+  box-shadow: 0px 2px 3px #e6c7c1;
 }
 
 .inner {
@@ -297,7 +289,7 @@ strong {
   background-color: #fff;
   z-index: 999;
   text-align: center;
-  box-shadow: 1px 1px 6px #ebf6fa;
+  box-shadow: 1px 1px 6px #e6c7c1;
 }
 
 .header .inner {
@@ -382,30 +374,64 @@ strong {
   height: 100vh;
 }
 
+.visual {
+  position: absolute;
+  right: 0px;
+  bottom: 0;
+  display: block;
+  width: 1000px;
+  height: 100vh;
+  background: url('../images/hm_cafe.jpg') no-repeat center;
+  background-size: contain;
+}
+
 .home .inner {
   position: relative;
   display: block;
   height: 100%;
 }
 
-.home-wrap {
+.visual-wrap {
   position: relative;
   display: block;
   height: 100%;
 }
 
-.home-text {
+.visual-text1 {
+  font-family: 'S-CoreDream-3Light', 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic';
   position: absolute;
-  top: 30%;
+  top: 35%;
+  left: 0;
+  text-align: start;
+  font-size: 60px;
+  line-height: 80px;
+}
+
+.visual-text2 {
+  font-family: 'S-CoreDream-3Light', 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic';
+  position: absolute;
+  top: 55%;
   left: 0%;
   text-align: start;
-  line-height: 80px;
+  font-size: 20px;
+  line-height: 30px;
+  color: #666;
+  font-weight: 600;
+}
+
+.visual-text3 {
+  font-family: 'S-CoreDream-3Light', 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic';
+  position: relative;
+  text-align: start;
+  font-size: 30px;
+  color: rgb(211, 104, 83 ,20%);
+  font-weight: 600;
 }
 
 .view {
   font-family: 'Sriracha', 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo', sans-serif;
   position: absolute;
-  top: 70%;
+  top: 80%;
   left: 0;
   width: 150px;
   height: 100px;
@@ -415,23 +441,16 @@ strong {
   cursor: pointer;
 }
 
-.visual {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  display: block;
-  width: 1000px;
-  height: 800px;
-  background: url('../images/hm_cafe.jpg') no-repeat center;
-  background-size: contain;
-}
-
 
 /* =============================== about ================================= */
 .about {
   position: relative;
   display: block;
   height: 100%;
+}
+
+.about > .line-bar {
+  margin-top: 0;
 }
 
 .about >.inner {
@@ -449,13 +468,8 @@ strong {
   height: 600px;
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: rgb(230, 200, 194);
-  box-shadow:
-    rgba(230, 200, 194, 0.25) 0px 54px 55px,
-    rgba(230, 200, 194, 0.12) 0px -12px 30px,
-    rgba(230, 200, 194, 0.12) 0px 4px 6px,
-    rgba(230, 200, 194, 0.17) 0px 12px 13px,
-    rgba(230, 200, 194, 0.09) 0px -3px 5px;
+  border: 1px solid rgb(65 65 66 / 5%);
+  box-shadow: rgb(65 65 66 / 10%) 8px 9px 13px 1px;
 }
 
 
@@ -796,6 +810,12 @@ strong {
   display: block;
 }
 
+.portfolio .inner{
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
 .portfolio b {
   font-weight: 500;
   color: #b51b1b;
@@ -832,64 +852,98 @@ strong {
 }
 
 .portfolio-bt button:hover {
-  color: #a4c6eb;
+  color: #d36853;
 }
 
 .portfolio-bt .portfolio-menu-active {
-  color: #a4c6eb;
+  color: #d36853;
 }
-
 
 .portfolio-cate {
   position: relative;
   padding-left: 45px;
 }
 
-.portfolio-list {
-  position: relative;
-  display: block;
-  width: 100%;
-}
-
 .portfolio-content {
   position: relative;
   display: block;
-  float: left;
-  width: 350px;
-  height: 380px;
-  margin: 25px 25px;
-  background-color: #fff;
-  /* border: 1px solid #cee5f6; */
-  box-shadow: 1px 1px 6px #cee5f6;
+  width: 580px;
+  height: 475px;
+  margin: 25px 25px;  
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgb(65 65 66 / 10%) 2px 2px 5px 1px;
   border-radius: 15px;
   overflow: hidden;
-  transition: all 0.9s ease;
 }
 
-.portfolio-content:hover {
-  transform: scale(1.1);
-  z-index: 9;
-}
-
-
-.portfolio-content .portfolio-pic {
+.portfolio-content .portfolio-pic >img {
+  position: relative;
   display: block;
-}
-
-.portfolio-content .portfolio-pic>img {
   width: 100%;
-  height: 200px;
+  height: 70%;
   margin-bottom: 10px;
   box-shadow: -1px -1px 5px gray;
-}
+  z-index: -9;
+} 
+
 
 /* portfolio inner */
 .portfolio h5 {
+  font-family: 'GangwonEduPowerExtraBoldA', 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic';
+  position: relative;
   position: relative;
   display: block;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 20px 0px 0px 20px;
+}
+
+.portfolio-depth1 {
+  position: relative;
+  display: block;
+}
+
+.portfolio-depth2 {
+  position: relative;
+  display: block;
+}
+
+.portfolio-calendar {
+  position: relative;
+  display: inline-block;
+}
+
+.fa-calendar-alt {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  margin-left: 20px;
+  margin-right: 5px;
+}
+
+.portfolio-text {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 300;
+  margin: 7px 20px;
+}
+
+.text-vue {
+  color: #3f5313;
+}
+
+/* portfolio-icon */
+.pc-web {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #d1baf35e;
+  background-color: #d1baf35e;
+  border-radius: 6px;
   font-weight: 500;
-  margin: 7px 20px 10px 20px;
+  font-size: 14px;
+  padding: 3px 7px;
+  margin: 12px 0px 5px 16px;
 }
 
 .responsive {
@@ -907,8 +961,8 @@ strong {
 .vue {
   position: relative;
   display: inline-block;
-  border: 1px solid #d1baf35e;
-  background-color: #d1baf35e;
+  border: 1px solid #e4f2c6;
+  background-color: #e4f2c6;
   border-radius: 6px;
   font-weight: 500;
   font-size: 14px;
@@ -926,43 +980,6 @@ strong {
   font-size: 14px;
   padding: 3px 7px;
   margin: 12px 10px 5px 16px;
-}
-
-.pc-web {
-  position: relative;
-  display: inline-block;
-  border: 1px solid #e4f2c6;
-  background-color: #e4f2c6;
-  border-radius: 6px;
-  font-weight: 500;
-  font-size: 14px;
-  padding: 3px 7px;
-  margin: 12px 0px 5px 16px;
-}
-
-.fa-calendar-alt {
-  position: relative;
-  display: inline-block;
-  font-size: 20px;
-  margin: 0px 8px 10px 20px;
-}
-
-.portfolio-calendar {
-  position: relative;
-  display: inline-block;
-}
-
-.portfolio-text-wrap {
-  position: relative;
-  display: block;
-}
-
-.portfolio-text {
-  position: relative;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 300;
-  margin: 5px 20px;
 }
 
 .fa-laptop-code {
@@ -998,6 +1015,12 @@ strong {
   position: relative;
   padding: 0 5px;
   font-weight: 400;
+}
+
+.sw-pg {
+  position: relative;
+  display: block;
+  margin-top: 20px;
 }
 
 /* ========================= life ========================= */

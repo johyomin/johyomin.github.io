@@ -72,19 +72,19 @@ window.onload = function () {
   // })
 
   /* ========================= home ========================= */
-  const content = "안녕하세요 :) \n  프론트엔드 개발자 \n 조효민 입니다.";
-  const text = document.querySelector(".home-text");
-  let i = 0;
+  // const content = "프론트엔드 개발자 \n 조효민 입니다.";
+  // const text = document.querySelector(".home-text");
+  // let i = 0;
 
-  function typing() {
-    let txt = content[i++];
-    text.innerHTML += txt === "\n" ? "<br/>" : txt;
-    if (i > content.length) {
-      text.textContent = "";
-      i = 0;
-    }
-  }
-  setInterval(typing, 150);
+  // function typing() {
+  //   let txt = content[i++];
+  //   text.innerHTML += txt === "\n" ? "<br/>" : txt;
+  //   if (i > content.length) {
+  //     text.textContent = "";
+  //     i = 0;
+  //   }
+  // }
+  // setInterval(typing, 150);
   /* ========================= gotop ========================= */
   let go_top = $('.gotop');
   let buttonList = $('.button-list');
@@ -246,6 +246,35 @@ window.onload = function () {
       }
     });
   }
+
+
+// portfolio swiper
+let swiper = new Swiper(".portfolio-cate", {
+  effect: "coverflow",
+  grabCursor: false,
+  centeredSlides: true,
+  loop: true,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 500,
+    modifier: 1,
+    slideShadows: true,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
+
+
+
+
+
+
+
+
+
 
   AOS.init();
 }
