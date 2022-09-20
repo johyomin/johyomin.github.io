@@ -87,7 +87,7 @@ body {
   width: 100%;
   height: 1px;
   margin: 100px 0;
-  box-shadow: 0px 2px 3px #e6c7c1;
+  box-shadow: 0px 2px 3px #c2cfd7;
 }
 
 .inner {
@@ -297,7 +297,7 @@ strong {
   background-color: #fff;
   z-index: 999;
   text-align: center;
-  box-shadow: 1px 1px 6px #e6c7c1;
+  box-shadow: 1px 1px 6px #ebf6fa;
 }
 
 .header .inner {
@@ -415,6 +415,18 @@ strong {
   cursor: pointer;
 }
 
+.visual {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 1000px;
+  height: 800px;
+  background: url('../images/hm_cafe.jpg') no-repeat center;
+  background-size: contain;
+}
+
+
 /* =============================== about ================================= */
 .about {
   position: relative;
@@ -446,6 +458,7 @@ strong {
     rgba(230, 200, 194, 0.09) 0px -3px 5px;
 }
 
+
 .profile-left {
   position: relative;
   display: flex;
@@ -460,6 +473,8 @@ strong {
   height: 300px;
   border-radius: 50%;
   margin: 20px auto;
+  background: url('../images/hm_car.jpg') no-repeat right center;
+  background-size: cover;
 }
 
 .profile-icon {
@@ -817,11 +832,11 @@ strong {
 }
 
 .portfolio-bt button:hover {
-  color: #d36853;
+  color: #a4c6eb;
 }
 
 .portfolio-bt .portfolio-menu-active {
-  color: #d36853;
+  color: #a4c6eb;
 }
 
 
@@ -844,8 +859,8 @@ strong {
   height: 380px;
   margin: 25px 25px;
   background-color: #fff;
-  box-shadow: 1px 1px 6px #e6c8c2;
-  /* border-radius: 40px 80px / 80px 40px; */
+  /* border: 1px solid #cee5f6; */
+  box-shadow: 1px 1px 6px #cee5f6;
   border-radius: 15px;
   overflow: hidden;
   transition: all 0.9s ease;
@@ -989,7 +1004,6 @@ strong {
 .life {
   position: relative;
   display: block;
-  /* height: 1300px; */
 }
 
 .life .inner {
@@ -1079,7 +1093,7 @@ strong {
   width: 255px;
   height: 350px;
   margin: 0 auto;
-  background: url('../images/hm_cafe.jpg') no-repeat center;
+  background: url('../images/hm_ikea2.jpg') no-repeat center;
   background-size: cover;
 }
 
