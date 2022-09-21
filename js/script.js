@@ -53,24 +53,6 @@ window.onload = function () {
     });
   });
 
-  // 비주얼 스크롤시 About 로 한번 이동
-  // let aboutSection = $('.about');
-  // let aboutSectionY = aboutSection.offset().top;
-  // let aboutSpeed = 0.5;
-  // aboutSectionY = parseInt(aboutSectionY);
-  // aboutSectionY -= 70;
-  // $(window).resize(function(){
-  //   aboutSectionY = aboutSection.offset().top;
-  //   aboutSectionY = parseInt(aboutSectionY);
-  //   aboutSectionY -= 70;
-  // });
-  // $(???).click(function(event){
-  //   gsap.to($('html'), aboutSpeed, {
-  //     scrollTo: aboutSectionY -  $('.header').height() - 10,
-  //     onComplete: function () {}
-  //   }); 
-  // })
-
   /* ========================= home ========================= */
   // const content = "프론트엔드 개발자 \n 조효민 입니다.";
   // const text = document.querySelector(".home-text");
@@ -167,7 +149,7 @@ window.onload = function () {
       strokeWidth: 6,
       trailWidth: 4, 
       easing: 'easeInOut',
-      duration: 1500,
+      duration: 2000,
       text: {
         autoStyleContainer: true
       },
@@ -256,14 +238,15 @@ let swiper = new Swiper(".portfolio-cate", {
   loop: true,
   slidesPerView: "auto",
   coverflowEffect: {
-    rotate: 50,
+    rotate: 30,
     stretch: 0,
-    depth: 500,
+    depth: 1000,
     modifier: 1,
     slideShadows: true,
   },
   pagination: {
     el: ".swiper-pagination",
+    clickable: true
   },
 });
 

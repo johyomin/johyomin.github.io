@@ -379,9 +379,9 @@ strong {
   right: 0px;
   bottom: 0;
   display: block;
-  width: 1000px;
+  width: 1200px;
   height: 100vh;
-  background: url('../images/hm_cafe.jpg') no-repeat center;
+  background: url('../images/hm_visual.png') no-repeat center;
   background-size: contain;
 }
 
@@ -398,40 +398,46 @@ strong {
 }
 
 .visual-text1 {
-  font-family: 'S-CoreDream-3Light', 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic';
+  font-family: 'Sriracha', 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo', sans-serif;
   position: absolute;
-  top: 35%;
-  left: 0;
+  top: 31%;
+  left: 1%;
+  display: block;
   text-align: start;
-  font-size: 60px;
-  line-height: 80px;
+  font-size: 24px;
+  color: rgb(211, 104, 83, 20%);
+  font-weight: 600;
 }
 
 .visual-text2 {
   font-family: 'S-CoreDream-3Light', 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic';
   position: absolute;
-  top: 55%;
-  left: 0%;
+  display: block;
+  top: 35%;
+  left: 0;
   text-align: start;
-  font-size: 20px;
-  line-height: 30px;
-  color: #666;
+  font-size: 50px;
+  line-height: 80px;
   font-weight: 600;
 }
 
 .visual-text3 {
   font-family: 'S-CoreDream-3Light', 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic';
-  position: relative;
+  position: absolute;
+  display: block;
+  top: 53%;
+  left: 0%;
   text-align: start;
-  font-size: 30px;
-  color: rgb(211, 104, 83 ,20%);
+  font-size: 20px;
+  line-height: 35px;
+  color: #666;
   font-weight: 600;
 }
 
 .view {
   font-family: 'Sriracha', 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo', sans-serif;
   position: absolute;
-  top: 80%;
+  top: 130%;
   left: 0;
   width: 150px;
   height: 100px;
@@ -449,11 +455,11 @@ strong {
   height: 100%;
 }
 
-.about > .line-bar {
+.about>.line-bar {
   margin-top: 0;
 }
 
-.about >.inner {
+.about>.inner {
   position: relative;
   display: block;
   height: 760px;
@@ -468,10 +474,9 @@ strong {
   height: 600px;
   background-color: #fff;
   border-radius: 10px;
-  border: 1px solid rgb(65 65 66 / 5%);
-  box-shadow: rgb(65 65 66 / 10%) 8px 9px 13px 1px;
+  border: 1px solid rgb(230, 199, 193, 30%);
+  box-shadow: rgb(230, 199, 193, 30%) 8px 9px 13px 1px;
 }
-
 
 .profile-left {
   position: relative;
@@ -810,7 +815,7 @@ strong {
   display: block;
 }
 
-.portfolio .inner{
+.portfolio .inner {
   position: relative;
   display: block;
   overflow: hidden;
@@ -869,14 +874,14 @@ strong {
   display: block;
   width: 580px;
   height: 475px;
-  margin: 25px 25px;  
+  margin: 25px 25px;
   background-color: rgb(255, 255, 255);
   box-shadow: rgb(65 65 66 / 10%) 2px 2px 5px 1px;
   border-radius: 15px;
   overflow: hidden;
 }
 
-.portfolio-content .portfolio-pic >img {
+.portfolio-content .portfolio-pic>img {
   position: relative;
   display: block;
   width: 100%;
@@ -884,8 +889,23 @@ strong {
   margin-bottom: 10px;
   box-shadow: -1px -1px 5px gray;
   z-index: -9;
-} 
+}
 
+.swiper-pagination-bullet {
+  background-color: #999;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #d36853;
+}
+
+.swiper-container-3d .swiper-slide-shadow-left {
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+}
+
+.swiper-container-3d .swiper-slide-shadow-right {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+}
 
 /* portfolio inner */
 .portfolio h5 {
@@ -1017,6 +1037,12 @@ strong {
   font-weight: 400;
 }
 
+.php-pic {
+  position: relative;
+  width: 24px;
+  height: 18px;
+}
+
 .sw-pg {
   position: relative;
   display: block;
@@ -1056,10 +1082,9 @@ strong {
   transform: rotate(3deg);
 }
 
-.life-photo:nth-child(odd) {
+.life-cont:nth-child(odd) {
   transform: rotate(-5deg);
 }
-
 .photo-text {
   font-family: 'S-CoreDream-3Light', 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic';
   position: relative;
@@ -1145,6 +1170,73 @@ strong {
   height: 350px;
   margin: 0 auto;
 }
+
+/* ========================= vision ========================= */
+.vision {
+  position: relative;
+  display: block;
+}
+
+.vision .inner {
+  position: relative;
+  display: block;
+}
+
+.vision-wrap {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.vision-content {
+  position: relative;
+  display: block;
+  width: 410px;
+  height: 370px;
+  border: 1px solid rgb(230, 199, 193, 30%);
+  box-shadow: rgb(230, 199, 193, 30%) 8px 9px 13px 1px;
+  border-radius: 5%;
+  padding: 30px;
+}
+
+.vision-content img {
+  position: absolute;
+  top: -50px;
+  left: -20px;
+  display: block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.vision-title {    
+  font-family: 'GangwonEduPowerExtraBoldA', 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic';
+  font-family: 'S-CoreDream-3Light', 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic';
+  position: relative;
+  display: block;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+
+.vision-text {
+  font-family: 'S-CoreDream-3Light', 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic';
+  position: relative;
+  display: block;
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 600;
+  color: #777;
+}
+
+
+
+
+
+
+
 
 
 /* ========================= footer ========================= */
