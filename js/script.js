@@ -1,131 +1,113 @@
 window.onload = function () {
   /* ========================= header ========================= */
-  let gnbButton = $('.gnb-button');
-  gnbButton.eq(0).addClass('gnb-button-active');
+  let gnbButton = $(".gnb-button");
+  gnbButton.eq(0).addClass("gnb-button-active");
   $.each(gnbButton, function (index, item) {
     $(this).click(function (event) {
       event.preventDefault();
-      gnbButton.removeClass('gnb-button-active');
-      $(this).addClass('gnb-button-active');
-      let posY = $(this).attr('href');
+      gnbButton.removeClass("gnb-button-active");
+      $(this).addClass("gnb-button-active");
+      let posY = $(this).attr("href");
       posY = $(posY).offset().top;
       posY = parseInt(posY);
       posY = posY - 40;
       // if (index == 1) {
       //   posY -= 10;
       // }
-      gsap.to($('html'), 0.5, {
-        scrollTo: posY
+      gsap.to($("html"), 0.5, {
+        scrollTo: posY,
       });
     });
-    let view = $('.view');
+    let view = $(".view");
     view.click(function (event) {
       event.preventDefault();
-      let posY = $(this).attr('href');
+      let posY = $(this).attr("href");
       posY = $(posY).offset().top;
       posY = parseInt(posY);
-      posY = posY -40;
-      gsap.to($('html'), 0.5, {
-        scrollTo: posY
+      posY = posY - 40;
+      gsap.to($("html"), 0.5, {
+        scrollTo: posY,
       });
     });
   });
 
   // 스크롤시 섹션 포커스
   $.each(gnbButton, function (index, item) {
-    let temp = $(this).attr('href');
+    let temp = $(this).attr("href");
     new Waypoint({
       element: $(temp),
       handler: function (direction) {
-        if (direction == 'down') {
+        if (direction == "down") {
           //  일단 모든 클래스 제거
-          gnbButton.removeClass('gnb-button-active');
+          gnbButton.removeClass("gnb-button-active");
           // 클릭된 대상만 클래스 추가
-          gnbButton.eq(index).addClass('gnb-button-active');
-        } else if (direction == 'up') {
+          gnbButton.eq(index).addClass("gnb-button-active");
+        } else if (direction == "up") {
           //  일단 모든 클래스 제거
-          gnbButton.removeClass('gnb-button-active');
+          gnbButton.removeClass("gnb-button-active");
           // 클릭된 대상만 클래스 추가
-          gnbButton.eq(index - 1).addClass('gnb-button-active');
+          gnbButton.eq(index - 1).addClass("gnb-button-active");
         }
       },
-      offset: '50%'
+      offset: "50%",
     });
   });
 
-  /* ========================= home ========================= */
-  // const content = "프론트엔드 개발자 \n 조효민 입니다.";
-  // const text = document.querySelector(".home-text");
-  // let i = 0;
-
-  // function typing() {
-  //   let txt = content[i++];
-  //   text.innerHTML += txt === "\n" ? "<br/>" : txt;
-  //   if (i > content.length) {
-  //     text.textContent = "";
-  //     i = 0;
-  //   }
-  // }
-  // setInterval(typing, 150);
   /* ========================= gotop ========================= */
-  let go_top = $('.gotop');
-  let buttonList = $('.button-list');
+  let go_top = $(".gotop");
+  let buttonList = $(".button-list");
   go_top.click(function () {
-    $('html').animate({
-      scrollTop: 0
-    }, 1000);
+    $("html").animate({
+        scrollTop: 0,
+      },
+      1000
+    );
   });
   new Waypoint({
-    element: $('.about'),
+    element: $(".about"),
     handler: function (direction) {
-      if (direction == 'down') {
+      if (direction == "down") {
         buttonList.show();
-      } else if (direction == 'up') {
+      } else if (direction == "up") {
         buttonList.hide();
-        contactList.addClass('contact-list-active');
+        contactList.addClass("contact-list-active");
       }
     },
-    offset: '50%'
+    offset: "50%",
   });
   // contact
-  let contact = $('.contact');
-  let contactList = $('.contact-list');
+  let contact = $(".contact");
+  let contactList = $(".contact-list");
   contact.click(function (event) {
     event.preventDefault();
     event.stopPropagation();
-    contactList.toggleClass('contact-list-active');
+    contactList.toggleClass("contact-list-active");
   });
-  $('body').click(function (event) {
-    contactList.removeClass('contact-list-active');
+  $("body").click(function (event) {
+    contactList.removeClass("contact-list-active");
   });
   $(window).scroll(function () {
-    contactList.removeClass('contact-list-active');
+    contactList.removeClass("contact-list-active");
   });
   /* ========================= possibility ========================= */
-  const labels = [
-    '책임감',
-    '도전정신',
-    '포용력',
-    'IT 활용 능력',
-    '소통 능력'
-  ];
+  const labels = ["책임감", "도전정신", "포용력", "IT 활용 능력", "소통 능력"];
   const data = {
     labels: labels,
     datasets: [{
-      backgroundColor: 'rgb(230, 200, 194,30%)',
-      borderColor: '#e6c7c1',
+      backgroundColor: "rgb(230, 200, 194,30%)",
+      borderColor: "#e6c7c1",
       borderWidth: 5,
       data: [95, 85, 95, 90, 100],
-    }]
+    }, ],
   };
   const config = {
-    type: 'radar',
+    type: "radar",
     data: data,
     options: {
       plugins: {
         legend: {
-          display: false
-        }
+          display: false,
+        },
       },
       scale: {
         min: 0,
@@ -133,63 +115,60 @@ window.onload = function () {
         suggestedMin: 0,
         suggestedMax: 100,
         ticks: {
-          textStrokeWidth: 35
-        }
-      }
-    }
+          textStrokeWidth: 35,
+        },
+      },
+    },
   };
-  const myChart = new Chart(
-    document.getElementById('myChart'),
-    config
-  );
+  const myChart = new Chart(document.getElementById("myChart"), config);
   /* ========================= skill ========================= */
   function makeCircle(_id, _endColor) {
     var bar = new ProgressBar.Circle(_id, {
-      color: '#333',
+      color: "#333",
       strokeWidth: 6,
-      trailWidth: 4, 
-      easing: 'easeInOut',
+      trailWidth: 4,
+      easing: "easeInOut",
       duration: 2000,
       text: {
-        autoStyleContainer: true
+        autoStyleContainer: true,
       },
       from: {
         color: _endColor,
-        width: 1
+        width: 1,
       },
       to: {
         color: _endColor,
-        width: 36
+        width: 36,
       },
       step: function (state, circle) {
-        circle.path.setAttribute('stroke', state.color);
-        circle.path.setAttribute('stroke-width', state.width);
+        circle.path.setAttribute("stroke", state.color);
+        circle.path.setAttribute("stroke-width", state.width);
         var value = Math.round(circle.value() * 100);
         if (value === 0) {
-          circle.setText('');
+          circle.setText("");
         } else {
-          circle.setText('');
+          circle.setText("");
         }
-      }
+      },
     });
     bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-    bar.text.style.fontSize = '2rem';
+    bar.text.style.fontSize = "2rem";
     return bar;
   }
 
-  let bar_html = makeCircle(pro_html, '#f1a294');
-  let bar_css = makeCircle(pro_css, '#93a9eb');
-  let bar_js = makeCircle(pro_js, '#f9ecab');
-  let bar_git = makeCircle(pro_git, '#000');
-  let bar_jquery = makeCircle(pro_jquery, '#414193');
-  let bar_vue = makeCircle(pro_vue, '#3cb371');
-  let bar_figma = makeCircle(pro_figma, '#a3e3f0');
-  let bar_scss = makeCircle(pro_scss, '#c091c0');
+  let bar_html = makeCircle(pro_html, "#f1a294");
+  let bar_css = makeCircle(pro_css, "#93a9eb");
+  let bar_js = makeCircle(pro_js, "#f9ecab");
+  let bar_git = makeCircle(pro_git, "#000");
+  let bar_jquery = makeCircle(pro_jquery, "#414193");
+  let bar_vue = makeCircle(pro_vue, "#3cb371");
+  let bar_figma = makeCircle(pro_figma, "#a3e3f0");
+  let bar_scss = makeCircle(pro_scss, "#c091c0");
 
   new Waypoint({
-    element: $('.skill'),
+    element: $(".skill"),
     handler: function (direction) {
-      if (direction == 'down') {
+      if (direction == "down") {
         bar_html.animate(0.95);
         bar_css.animate(0.9);
         bar_js.animate(0.75);
@@ -198,66 +177,72 @@ window.onload = function () {
         bar_git.animate(0.9);
         bar_figma.animate(0.9);
         bar_scss.animate(0.85);
-      } else if (direction == 'up') {}
+      } else if (direction == "up") {}
     },
-    offset: '50%'
+    offset: "50%",
   });
 
   /* ========================= portfolio ========================= */
-  let portfolioMenu = $('.portfolio-bt');
-  let portfolioContent = $('.portfolio-content');
-  portfolioMenu.eq(0).find('button').addClass('portfolio-menu-active');
 
-  $.each(portfolioMenu, function (index, item) {
-    $(this).find('button').click(function (event) {
-      portfolioMenu.find('button').removeClass('portfolio-menu-active');
-      $(this).addClass('portfolio-menu-active');
-      let data_cate = $(this).attr('data-cate');
-      showPortfolio(data_cate);
-    });
+  // portfolio swiper
+  let portfolioMenu = $(".portfolio-bt");
+  let portfolioContent = $(".portfolio-content");
+  portfolioMenu.eq(0).find("button").addClass("portfolio-menu-active");
+
+  let swiperCate = new Swiper(".portfolio-cate", {
+    effect: "coverflow",
+    grabCursor: false,
+    centeredSlides: true,
+    loop: true,
+    slidesPerView: "auto",
+    // speed: 1000,
+    // autoplay: {
+      // delay: 2000,
+      // disableOnInteraction: false,
+    // },
+    coverflowEffect: {
+      rotate: 30,
+      stretch: 0,
+      depth: 1000,
+      modifier: 1,
+      slideShadows: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    // 슬라이드시 버튼 포커스
+    on: {
+      activeIndexChange: function () {
+        // console.log("swiper initialized", this.realIndex);
+        portfolioMenu.find("button").removeClass("portfolio-menu-active");
+        if (this.realIndex < 3) {
+          portfolioMenu.eq(0).find("button").addClass("portfolio-menu-active");
+        } else if (this.realIndex < 8) {
+          portfolioMenu.eq(1).find("button").addClass("portfolio-menu-active");
+        } else {
+          portfolioMenu.eq(2).find("button").addClass("portfolio-menu-active");
+        }
+      },
+    },
   });
 
-  function showPortfolio(_cate) {
-    $.each(portfolioContent, function (index, item) {
-      let data_cate = $(this).attr('data-cate');
-      let data_cate_arr = data_cate.split('-');
-      if (_cate == 'all' || _cate == data_cate_arr[0] || _cate == data_cate_arr[1]) {
-        $(this).show();
-      } else {
-        $(this).hide();
-      }
-    });
-  }
-
-
-// portfolio swiper
-let swiper = new Swiper(".portfolio-cate", {
-  effect: "coverflow",
-  grabCursor: false,
-  centeredSlides: true,
-  loop: true,
-  slidesPerView: "auto",
-  coverflowEffect: {
-    rotate: 30,
-    stretch: 0,
-    depth: 1000,
-    modifier: 1,
-    slideShadows: true,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true
-  },
-});
-
-
-
-
-
-
-
-
-
+  // 버튼 클릭시 포커스
+  $.each(portfolioMenu, function (index, item) {
+    $(this)
+      .find("button")
+      .click(function (event) {
+        portfolioMenu.find("button").removeClass("portfolio-menu-active");
+        $(this).addClass("portfolio-menu-active");
+        if (index == 0) {
+          swiperCate.slideTo(11);
+        } else if (index == 1) {
+          swiperCate.slideTo(14);
+        } else if (index == 2) {
+          swiperCate.slideTo(19);
+        }
+      });
+  });
 
   AOS.init();
-}
+};
