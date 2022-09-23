@@ -878,20 +878,27 @@ strong {
 
 .sw-pg {
   position: absolute;
-  bottom: 2px;
+  bottom: 3px;
   left: 50%;
   transform: translateX(-50%);
   display: block;
 }
 
-.fa-play-circle,
-.fa-pause-circle {
+.sw-pause {
   position: absolute;
   bottom: 0;
   left: 59%;
   border: 0;
-  background-color: transparent;
-  font-size: 22px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  background: url('../images/sw-pause.svg') no-repeat center;
+  background-size: contain;
+}
+
+.sw-control .sw-play {
+  background: url('../images/sw-play.svg') no-repeat center;
+  background-size: contain;
 }
 
 .swiper-pagination-bullet {
@@ -1156,7 +1163,7 @@ strong {
 }
 
 .life-collection>li>.life-cont {
-  transform: rotate(5deg);
+  transform: rotate(3deg);
 }
 
 .life-collection>li:nth-child(2n)>.life-cont {
