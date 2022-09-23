@@ -835,11 +835,7 @@ strong {
   color: #b51b1b;
 }
 
-/* portfolio-layout */
-.portfolio-wrap {
-  position: relative;
-}
-
+/* portfolio-menu */
 .portfolio-menu {
   position: relative;
   text-align: center;
@@ -873,9 +869,50 @@ strong {
   color: #d36853;
 }
 
+
+/* portfolio-cate */
 .portfolio-cate {
   position: relative;
   padding-left: 45px;
+}
+
+.sw-pg {
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+}
+
+.fa-play-circle,
+.fa-pause-circle {
+  position: absolute;
+  bottom: 0;
+  left: 59%;
+  border: 0;
+  background-color: transparent;
+  font-size: 22px;
+}
+
+.swiper-pagination-bullet {
+  margin: 0 5px;
+  background-color: #999;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #d36853;
+}
+
+.swiper-container-3d .swiper-slide-shadow-left {
+  background-image: linear-gradient(to left,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0));
+}
+
+.swiper-container-3d .swiper-slide-shadow-right {
+  background-image: linear-gradient(to right,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0));
 }
 
 .portfolio-content {
@@ -900,41 +937,98 @@ strong {
   z-index: -9;
 }
 
-.swiper-pagination-bullet {
-  background-color: #999;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #d36853;
-}
-
-.swiper-container-3d .swiper-slide-shadow-left {
-  background-image: linear-gradient(to left,
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0));
-}
-
-.swiper-container-3d .swiper-slide-shadow-right {
-  background-image: linear-gradient(to right,
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0));
-}
-
 /* portfolio inner */
+.portfolio-depth {
+  position: relative;
+  display: block;
+}
+
+.portfolio-cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 50%);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+
+.portfolio-content:hover .portfolio-cover {
+  opacity: 1;
+}
+
+.portfolio-inner {
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  width: 380px;
+  height: 215px;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+
+.portfolio-inner-title {
+  position: relative;
+  display: block;
+  font-size: 20px;
+  color: #000;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.clone-web {
+  position: relative;
+  display: block;
+  margin-bottom: 30px;
+  background-color: rgb(255, 255, 255, 80%);
+  padding: 25px;
+  padding-left: 30px;
+  border-radius: 5px;
+  box-shadow: rgb(65 65 66 / 80%) 2px 2px 5px 1px;
+}
+
+.clone-vue {
+  position: relative;
+  display: block;
+  background-color: rgb(255, 255, 255, 80%);
+  padding: 25px;
+  padding-left: 30px;
+  border-radius: 5px;
+  box-shadow: rgb(65 65 66 / 80%) 2px 2px 5px 1px;
+}
+
+
+.portfolio-text {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.portfolio-text:hover {
+  color: #b51b1b;
+}
+
+/* portfolio-icon */
 .portfolio h5 {
   font-family: "GangwonEduPowerExtraBoldA", "Noto Sans KR", Helvetica,
     "맑은 고딕", "malgun gothic";
   position: relative;
   position: relative;
   display: block;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 700;
   margin: 20px 0px 0px 20px;
 }
 
-.portfolio-depth {
+.icon-text {
   position: relative;
-  display: block;
+  padding-right: 15px;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .portfolio-calendar {
@@ -950,45 +1044,6 @@ strong {
   margin-right: 5px;
 }
 
-.portfolio-text {
-  position: relative;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 300;
-  margin: 7px 20px;
-}
-
-.text-vue {
-  color: #3f5313;
-}
-
-.portfolio-cover {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 20%);
-  opacity: 0;
-  transition: opacity 0.5s;
-  padding-top: 50px;
-  padding-left: 50px;
-}
-
-.portfolio-content:hover .portfolio-cover {
-  opacity: 1;
-}
-
-.portfolio-inner {
-  position: relative;
-  display: block;
-  width: 300px;
-  height: 300px;
-  /* background-color: #fff; */
-  border-radius: 10%;
-}
-
-/* portfolio-icon */
 .pc-web {
   position: relative;
   display: inline-block;
@@ -1037,54 +1092,44 @@ strong {
   margin: 12px 10px 5px 16px;
 }
 
-.fa-laptop-code {
+.fa-desktop {
   position: relative;
-  font-size: 25px;
+  font-size: 20px;
+  margin-right: 10px;
 }
 
-.vue-pic {
+.fa-vuejs {
   position: relative;
-  width: 18px;
-  height: 18px;
+  font-size: 21px;
+  font-weight: 400;
+  margin-right: 10px;
 }
 
 .fa-github {
   position: relative;
   font-size: 20px;
+  margin-right: 10px;
 }
 
-.chrome-pic {
+.fa-chrome {
   position: relative;
-  width: 18px;
-  height: 18px;
-}
-
-.figma {
-  position: relative;
-  width: 18px;
-  height: 18px;
-}
-
-.icon-text {
-  position: relative;
-  padding: 0 10px;
   font-size: 20px;
-  font-weight: 400;
-  border: 1px solid red;
-  color: #fff;
+  margin-right: 10px;
 }
 
-.php-pic {
+.fa-figma {
   position: relative;
-  width: 24px;
-  height: 18px;
+  font-size: 20px;
+  margin-right: 10px;
 }
 
-.sw-pg {
+.fa-php {
   position: relative;
-  display: block;
-  margin-top: 20px;
+  font-size: 25px;
+  font-weight: 600;
+  margin-right: 10px;
 }
+
 
 /* ========================= life ========================= */
 .life {
@@ -1102,7 +1147,7 @@ strong {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 100px;
 }
 
 .life-collection>li {
@@ -1313,7 +1358,7 @@ strong {
   margin-bottom: 20px;
 }
 
-.footer-contact >li {
+.footer-contact>li {
   position: relative;
   display: inline-block;
 }

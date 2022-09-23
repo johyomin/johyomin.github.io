@@ -57,7 +57,8 @@ window.onload = function () {
   let go_top = $(".gotop");
   let buttonList = $(".button-list");
   go_top.click(function () {
-    $("html").animate({
+    $("html").animate(
+      {
         scrollTop: 0,
       },
       1000
@@ -93,12 +94,14 @@ window.onload = function () {
   const labels = ["책임감", "도전정신", "포용력", "IT 활용 능력", "소통 능력"];
   const data = {
     labels: labels,
-    datasets: [{
-      backgroundColor: "rgb(230, 200, 194,30%)",
-      borderColor: "#e6c7c1",
-      borderWidth: 5,
-      data: [95, 85, 95, 90, 100],
-    }, ],
+    datasets: [
+      {
+        backgroundColor: "rgb(230, 200, 194,30%)",
+        borderColor: "#e6c7c1",
+        borderWidth: 5,
+        data: [95, 85, 95, 90, 100],
+      },
+    ],
   };
   const config = {
     type: "radar",
@@ -177,7 +180,8 @@ window.onload = function () {
         bar_git.animate(0.9);
         bar_figma.animate(0.9);
         bar_scss.animate(0.85);
-      } else if (direction == "up") {}
+      } else if (direction == "up") {
+      }
     },
     offset: "50%",
   });
@@ -195,11 +199,11 @@ window.onload = function () {
     centeredSlides: true,
     loop: true,
     slidesPerView: "auto",
-    // speed: 1000,
-    // autoplay: {
-      // delay: 2000,
-      // disableOnInteraction: false,
-    // },
+    speed: 1000,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
     coverflowEffect: {
       rotate: 30,
       stretch: 0,
@@ -208,9 +212,10 @@ window.onload = function () {
       slideShadows: true,
     },
     pagination: {
-      el: ".swiper-pagination",
+      el: ".sw-pg",
       clickable: true,
     },
+
     // 슬라이드시 버튼 포커스
     on: {
       activeIndexChange: function () {
@@ -243,6 +248,20 @@ window.onload = function () {
         }
       });
   });
+
+  // swiper button
+  // let swPause = $(".sw-pause");
+  // let swPortfolio = $(".portfolio-cate");
+  // swPause.click(function (event) {
+  //   let temp = $(this).hasClass('sw-play');
+  //   if (temp == false) {
+  //     $(this).addClass('sw-play');
+  //     swPortfolio.autoplay.stop();
+  //   } else {
+  //     $(this).removeClass('sw-play');
+  //     swPortfolio.autoplay.start();
+  //   }
+  // });
 
   AOS.init();
 };
