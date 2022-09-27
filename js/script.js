@@ -195,11 +195,6 @@ window.onload = function () {
     centeredSlides: true,
     loop: true,
     slidesPerView: "auto",
-    speed: 1000,
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
     coverflowEffect: {
       rotate: 30,
       stretch: 0,
@@ -243,21 +238,6 @@ window.onload = function () {
           swiperCate.slideTo(19);
         }
       });
-  });
-
-  // swiper button
-  let swPause = $('.sw-pause');
-  swPause.click(function () {
-    let temp = $(this).hasClass('sw-play');
-    if (temp == false) {
-      $(this).addClass('sw-play');
-      // 슬라이드 멈추기
-      swiperCate.autoplay.stop();
-    } else {
-      $(this).removeClass('sw-play');
-      // 슬라이드 재생
-      swiperCate.autoplay.start();
-    }
   });
 
   AOS.init();
