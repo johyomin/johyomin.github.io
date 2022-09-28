@@ -366,7 +366,7 @@ strong {
 
 .visual {
   position: absolute;
-  right: 0px;
+  right: -50px;
   top: 0;
   display: block;
   width: 1080px;
