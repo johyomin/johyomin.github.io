@@ -490,6 +490,11 @@ strong {
   background-size: contain;
 }
 
+.profile-pic:hover {
+  background: url("../images/hm_profile2.jpg") no-repeat right center;
+  background-size: cover;
+}
+
 .profile-icon {
   position: relative;
   display: block;
