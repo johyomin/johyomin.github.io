@@ -543,6 +543,7 @@ strong {
   width: 900px;
   color: #444;
   font-weight: 600;
+  padding-top: 30px;
 }
 
 .about-me {
@@ -570,7 +571,7 @@ strong {
   font-size: 42px;
   font-weight: 700;
   text-align: start;
-  margin: 10px 0;
+  margin: 5px 0;
 }
 
 .about-me-text {
@@ -584,11 +585,11 @@ strong {
 }
 
 .about-me-sub-text {
-  position: relative;
-  display: block;
-  font-size: 18px;
-  line-height: 36px;
-  padding-top: 30px;
+    position: relative;
+    display: block;
+    font-size: 18px;
+    line-height: 32px;
+    padding-top: 16px;
 }
 
 .about-me-sub-text > b {
@@ -706,7 +707,7 @@ strong {
 .pos-text3 {
   position: absolute;
   display: block;
-  bottom: 0%;
+  bottom: 5%;
   right: -4%;
   width: 510px;
   background: url("../images//posibility-bcc.jpg") no-repeat center;
@@ -765,7 +766,7 @@ strong {
 .skill-pic {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 55%;
   transform: translate(-50%, -50%);
   display: block;
   width: 60px;
@@ -1242,8 +1243,8 @@ strong {
   top: -50px;
   left: -20px;
   display: block;
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
 }
 
