@@ -356,6 +356,11 @@ strong {
   opacity: 1;
 }
 
+.fa-list-ul {
+  position: relative;
+  font-size: 0px;
+}
+
 /* ========================= home ========================= */
 .home {
   position: relative;
@@ -383,31 +388,29 @@ strong {
 }
 
 .visual-wrap {
-  position: relative;
+  position: absolute;
+  top: 30%;
+  left: 0;
   display: block;
-  height: 100%;
 }
 
 .visual-text1 {
   font-family: "Sriracha", "Noto Sans KR", Helvetica, "맑은 고딕",
     "malgun gothic", "Apple SD Gothic Neo", sans-serif;
-  position: absolute;
-  top: 31%;
-  left: 1%;
+  position: relative;
   display: block;
   text-align: start;
   font-size: 24px;
   color: rgb(211, 104, 83, 20%);
   font-weight: 600;
+  padding-left: 15px;
 }
 
 .visual-text2 {
   font-family: "S-CoreDream-3Light", "Noto Sans KR", Helvetica, "맑은 고딕",
     "malgun gothic";
-  position: absolute;
+  position: relative;
   display: block;
-  top: 35%;
-  left: 0;
   text-align: start;
   font-size: 50px;
   line-height: 80px;
@@ -417,29 +420,26 @@ strong {
 .visual-text3 {
   font-family: "S-CoreDream-3Light", "Noto Sans KR", Helvetica, "맑은 고딕",
     "malgun gothic";
-  position: absolute;
+  position: relative;
   display: block;
-  top: 53%;
-  left: 0%;
   text-align: start;
   font-size: 20px;
   line-height: 35px;
   color: #666;
   font-weight: 600;
+  margin-top: 15px;
 }
 
 .view {
   font-family: "Sriracha", "Noto Sans KR", Helvetica, "맑은 고딕",
     "malgun gothic", "Apple SD Gothic Neo", sans-serif;
-  position: absolute;
-  top: 130%;
-  left: 0;
-  width: 150px;
-  height: 100px;
+  position: relative;
+  display: block;
   border: 0;
   background-color: transparent;
   font-size: 20px;
   cursor: pointer;
+  margin-top: 30px;
 }
 
 /* =============================== about ================================= */

@@ -1,0 +1,112 @@
+/* header */
+@media all and (max-width: 1320px) {
+    .header .inner {
+        display: block;
+    }
+
+    .logo {
+        position: absolute;
+        top: 0;
+        left: 2%;
+    }
+
+    .gnb {
+        position: absolute;
+        top: 0;
+        left: 33%;
+    }
+}
+
+@media all and (max-width: 1230px) {
+    .gnb {
+        left: 25%;
+    }
+}
+
+@media all and (max-width: 1130px) {
+    .gnb {
+        left: 20%;
+    }
+}
+
+@media all and (max-width: 1060px) {
+    .gnb {
+        left: 15%;
+    }
+}
+
+@media all and (max-width: 1000px) {
+    .gnb {
+        left: 20%;
+    }
+
+    .gnb-button {
+        font-size: 16px;
+        margin-left: 15px;
+    }
+}
+
+@media all and (max-width: 910px) {
+    .gnb {
+        left: 15%;
+    }
+}
+
+@media all and (max-width: 840px) {
+    .gnb {
+        left: 10%;
+    }
+}
+
+@media all and (max-width: 770px) {
+    .gnb {
+        left: 10%;
+    }
+
+    .gnb-button {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media all and (max-width: 685px) {
+    .gnb {
+        display: none;
+    }
+}
+
+/* home */
+@media all and (max-width: 1410px) {
+    .visual {
+    right: 0px;
+    }
+}
+
+@media all and (max-width: 1300px) {
+    .visual {
+        right: 30px;
+    }
+}
+
+@media all and (max-width: 1230px) {
+    .visual {
+        right: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+/* about */
+@media all and (max-width: 1320px) {
+
+}
