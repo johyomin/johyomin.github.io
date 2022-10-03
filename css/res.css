@@ -301,19 +301,39 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* about */
-@media all and (max-width: 1320px) {}
+@media all and (max-width: 1360px) {
+.profile {
+    margin-left: 30px;
+}
+
+.about-me-title {
+    font-size: 26px;
+}
+
+.about-me-sub-title {
+    font-size: 36px;
+}
+
+.about-me-text {
+    font-size: 28px;
+}
+
+.about-me-sub-text {
+    font-size: 16px;
+}
+
+
+.profile-right-title {
+    font-size: 24px;
+}
+
+.profile-right-text {
+    font-size: 14px;
+}
+
+}
+
+@media all and (max-width: 1230px) {
+    
+}
