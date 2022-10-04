@@ -4,16 +4,14 @@
 
 @font-face {
   font-family: "GangwonEduPowerExtraBoldA";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "S-CoreDream-3Light";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
-    format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -98,7 +96,6 @@ body {
   position: relative;
   display: block;
   max-width: 1300px;
-  min-width: 1300px;
   height: calc(100% - 80px);
   margin: 0 auto;
 }
@@ -283,14 +280,14 @@ strong {
 }
 
 .header .inner {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 0;
+  position: relative;
+  display: block;
 }
 
 .logo {
   position: relative;
   display: block;
+  float: left;
   width: 50px;
   height: 50px;
   background: url("../images/favicon.png") no-repeat center;
@@ -302,16 +299,18 @@ strong {
 /* header-gnb */
 .gnb {
   position: relative;
-  display: inline-block;
-  font-size: 0;
+  display: block;
+  height: 80px;
+  float: right;
 }
 
-.gnb > li {
+.gnb>li {
   position: relative;
   display: inline-block;
   white-space: nowrap;
   font-size: 0;
   margin: 0 10px;
+  height: 100%;
 }
 
 .gnb-button {
@@ -365,20 +364,19 @@ strong {
 .home {
   position: relative;
   display: block;
-  min-width: 1300px;
   height: 100vh;
 }
 
 .visual {
-  position: absolute;
-  right: -50px;
-  top: 0;
+  position: relative;
   display: block;
-  width: 1080px;
-  min-width: 1080px;
   height: 100vh;
-  background: url("../images/hm_visual.png") no-repeat right center;
-  background-size: contain;
+  float: right;
+}
+
+.visual>img {
+  width: 100%;
+  height: 100%;
 }
 
 .home .inner {
@@ -389,9 +387,10 @@ strong {
 
 .visual-wrap {
   position: absolute;
-  top: 30%;
+  top: 25%;
   left: 0;
   display: block;
+  z-index: 9;
 }
 
 .visual-text1 {
@@ -412,8 +411,8 @@ strong {
   position: relative;
   display: block;
   text-align: start;
-  font-size: 50px;
-  line-height: 80px;
+  font-size: 48px;
+  line-height: 76px;
   font-weight: 600;
 }
 
@@ -449,11 +448,11 @@ strong {
   height: 100%;
 }
 
-.about > .line-bar {
+.about>.line-bar {
   margin-top: 0;
 }
 
-.about > .inner {
+.about>.inner {
   position: relative;
   display: block;
   height: 650px;
@@ -586,14 +585,14 @@ strong {
 }
 
 .about-me-sub-text {
-    position: relative;
-    display: block;
-    font-size: 18px;
-    line-height: 32px;
-    padding-top: 16px;
+  position: relative;
+  display: block;
+  font-size: 18px;
+  line-height: 32px;
+  padding-top: 16px;
 }
 
-.about-me-sub-text > b {
+.about-me-sub-text>b {
   color: #000;
 }
 
@@ -852,19 +851,15 @@ strong {
 }
 
 .swiper-container-3d .swiper-slide-shadow-left {
-  background-image: linear-gradient(
-    to left,
-    rgba(0, 0, 0, 0.3),
-    rgba(0, 0, 0, 0)
-  );
+  background-image: linear-gradient(to left,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0));
 }
 
 .swiper-container-3d .swiper-slide-shadow-right {
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.3),
-    rgba(0, 0, 0, 0)
-  );
+  background-image: linear-gradient(to right,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0));
 }
 
 .portfolio-content {
@@ -879,7 +874,7 @@ strong {
   overflow: hidden;
 }
 
-.portfolio-content .portfolio-pic > img {
+.portfolio-content .portfolio-pic>img {
   position: relative;
   display: block;
   width: 100%;
@@ -1099,16 +1094,16 @@ strong {
   margin-top: 100px;
 }
 
-.life-collection > li {
+.life-collection>li {
   position: relative;
   display: block;
 }
 
-.life-collection > li > .life-cont {
+.life-collection>li>.life-cont {
   transform: rotate(3deg);
 }
 
-.life-collection > li:nth-child(2n) > .life-cont {
+.life-collection>li:nth-child(2n)>.life-cont {
   transform: rotate(-5deg);
 }
 
@@ -1307,7 +1302,7 @@ strong {
   margin-bottom: 20px;
 }
 
-.footer-contact > li {
+.footer-contact>li {
   position: relative;
   display: inline-block;
 }
