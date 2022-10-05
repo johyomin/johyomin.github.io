@@ -56,7 +56,17 @@ html {
 
 /* SCROLL */
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #e6c7c1;
+  border-radius: 30px;
+  height: 200px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
 }
 
 html {
@@ -387,7 +397,7 @@ strong {
 
 .visual-wrap {
   position: absolute;
-  top: 25%;
+  top: 27%;
   left: 0;
   display: block;
   z-index: 9;
@@ -411,7 +421,7 @@ strong {
   position: relative;
   display: block;
   text-align: start;
-  font-size: 48px;
+  font-size: 46px;
   line-height: 76px;
   font-weight: 600;
 }

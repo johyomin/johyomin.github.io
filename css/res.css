@@ -5,14 +5,12 @@
     }
 }
 
-
 @media all and (max-width: 1000px) {
     .gnb-button {
         font-size: 16px;
         margin-left: 15px;
     }
 }
-
 
 @media all and (max-width: 850px) {
     .gnb-button {
@@ -55,7 +53,7 @@
     }
 }
 
-@media all and (max-width: 1200px) {
+@media all and (max-width: 1250px) {
     .visual-text1 {
         font-size: 18px;
     }
@@ -69,7 +67,6 @@
         font-size: 16px;
     }
 }
-
 
 @media all and (max-width: 550px) {
     .visual {
@@ -92,11 +89,9 @@
     .view {
         font-size: 16px;
     }
-
 }
 
-
-@media all and (max-width: 410px) {
+@media all and (max-width: 470px) {
     .visual {
         height: 80vh;
     }
@@ -117,11 +112,7 @@
     .view {
         font-size: 14px;
     }
-
-
 }
-
-
 
 /* about */
 @media all and (max-width: 1360px) {
