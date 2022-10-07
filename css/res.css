@@ -1,148 +1,384 @@
+/* gotop */
+@media all and (max-width: 1300px) {
+  /* 
+    .contact {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        padding-top: 8px;
+    }
+
+    .contact-list .kakao-pic {
+        width: 50px;
+        height: 50px;
+    }
+
+    .contact-list .kakao-pic:hover {
+        transform: scale(1.1);
+    }
+
+    .contact-list .cont-git {
+        font-size: 46px;
+        margin: 20px 0 20px 3px;
+    }
+
+    .contact-list .cont-git:hover {
+        transform: scale(1.1);
+    }
+
+    .contact-list .email-pic {
+        width: 50px;
+        height: 50px;
+    }
+
+    .contact-list .email-pic:hover {
+        transform: scale(1.1);
+    }
+
+    .pdf {
+        margin: 10px 0;
+        width: 60px;
+        height: 60px;
+        padding-top: 12px;
+    }
+
+    .fa-file-pdf {
+        font-size: 32px;
+    }
+
+    .fa-user {
+        font-size: 14px;
+        margin-left: 5px;
+    }
+
+    .gotop {
+        margin: 10px 0;
+        width: 60px;
+        height: 60px;
+        font-size: 14px;
+        padding-top: 8px;
+    }
+
+    .fa-chevron-up {
+        font-size: 40px;
+    } */
+}
+
 /* header */
 @media all and (max-width: 1410px) {
-    .logo {
-        margin-left: 30px;
-    }
+  .logo {
+    margin-left: 30px;
+  }
 }
 
 @media all and (max-width: 1000px) {
-    .gnb-button {
-        font-size: 16px;
-        margin-left: 15px;
-    }
+  .gnb-button {
+    font-size: 16px;
+    margin-left: 15px;
+  }
 }
 
 @media all and (max-width: 850px) {
-    .gnb-button {
-        font-size: 14px;
-        margin-left: 10px;
-    }
+  .gnb-button {
+    font-size: 14px;
+    margin-left: 10px;
+  }
 
-    .logo {
-        width: 40px;
-        height: 40px;
-    }
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media all and (max-width: 750px) {
-    .gnb {
-        display: none;
-    }
+  .gnb {
+    display: none;
+  }
 }
 
 /* home */
 @media all and (max-width: 1410px) {
-    .visual-wrap {
-        left: 3%;
-    }
+  .visual-wrap {
+    left: 3%;
+  }
 
-    .visual-text1 {
-        font-size: 20px;
-    }
+  .visual-text1 {
+    font-size: 20px;
+  }
 
-    .visual-text2 {
-        font-size: 46px;
-    }
+  .visual-text2 {
+    font-size: 46px;
+  }
 
-    .visual-text3 {
-        font-size: 18px;
-    }
+  .visual-text3 {
+    font-size: 18px;
+  }
 
-    .view {
-        font-size: 18px;
-    }
+  .view {
+    font-size: 18px;
+  }
 }
 
 @media all and (max-width: 1250px) {
-    .visual-text1 {
-        font-size: 18px;
-    }
+  .visual-text1 {
+    font-size: 18px;
+  }
 
-    .visual-text2 {
-        font-size: 40px;
-        line-height: 70px;
-    }
+  .visual-text2 {
+    font-size: 40px;
+    line-height: 70px;
+  }
 
-    .visual-text3 {
-        font-size: 16px;
-    }
+  .visual-text3 {
+    font-size: 16px;
+  }
 }
 
 @media all and (max-width: 550px) {
-    .visual {
-        height: 90vh;
-    }
+  .visual {
+    height: 90vh;
+  }
 
-    .visual-text1 {
-        font-size: 16px;
-    }
+  .visual-text1 {
+    font-size: 16px;
+  }
 
-    .visual-text2 {
-        font-size: 30px;
-        line-height: 50px;
-    }
+  .visual-text2 {
+    font-size: 30px;
+    line-height: 50px;
+  }
 
-    .visual-text3 {
-        font-size: 14px;
-    }
+  .visual-text3 {
+    font-size: 14px;
+  }
 
-    .view {
-        font-size: 16px;
-    }
+  .view {
+    font-size: 16px;
+  }
 }
 
 @media all and (max-width: 470px) {
-    .visual {
-        height: 80vh;
-    }
+  .visual {
+    height: 80vh;
+  }
 
-    .visual-text1 {
-        font-size: 12px;
-    }
+  .visual-text1 {
+    font-size: 12px;
+  }
 
-    .visual-text2 {
-        font-size: 24px;
-        line-height: 40px;
-    }
+  .visual-text2 {
+    font-size: 24px;
+    line-height: 40px;
+  }
 
-    .visual-text3 {
-        font-size: 10px;
-    }
+  .visual-text3 {
+    font-size: 10px;
+  }
 
-    .view {
-        font-size: 14px;
-    }
+  .view {
+    font-size: 14px;
+  }
 }
 
 /* about */
-@media all and (max-width: 1360px) {
-    .profile {
-        margin-left: 30px;
-    }
-
-    .about-me-title {
-        font-size: 26px;
-    }
-
-    .about-me-sub-title {
-        font-size: 36px;
-    }
-
-    .about-me-text {
-        font-size: 28px;
-    }
-
-    .about-me-sub-text {
-        font-size: 16px;
-    }
-
-    .profile-right-title {
-        font-size: 24px;
-    }
-
-    .profile-right-text {
-        font-size: 14px;
-    }
+@media all and (max-width: 1300px) {
 }
 
-@media all and (max-width: 1230px) {}
+/* possibility */
+@media all and (max-width: 1320px) {
+  .pos-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .chart {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    margin: 70px;
+  }
+
+  .pos-text {
+    width: 320px;
+  }
+
+  .pos-text > li {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: none;
+  }
+
+  .pos-content h3 {
+    font-size: 14px;
+  }
+
+  .pos-content h4 {
+    font-size: 12px;
+  }
+
+  .pos-content p {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  .pos-text1 {
+    width: 100%;
+    height: 105px;
+  }
+
+  .pos-text2 {
+    width: 100%;
+    height: 135px;
+  }
+
+  .pos-text3 {
+    width: 100%;
+    height: 95px;
+  }
+
+  .pos-text4 {
+    width: 100%;
+    height: 110px;
+    text-align: left;
+  }
+
+  .pos-text5 {
+    width: 100%;
+    height: 110px;
+    text-align: left;
+  }
+}
+
+@media all and (max-width: 960px) {
+  .possibility .inner {
+    height: 100%;
+  }
+
+  .pos-content {
+    display: block;
+    padding-left: 30px;
+    height: 100%;
+  }
+
+  .chart {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .pos-text {
+    width: 440px;
+    margin: 30px auto;
+  }
+
+  .pos-text1 {
+    width: 391px;
+    height: 135px;
+  }
+
+  .pos-text2 {
+    width: 240px;
+    height: 180px;
+  }
+
+  .pos-text3 {
+    width: 407px;
+    height: 120px;
+  }
+
+  .pos-text4 {
+    width: 440px;
+    height: 140px;
+  }
+
+  .pos-text5 {
+    width: 333px;
+    height: 140px;
+  }
+
+  .pos-content h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .pos-content h4 {
+    font-size: 16px;
+    margin-bottom: 3px;
+  }
+
+  .pos-content p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .chart {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media all and (max-width: 470px) {
+  .chart {
+    width: 330px;
+    height: 330px;
+  }
+
+  .pos-text {
+    width: 310px;
+  }
+
+  .pos-content h3 {
+    font-size: 14px;
+  }
+
+  .pos-content h4 {
+    font-size: 12px;
+  }
+
+  .pos-content p {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  .pos-text1 {
+    width: 280px;
+    height: 100px;
+  }
+
+  .pos-text2 {
+    width: 175px;
+    height: 130px;
+  }
+
+  .pos-text3 {
+    width: 305px;
+    height: 85px;
+  }
+
+  .pos-text4 {
+    width: 310px;
+    height: 100px;
+  }
+
+  .pos-text5 {
+    width: 240px;
+    height: 100px;
+  }
+}
+
+@media all and (max-width: 360px) {
+  .chart {
+    width: 280px;
+    height: 280px;
+  }
+
+  .pos-content {
+    padding-left: 15px;
+  }
+}
