@@ -134,7 +134,7 @@ strong {
 /* ========================= gotop ========================= */
 .button-list {
   position: fixed;
-  bottom: 30px;
+  bottom: 70px;
   right: 30px;
   display: block;
   z-index: 9999;
@@ -246,11 +246,6 @@ strong {
   font-size: 32px;
 }
 
-.fa-user {
-  font-size: 14px;
-  margin-left: 5px;
-}
-
 .gotop {
   position: relative;
   display: block;
@@ -275,6 +270,118 @@ strong {
 .gotop:hover {
   color: #000;
 }
+
+
+/* 모바일 메뉴 */
+.mb-bt {
+  position: relative;
+  display: block;
+  float: right;
+  display: none;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  margin-right: 10px;
+  margin-top: 25px;
+  border: 0;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.mb-div {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+
+.mb-bg {
+  position: relative;
+  width: 330px;
+  height: 100%;
+  padding: 30px;
+  background-color: #fff;
+}
+
+.mb-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  border: 0;
+  background-color: #fff;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.mb-wrap {
+  position: relative;
+  display: block;
+  width: 300px;
+}
+
+.mb-menu {
+  position: relative;
+  display: block;
+}
+
+.mb-menu>li {
+  position: relative;
+  display: block;
+  margin-bottom: 25px;
+}
+
+
+.mb-gnb-button {
+  position: relative;
+  display: block;
+  line-height: 80px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 30px;
+  transition: all 0.7s;
+}
+
+.mb-gnb-button::before {
+  content: "";
+  position: absolute;
+  left: -11%;
+  top: 18px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url("../images/posibility-bcc.jpg") no-repeat center;
+  background-size: contain;
+  transition: all 0.7s;
+  z-index: -1;
+  opacity: 0;
+  z-index: 9;
+}
+
+.mb-gnb-button:hover {
+  color: #d36853;
+}
+
+.mb-gnb-button:hover::before {
+  opacity: 1;
+}
+
+.mb-gnb-button-active {
+  color: #d36853;
+}
+
+.mb-gnb-button-active::before {
+  opacity: 1;
+}
+
 
 /* ========================= header ========================= */
 .header {
@@ -456,7 +563,6 @@ strong {
   position: relative;
   display: block;
   height: 100%;
-  min-width: 1300px;
 }
 
 .about>.line-bar {
@@ -465,8 +571,8 @@ strong {
 
 .about>.inner {
   position: relative;
-  display: block;
-  height: 650px;
+  display: flex;
+  justify-content: space-between;
   padding-left: 30px;
 }
 
@@ -474,14 +580,12 @@ strong {
 .profile {
   position: relative;
   display: block;
-  float: left;
   width: 350px;
   height: 600px;
   background-color: #fff;
   border-radius: 10px;
   border: 1px solid rgb(230, 199, 193, 30%);
   box-shadow: rgb(230, 199, 193, 30%) 8px 9px 13px 1px;
-
 }
 
 .profile-left {
@@ -506,7 +610,8 @@ strong {
   position: relative;
   display: block;
   font-size: 20px;
-  margin: 25px;
+  line-height: 20px;
+  margin: 25px 0 25px 25px;
 }
 
 .profile-left>span>a {
@@ -541,12 +646,12 @@ strong {
     "malgun gothic";
   position: relative;
   display: block;
-  float: right;
-  width: 900px;
   color: #444;
+  height: 100%;
   font-weight: 600;
   padding-top: 40px;
-  padding-left: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .about-me {
@@ -602,7 +707,6 @@ strong {
 .profile-bottom {
   position: relative;
   display: block;
-  width: 100%;
   padding-top: 30px;
 }
 
@@ -774,8 +878,6 @@ strong {
 .skill {
   position: relative;
   display: block;
-  min-width: 1300px;
-  /* height: 870px; */
 }
 
 .skill .inner {
@@ -794,16 +896,15 @@ strong {
   position: relative;
   display: block;
   width: 220px;
-  height: 200px;
+  height: 220px;
   margin: 60px 40px;
-  font-size: 20px;
 }
 
 /* skill-icon */
 .skill-pic {
   position: absolute;
   left: 50%;
-  top: 55%;
+  top: 50%;
   transform: translate(-50%, -50%);
   display: block;
   width: 60px;
@@ -814,13 +915,12 @@ strong {
 .portfolio {
   position: relative;
   display: block;
-  min-width: 1300px;
 }
 
 .portfolio .inner {
   position: relative;
   display: block;
-  overflow: hidden;
+  min-width: 1300px;
 }
 
 .portfolio b {
@@ -866,9 +966,10 @@ strong {
 .portfolio-cate {
   position: relative;
   display: block;
-  width: 100%;
+  width: 1250px;
   height: 550px;
-  padding-left: 45px;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
 .sw-pg {
@@ -1117,7 +1218,6 @@ strong {
 .life {
   position: relative;
   display: block;
-  min-width: 1300px;
 }
 
 .life .inner {
@@ -1129,7 +1229,7 @@ strong {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 100px;
 }
 
@@ -1172,93 +1272,50 @@ strong {
   margin-left: 5px;
 }
 
-.photo-1 {
+.photo-size {
   position: relative;
   display: block;
   width: 280px;
   height: 350px;
   margin: 0 auto;
+}
+
+.photo-1 {
   background: url("../images/hm_tongyoung.jpg") no-repeat center;
   background-size: cover;
 }
 
-.photo-2 {
-  position: relative;
-  display: block;
-  width: 280px;
-  height: 350px;
-  margin: 0 auto;
-}
-
 .photo-3 {
-  position: relative;
-  display: block;
-  width: 280px;
-  height: 350px;
-  margin: 0 auto;
   background: url("../images/hm_lottewater.jpg") no-repeat center;
   background-size: cover;
 }
 
-.photo-4 {
-  position: relative;
-  display: block;
-  width: 280px;
-  height: 350px;
-  margin: 0 auto;
-}
-
 .photo-5 {
-  position: relative;
-  display: block;
-  width: 280px;
-  height: 350px;
-  margin: 0 auto;
   background: url("../images/hm_ikea.jpg") no-repeat center;
   background-size: cover;
 }
 
-.photo-6 {
-  position: relative;
-  display: block;
-  width: 280px;
-  height: 350px;
-  margin: 0 auto;
-}
-
 .photo-7 {
-  position: relative;
-  display: block;
-  width: 280px;
-  height: 350px;
-  margin: 0 auto;
   background: url("../images/hm_blossom.jpg") no-repeat center;
   background-size: cover;
-}
-
-.photo-8 {
-  position: relative;
-  display: block;
-  width: 280px;
-  height: 350px;
-  margin: 0 auto;
 }
 
 /* ========================= vision ========================= */
 .vision {
   position: relative;
   display: block;
-  min-width: 1300px;
 }
 
 .vision .inner {
   position: relative;
   display: block;
+  padding: 0 30px;
 }
 
 .vision-wrap {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 100px;
 }
@@ -1266,12 +1323,12 @@ strong {
 .vision-content {
   position: relative;
   display: block;
-  width: 410px;
-  height: 370px;
+  width: 380px;
+  height: 380px;
   border: 1px solid rgb(230, 199, 193, 30%);
   box-shadow: rgb(230, 199, 193, 30%) 8px 9px 13px 1px;
   border-radius: 5%;
-  padding: 30px;
+  padding: 30px 0 30px 30px;
 }
 
 .vision-content img {
@@ -1320,7 +1377,6 @@ strong {
   background-color: #e6c7c1;
   padding-top: 10px;
   text-align: center;
-  min-width: 1300px;
 }
 
 .footer .inner {
@@ -1328,6 +1384,7 @@ strong {
   display: block;
   padding-top: 25px;
   font-weight: 500;
+  margin: 0 auto;
 }
 
 .footer-logo {

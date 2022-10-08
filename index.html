@@ -110,6 +110,23 @@
     </ul>
   </div>
 
+  <!-- 모바일 메뉴 -->
+  <div class="mb-div">
+    <div class="mb-bg">
+      <button class="mb-close"><i class="fas fa-times"></i></button>
+      <div class="mb-wrap">
+        <ul class="mb-menu">
+          <li><a href="#home" class="mb-gnb-button">Home</a></li>
+          <li><a href="#about" class="mb-gnb-button">ABOUT</a></li>
+          <li><a href="#possibility" class="mb-gnb-button">POSSIBILITY</a></li>
+          <li><a href="#skill" class="mb-gnb-button">SKILL</a></li>
+          <li><a href="#portfolio" class="mb-gnb-button">PORTFOLIO</a></li>
+          <li><a href="#life" class="mb-gnb-button">LIFE</a></li>
+          <li><a href="#vision" class="mb-gnb-button">VISION</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
   <div class="wrap">
 
@@ -117,6 +134,7 @@
     <header class="header" id="header">
       <div class="inner">
         <a href="index.html" class="logo"></a>
+        <button class="mb-bt"><i class="fas fa-bars"></i></button>
         <ul class="gnb">
           <li><a href="#home" class="gnb-button">Home</a></li>
           <li><a href="#about" class="gnb-button">ABOUT</a></li>
@@ -174,12 +192,14 @@
           <div class="about-me">
             <h2 class="about-me-title">FRONT-END</h2>
             <h2 class="about-me-sub-title">JO HYO MIN</h2>
-            <h2 class="about-me-text"><strong>시작</strong>과 <strong>끝</strong>을 보며 나아가는 프론트엔드 개발자 조효민입니다.</h2>
+            <h2 class="about-me-text">
+              <span class="about-br"><strong>시작</strong>과 <strong>끝</strong>을 보며 나아가는</span>
+              <span class="about-br3">프론트엔드 개발자</span>조효민입니다.</h2>
             <span class="about-me-sub-text">
-              저는 세심하고 꼼꼼하며 안정성을 중요시하는 성격입니다.<br>
+              <span class="about-br3">저는 세심하고 꼼꼼하며</span>안정성을 중요시하는 성격입니다.<br>
               항상 행동하기 전에 계획을 짜고 행동을 실행합니다.<br>
-              그 후, 빠진 것은 없는지 두 번 이상 확인하고 문제가 생길 요소가 있는지 시뮬레이션합니다.<br>
-              같은 실수를 다시 하는 일은 절대로 없도록 새겨두고 나 자신을 계속 되돌아보며 발전합니다.<br>
+              <span class="about-br2">그 후, 빠진 것은 없는지 두 번 이상 확인하고 문제가</span> 생길 요소가 있는지 시뮬레이션합니다.<br>
+              <span class="about-br2">같은 실수를 다시 하는 일은 절대로 없도록 새겨두고</span> 나 자신을 계속 되돌아보며 발전합니다.<br>
             </span>
           </div>
 
@@ -198,7 +218,6 @@
               <span class="profile-right-text">신뢰, 성실, 규칙을 중요시하는 MBTI로 헌신적이며 정직합니다.</span>
               <span class="profile-right-text">특히 직장에서 두드러지며, 일을 성취하기 위해서는
                 <br>직접 열심히 일해야 직성이 풀리는 타입입니다.</span>
-
             </div>
           </div>
         </div>
@@ -215,9 +234,9 @@
         </div>
         <div class="pos-content">
           <div data-aos="zoom-in" data-aos-delay="500" data-aos-duration="2000" class="chart">
-          <canvas id="myChart"></canvas>
+            <canvas id="myChart"></canvas>
           </div>
-          <ul data-aos="zoom-in" data-aos-offset="300" data-aos-duration="2000"  class="pos-text">
+          <ul data-aos="zoom-in" data-aos-offset="300" data-aos-duration="2000" class="pos-text">
             <li class="pos-text1">
               <h3>책임감</h3>
               <h4>책임지지 못 할 행동은 절대로 하지 않을 것입니다.</h4>
@@ -788,7 +807,7 @@
       <ul class="life-collection">
         <li data-aos="flip-left" data-aos-offset="100" data-aos-duration="1500">
           <div class="life-cont">
-            <span class=" photo-1"></span>
+            <span class=" photo-1 photo-size"></span>
             <span class="photo-text">
               여행 다니는 것을 좋아해 <br>
               주기적으로 리프레쉬를 합니다. 😍</span>
@@ -796,7 +815,7 @@
         </li>
         <li data-aos="flip-left" data-aos-offset="100" data-aos-duration="1500">
           <div class="life-cont">
-            <span class=" photo-2">
+            <span class=" photo-2 photo-size">
               <video width="280px" height="350px" src="images/hm_drive.mp4" controls autoplay loop muted>
               </video>
             </span>
@@ -807,7 +826,7 @@
         </li>
         <li data-aos="flip-left" data-aos-offset="100" data-aos-duration="1500">
           <div class="life-cont">
-            <span class=" photo-3"></span>
+            <span class=" photo-3 photo-size"></span>
             <span class="photo-text">
               수영과 친하지는 않지만 <br>
               물놀이를 좋아합니다. 😆</span>
@@ -815,7 +834,7 @@
         </li>
         <li data-aos="flip-left" data-aos-offset="100" data-aos-duration="1500">
           <div class="life-cont">
-            <span class=" photo-4">
+            <span class=" photo-4 photo-size">
               <video width="280px" height="350px" src="images/hm_water.mp4" controls autoplay loop muted>
               </video></span>
             <span class="photo-text">
@@ -825,7 +844,7 @@
         </li>
         <li data-aos="flip-left" data-aos-offset="100" data-aos-duration="1500">
           <div class="life-cont">
-            <span class=" photo-5"></span>
+            <span class=" photo-5 photo-size"></span>
             <span class="photo-text">
               나만의 편안한 공간을 꾸밀 수 있는<br>
               소품 쇼핑을 좋아합니다. 🎵 </span>
@@ -833,7 +852,7 @@
         </li>
         <li data-aos="flip-left" data-aos-offset="100" data-aos-duration="1500">
           <div class="life-cont">
-            <span class=" photo-6">
+            <span class=" photo-6 photo-size">
               <video width="280px" height="350px" src="images/hm_piano.mp4" controls autoplay loop muted>
               </video>
             </span>
@@ -844,7 +863,7 @@
         </li>
         <li data-aos="flip-left" data-aos-offset="100" data-aos-duration="1500">
           <div class="life-cont">
-            <span class=" photo-7"></span>
+            <span class=" photo-7 photo-size"></span>
             <span class="photo-text">
               계절이 바뀔 때마다 <br>
               두근두근 꽃구경은 필수 🌸</span>
@@ -852,7 +871,7 @@
         </li>
         <li data-aos="flip-left" data-aos-offset="100" data-aos-duration="1500">
           <div class="life-cont">
-            <span class=" photo-8">
+            <span class=" photo-8 photo-size">
               <video width="280px" height="350px" src="images/hm_lake.mp4" controls autoplay loop muted>
               </video></span>
             <span class="photo-text">

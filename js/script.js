@@ -1,4 +1,77 @@
 window.onload = function () {
+  /* ========================= mb-menu ========================= */
+  // 모바일 메뉴
+  let mb_div = $('.mb-div');
+
+  // 모바일 보기 버튼 기능
+  let mb_bt = $('.mb-bt');
+  mb_bt.click(function () {
+    mb_div.show();
+  });
+
+  // 모바일 닫기 버튼 기능
+  let mb_close = $('.mb-close');
+  mb_close.click(function () {
+    mb_div.hide();
+  });
+
+  mb_div.click(function () {
+    mb_div.hide();
+  });
+
+  $('.mb-bg').click(function (event) {
+    event.stopPropagation();
+  });
+
+  $(window).resize(function () {
+    let temp = $(window).width();
+    if (temp >= 750) {
+      mb_div.hide();
+    }
+  });
+
+  let mbGnbButton = $(".mb-gnb-button");
+  mbGnbButton.eq(0).addClass("mb-gnb-button-active");
+  $.each(mbGnbButton, function (index, item) {
+    $(this).click(function (event) {
+      event.preventDefault();
+      mbGnbButton.removeClass("mb-gnb-button-active");
+      $(this).addClass("mb-gnb-button-active");
+      let posY = $(this).attr("href");
+      posY = $(posY).offset().top;
+      posY = parseInt(posY);
+      posY = posY - 40;
+      // if (index == 1) {
+      //   posY -= 10;
+      // }
+      gsap.to($("html"), 0.5, {
+        scrollTo: posY,
+      });
+    });
+  });
+
+  // 스크롤시 섹션 포커스
+  $.each(mbGnbButton, function (index, item) {
+    let temp = $(this).attr("href");
+    new Waypoint({
+      element: $(temp),
+      handler: function (direction) {
+        if (direction == "down") {
+          //  일단 모든 클래스 제거
+          mbGnbButton.removeClass("mb-gnb-button-active");
+          // 클릭된 대상만 클래스 추가
+          mbGnbButton.eq(index).addClass("mb-gnb-button-active");
+        } else if (direction == "up") {
+          //  일단 모든 클래스 제거
+          mbGnbButton.removeClass("mb-gnb-button-active");
+          // 클릭된 대상만 클래스 추가
+          mbGnbButton.eq(index - 1).addClass("mb-gnb-button-active");
+        }
+      },
+      offset: "50%",
+    });
+  });
+
   /* ========================= header ========================= */
   let gnbButton = $(".gnb-button");
   gnbButton.eq(0).addClass("gnb-button-active");
@@ -52,6 +125,7 @@ window.onload = function () {
       offset: "50%",
     });
   });
+
 
   /* ========================= gotop ========================= */
   let go_top = $(".gotop");
