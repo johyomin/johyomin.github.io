@@ -134,7 +134,7 @@ strong {
 /* ========================= gotop ========================= */
 .button-list {
   position: fixed;
-  bottom: 70px;
+  bottom: 30px;
   right: 30px;
   display: block;
   z-index: 9999;
@@ -294,7 +294,6 @@ strong {
   top: 0;
   display: none;
   width: 100%;
-  height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 9999;
 }
@@ -302,7 +301,6 @@ strong {
 .mb-bg {
   position: relative;
   width: 330px;
-  height: 100vh;
   padding: 30px;
   background-color: #fff;
 }
@@ -332,7 +330,6 @@ strong {
   display: block;
   width: 100%;
   height: 100vh;
-  border: 3px solid red;
 }
 
 .mb-menu>li {
@@ -350,9 +347,7 @@ strong {
   font-size: 18px;
   font-weight: 600;
   margin-left: 30px;
-  transition: all 0.7s;
-  height: 100%;
-  border: 1px solid red;
+  transition: all 0.3s;
 }
 
 .mb-gnb-button::before {
@@ -369,6 +364,14 @@ strong {
   z-index: -1;
   opacity: 0;
   z-index: 9;
+}
+
+.mb-gnb-button:hover {
+  color: #d36853;
+}
+
+.mb-gnb-button:hover::before {
+  opacity: 1;
 }
 
 .mb-gnb-button-active {
@@ -435,7 +438,7 @@ strong {
   font-size: 18px;
   font-weight: 600;
   margin-left: 30px;
-  transition: all 0.7s;
+  transition: all 0.3s;
 }
 
 .gnb-button::before {
