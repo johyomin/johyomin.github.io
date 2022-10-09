@@ -35,6 +35,7 @@ window.onload = function () {
   $.each(mbGnbButton, function (index, item) {
     $(this).click(function (event) {
       event.preventDefault();
+      mb_div.hide();
       mbGnbButton.removeClass("mb-gnb-button-active");
       $(this).addClass("mb-gnb-button-active");
       let posY = $(this).attr("href");
