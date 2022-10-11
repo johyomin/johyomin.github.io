@@ -4,14 +4,16 @@
 
 @font-face {
   font-family: "GangwonEduPowerExtraBoldA";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "S-CoreDream-3Light";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -271,7 +273,6 @@ strong {
   color: #000;
 }
 
-
 /* 모바일 메뉴 */
 .mb-bt {
   position: relative;
@@ -332,17 +333,16 @@ strong {
   height: 100vh;
 }
 
-.mb-menu>li {
+.mb-menu > li {
   position: relative;
   display: block;
   margin-bottom: 25px;
 }
 
-
 .mb-gnb-button {
   position: relative;
   display: block;
-  line-height: 80px;
+  line-height: 60px;
   text-transform: uppercase;
   font-size: 18px;
   font-weight: 600;
@@ -382,7 +382,6 @@ strong {
   opacity: 1;
 }
 
-
 /* ========================= header ========================= */
 .header {
   position: fixed;
@@ -421,7 +420,7 @@ strong {
   float: right;
 }
 
-.gnb>li {
+.gnb > li {
   position: relative;
   display: inline-block;
   white-space: nowrap;
@@ -491,7 +490,7 @@ strong {
   float: right;
 }
 
-.visual>img {
+.visual > img {
   width: 100%;
   height: 100%;
 }
@@ -565,11 +564,11 @@ strong {
   height: 100%;
 }
 
-.about>.line-bar {
+.about > .line-bar {
   margin-top: 0;
 }
 
-.about>.inner {
+.about > .inner {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -604,7 +603,7 @@ strong {
   background-size: contain;
 }
 
-.profile-left>span {
+.profile-left > span {
   font-family: "GangwonEduPowerExtraBoldA", "Noto Sans KR", Helvetica,
     "맑은 고딕", "malgun gothic";
   position: relative;
@@ -614,7 +613,7 @@ strong {
   margin: 25px 0 25px 25px;
 }
 
-.profile-left>span>a {
+.profile-left > span > a {
   width: 100%;
   height: 100%;
 }
@@ -700,7 +699,7 @@ strong {
   padding-top: 16px;
 }
 
-.about-me-sub-text>b {
+.about-me-sub-text > b {
   color: #000;
 }
 
@@ -768,7 +767,6 @@ strong {
   height: 600px;
   margin-top: 20px;
 }
-
 
 .chart {
   position: absolute;
@@ -920,7 +918,6 @@ strong {
 .portfolio .inner {
   position: relative;
   display: block;
-  min-width: 1300px;
 }
 
 .portfolio b {
@@ -963,6 +960,19 @@ strong {
 }
 
 /* portfolio-cate */
+.portfolio-cate-wrap {
+  position: relative;
+  display: block;
+  height: 550px;
+}
+.portfolio-cate-pos {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  display: block;
+  height: 100%;
+}
 .portfolio-cate {
   position: relative;
   display: block;
@@ -990,15 +1000,19 @@ strong {
 }
 
 .swiper-container-3d .swiper-slide-shadow-left {
-  background-image: linear-gradient(to left,
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0));
+  background-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0)
+  );
 }
 
 .swiper-container-3d .swiper-slide-shadow-right {
-  background-image: linear-gradient(to right,
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0));
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0)
+  );
 }
 
 .portfolio-content {
@@ -1013,7 +1027,7 @@ strong {
   overflow: hidden;
 }
 
-.portfolio-content .portfolio-pic>img {
+.portfolio-content .portfolio-pic > img {
   position: relative;
   display: block;
   width: 100%;
@@ -1233,16 +1247,20 @@ strong {
   margin-top: 100px;
 }
 
-.life-collection>li {
+.life-collection > li {
   position: relative;
   display: block;
 }
 
-.life-collection>li>.life-cont {
+.life-collection > li:nth-child(2n + 1) {
+  z-index: 9;
+}
+
+.life-collection > li > .life-cont {
   transform: rotate(3deg);
 }
 
-.life-collection>li:nth-child(2n)>.life-cont {
+.life-collection > li:nth-child(2n) > .life-cont {
   transform: rotate(-5deg);
 }
 
@@ -1400,7 +1418,7 @@ strong {
   margin-bottom: 20px;
 }
 
-.footer-contact>li {
+.footer-contact > li {
   position: relative;
   display: inline-block;
 }

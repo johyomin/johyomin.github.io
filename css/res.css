@@ -665,7 +665,135 @@
 }
 
 /* portfolio */
+@media all and (max-width: 730px) {
+  .portfolio-bt button {
+    font-size: 16px;
+  }
+}
 
+@media all and (max-width: 630px) {
+  .portfolio-content {
+    width: 400px;
+    height: 320px;
+  }
+
+  .portfolio h5 {
+    margin: 10px 0px 0px 10px;
+  }
+
+  .fa-calendar-alt {
+    margin-left: 10px;
+  }
+
+  .pc-web {
+    margin: 0px 0px 5px 16px;
+  }
+
+  .responsive {
+    margin: 0px 0px 5px 16px;
+  }
+
+  .vue {
+    margin: 0px 0px 5px 16px;
+  }
+
+  .with-git {
+    margin: 0px 10px 5px 16px;
+  }
+.sw-pg {
+  bottom: 25%;
+}
+
+}
+
+@media all and (max-width: 610px) {
+  .portfolio-bt button {
+    margin: 0px;
+  }
+}
+
+@media all and (max-width: 450px) {
+  .portfolio-bt button {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .portfolio-content {
+    width: 340px;
+    height: 300px;
+  }
+
+  .portfolio h5 {
+    font-size: 20px;
+  }
+.sw-pg {
+  bottom: 36%;
+}
+
+
+.portfolio-inner {
+  width: 300px;
+  height: 130px;
+}
+
+.portfolio-inner-title {
+  font-size: 16px;
+}
+
+.clone-web {
+  margin-bottom: 15px;
+  padding: 15px;
+}
+
+.clone-vue {
+  padding: 15px;
+}
+
+.icon-text {
+  font-size: 14px;
+}
+
+.fa-desktop {
+  font-size: 14px;
+}
+
+.fa-vuejs {
+  font-size: 14px;
+}
+
+.fa-github {
+  font-size: 14px;
+}
+
+.fa-chrome {
+  font-size: 14px;
+}
+
+.fa-figma {
+  font-size: 14px;
+}
+
+.fa-php {
+  font-size: 14px;
+}
+
+
+.pc-web {
+  font-size: 10px;
+}
+
+.responsive {
+  font-size: 10px;
+}
+
+.vue {
+  font-size: 10px;
+}
+
+.with-git {
+  font-size: 10px;
+}
+}
 
 /* life */
 @media all and (max-width: 1400px) {
@@ -694,7 +822,6 @@
     height: 270px;
   }
 }
-
 
 @media all and (max-width: 603px) {
   .life-cont {
