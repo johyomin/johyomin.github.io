@@ -599,8 +599,8 @@ strong {
   height: 270px;
   border-radius: 50%;
   margin: 40px auto;
-  background: url("../images/hm_profile.jpg") no-repeat center;
-  background-size: contain;
+  background: url("../images/hm_profile2.jpg") no-repeat right;
+  background-size: cover;
 }
 
 .profile-left > span {
