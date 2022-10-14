@@ -133,6 +133,27 @@ strong {
   color: #d36853;
 }
 
+/* ========================= loading ========================= */
+
+.loading-dim {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999999;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background: url('../images/loading.gif') no-repeat center;
+}
+
 /* ========================= gotop ========================= */
 .button-list {
   position: fixed;
